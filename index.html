@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body id="top">
+<a class="skip" href="#main">跳到正文</a>
 
 <header class="topbar">
   <div class="topbar-in">
@@ -15,7 +16,7 @@
       <b>EH216-S 调研与分析</b>
       <span>Fundamentals of Flying Vehicle Technology</span>
     </a>
-    <nav class="topnav">
+    <nav class="topnav" aria-label="章节导航">
       <a href="01-frame.html">方法</a>
       <a href="02-system.html">系统</a>
       <a href="03-tech.html">技术</a>
@@ -30,7 +31,7 @@
 
 <div class="shell">
 
-  <aside class="toc-nav">
+  <aside class="toc-nav" aria-label="全站章节">
     <p class="toc-title">全站章节</p>
             <ol>
         <li class="nav-home"><a href="index.html" class="active" aria-current="page">首页</a></li>
@@ -44,7 +45,7 @@
       </ol>
   </aside>
 
-  <main>
+  <main id="main">
     <div class="page-head">
       <div class="ph-top">
         <div class="crumb"><span class="cur">首页</span><span class="sep">·</span><span>全方位调研与分析</span></div>
@@ -202,12 +203,12 @@
       </div>
     </section>
 
-    <nav class="pager">
+    <nav class="pager" aria-label="章节翻页">
       <a href="01-frame.html" class="next"><span class="p-d">下一章</span><span class="p-t">01 问题定义与检索协议 →</span></a>
     </nav>
   </main>
 
-  <aside class="toc">
+  <aside class="toc" aria-label="本页目录">
     <p class="toc-title">本页</p>
     <ol>
       <li><a href="#conclusions">五条核心结论</a></li>
