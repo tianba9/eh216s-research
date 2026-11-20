@@ -37,9 +37,10 @@
 1. 新建 Public 仓库，例如 `eh216s-research`。
 2. 将本目录全部文件放入仓库根目录（`index.html` 必须在根目录）。
 3. Settings → Pages → Source 选 `Deploy from a branch`，Branch 选 `main`，目录选 `/ (root)`，Save。
-4. 约 1–2 分钟后访问 `https://<你的用户名>.github.io/eh216s-research/`。
+4. 约 1–2 分钟后访问 `https://tianba9.github.io/eh216s-research/`。
 
-> 姊妹篇链接目前为占位符 `https://tianba9.github.io/eh216s-safety/`。部署作业二后，把两站中的 `tianba9` 替换为实际用户名即可。
+> 在线地址：https://tianba9.github.io/eh216s-research/
+> 姊妹篇：https://tianba9.github.io/eh216s-safety/
 
 ## 数据基线
 
