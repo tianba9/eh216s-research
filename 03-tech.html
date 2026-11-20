@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>03 技术可行性 · EH216-S 调研与分析</title>
+<meta name="description" content="用时间闭合检验、盘载荷对标与 TRL 评估，判断 EH216-S 的公开性能指标是否可信，以及技术瓶颈究竟在哪一层。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#method">三种检验方法</a></li>
+      <li><a href="#closure">时间闭合检验</a></li>
+      <li><a href="#bench">横向对标</a></li>
+      <li><a href="#trl">成熟度判定</a></li>
+      <li><a href="#bottle">技术瓶颈在哪一层</a></li>
+      <li><a href="#plan">若要验证：试飞大纲</a></li>
+      <li><a href="#verdict">本章判决</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">03 · 技术可行性</div>
+      <h1>这些数字经得起算：三重检验下的参数可信度</h1>
+      <p class="lede">
+        厂商给的参数往往无法直接验证——没有风洞数据，没有空重，没有旋翼直径。但仍然可以检验：
+        时间能否闭合、功率量级是否合理、横向置于同级机型中是否异常。三重检验都通过，参数就可以采信。
+      </p>
+    </div>
+
+    <section id="method">
+      <h2><span class="num">01</span>三种检验方法</h2>
+      <p>在关键数据缺失的条件下，可行性判断不靠信任，靠交叉。本文采用三种互相独立的检验路径。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 3-1</b>　三种检验路径及其逻辑</caption>
+          <thead><tr><th style="width:18%">方法</th><th style="width:36%">要检验什么</th><th>失败信号</th></tr></thead>
+          <tbody>
+            <tr><td class="em">时间闭合</td><td>航程、航时、巡航速度三者能否同时成立</td><td>按公布巡航速度飞完公布航程所需时间明显超过公布航时</td></tr>
+            <tr><td class="em">量级检验</td><td>功率、能量、盘载荷是否落在同级机型的物理区间</td><td>功率密度超出现有电机水平，或能量需求超过 620 kg 可携带上限</td></tr>
+            <tr><td class="em">横向对标</td><td>相对同类产品的性能分布是否异常</td><td>在同等构型与座级下，某项指标显著偏离群体</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="closure">
+      <h2><span class="num">02</span>时间闭合检验</h2>
+      <p>这是最便宜也最有效的检验。公布值：航程 30 km、正常平飞 90 km/h、最长航时 25 min。若以 90 km/h 巡航，30 km 需 20 分钟，剩余 5 分钟须覆盖爬升、下降、着陆与备份。</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 220" role="img" aria-label="单架次时间预算与航程闭合检验">
+            <g font-family="system-ui, sans-serif">
+              <text x="20" y="26" font-size="11" fill="#6d7783" letter-spacing="1.2">单架次 25 min 时间预算（分钟）</text>
+              <!-- 轴 -->
+              <line x1="20" y1="150" x2="660" y2="150" stroke="#cfcabf"/>
+              <g font-size="9.5" fill="#6d7783">
+                <text x="20" y="168">0</text><text x="140" y="168">5</text><text x="260" y="168">10</text>
+                <text x="380" y="168">15</text><text x="500" y="168">20</text><text x="620" y="168">25</text>
+              </g>
+              <!-- 堆叠条：每 5min = 120px（24px/min） -->
+              <g>
+                <rect x="20" y="70" width="48" height="56" fill="#a8500c"/>
+                <rect x="68" y="70" width="432" height="56" fill="#0f5c6b"/>
+                <rect x="500" y="70" width="72" height="56" fill="#5b7f86"/>
+                <rect x="572" y="70" width="48" height="56" fill="#c9c3b6"/>
+              </g>
+              <g font-size="11" fill="#ffffff" text-anchor="middle">
+                <text x="44" y="94" font-size="10">2</text>
+                <text x="44" y="110" font-size="8.5">爬升</text>
+                <text x="284" y="94">巡航 18 min ／ 30 km @ 90 km/h</text>
+                <text x="284" y="112" font-size="10" opacity=".85">这才是航程与速度的主约束</text>
+                <text x="536" y="94" font-size="10">3</text>
+                <text x="536" y="110" font-size="8.5">下降</text>
+              </g>
+              <text x="596" y="94" font-size="10" fill="#3d454e" text-anchor="middle">2</text>
+              <text x="596" y="110" font-size="8.5" fill="#3d454e" text-anchor="middle">备份</text>
+              <!-- 标注 -->
+              <g stroke="#9aa4ae" stroke-dasharray="3 3">
+                <line x1="500" y1="70" x2="500" y2="52"/>
+              </g>
+              <text x="500" y="46" font-size="10" fill="#6d7783" text-anchor="middle">20 min 处：已飞完 30 km</text>
+              <text x="20" y="200" font-size="11" fill="#3d454e">结论：爬升 2 + 巡航 18 + 下降 3 + 备份 2 = 25 min，与公布航时严格闭合，说明三个参数来自同一次任务剖面。</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>图 3-1</b>　时间预算与航程闭合。若把备份余量计入，实际可用巡航时间为 20 分钟，恰好飞完 30 公里。
+        <span class="fig-src">数据：官网公布值；分段时长为本文按典型观光航线剖面分配。</span></figcaption>
+      </figure>
+
+      <p>闭合的意义在于「一致」。如果厂商分别吹嘘三个数字，它们几乎不可能恰好拼成一个完整的任务剖面。三数严丝合缝，说明这组参数是真实试飞剖面的记录。</p>
+
+      <div class="note">
+        <span class="lbl">顺带得到的一个推论</span>
+        <p>平均地速只有 72 km/h（30 km / 25 min），远低于 90 km/h 的平飞速度。这个差额全部消耗在垂直起降与加减速段——对多旋翼而言，垂直段不仅慢，而且耗电最高。这解释了为什么缩短航程不能线性延长航时，也解释了为什么「换电」比「快充」更接近真实运营需求。</p>
+      </div>
+    </section>
+
+    <section id="bench">
+      <h2><span class="num">03</span>横向对标</h2>
+      <p>把 EH216-S 放回同级机型中，看它的位置是否异常。下表只对比可公开获取的参数，缺口处留空而不推测。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 3-2</b>　四款载人 eVTOL 关键参数对比</caption>
+          <thead>
+            <tr>
+              <th style="width:20%">项目</th><th>EH216-S</th><th>Joby S4</th><th>Archer Midnight</th><th>小鹏汇天 X3-F</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">构型</td><td>8 轴 16 旋翼共轴</td><td>倾转旋翼（6 副可倾转）</td><td>复合翼（12 桨，6 副可倾转）</td><td>6 轴 6 桨双涵道</td></tr>
+            <tr><td class="em">座级</td><td>2 名乘员，无驾驶员</td><td>1 名飞行员 + 4 名乘客</td><td>1 名飞行员 + 4 名乘客</td><td>2 名乘员，可选驾驶</td></tr>
+            <tr><td class="em">最大速度</td><td>130 km/h</td><td>约 322 km/h</td><td>约 241 km/h</td><td>未公开</td></tr>
+            <tr><td class="em">航程</td><td>30 km</td><td>约 161 km</td><td>约 161 km（典型任务约 32 km）</td><td>未公开（陆行体增程补能）</td></tr>
+            <tr><td class="em">适航状态</td><td><strong>TC / AC / PC / OC 齐全</strong></td><td>FAA 审定第五阶段，未取证</td><td>FAA 审定第四阶段，未取证</td><td>TC 与 PC 申请已受理</td></tr>
+            <tr><td class="em">商业运营</td><td>2026 年 3 月起售票观光</td><td>目标 2026 年载客</td><td>目标 2026 年启动</td><td>2026 年 Q4 小批量交付</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">数据来源：亿航官网与财报；Joby、Archer 官网与公开报道；小鹏汇天官网与行业报道。空白表示公开渠道未见可靠数据，本文不作推测。</p>
+
+      <div class="note warn">
+        <span class="lbl">对标后必须承认的差距</span>
+        <p>在速度与航程两个维度上，EH216-S 落后同级机型一个量级：30 km 对 161 km，130 km/h 对 322 km/h。这不是产品缺陷，而是构型代价——多旋翼没有机翼提供升力。它换回来的是取证进度领先两到三年，以及在 2 座、短途、低频场景下可接受的成本结构。<strong>评价它，必须用「取证领先」而不是「性能领先」的尺子。</strong></p>
+      </div>
+    </section>
+
+    <section id="trl">
+      <h2><span class="num">04</span>成熟度判定</h2>
+      <p>技术成熟度（TRL）按分系统评估，避免用整机一个数字掩盖差异。判定依据是该分系统是否已在真实运行环境中经受过验证。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 3-3</b>　分系统技术成熟度判定</caption>
+          <thead><tr><th style="width:30%">分系统</th><th style="width:12%">TRL</th><th>判定依据</th></tr></thead>
+          <tbody>
+            <tr><td>机体结构与复材工艺</td><td class="num em">9</td><td>已批产交付 400 架以上，实际商业运行中</td></tr>
+            <tr><td>分布式电推进（电机 / 电调 / 桨）</td><td class="num em">9</td><td>同上，且失效模式已在运行中统计</td></tr>
+            <tr><td>三余度飞控与表决</td><td class="num em">8</td><td>已通过审定并运行，但缺长时间高密度运营数据</td></tr>
+            <tr><td>锂电池能源系统</td><td class="num em">8</td><td>满足适航要求，但能量密度已接近化学体系上限</td></tr>
+            <tr><td>自主飞行与地面站调度</td><td class="num em">7</td><td>单机自主成熟，多机高密度协同尚未进入常态运行</td></tr>
+            <tr><td>固态电池</td><td class="num em">4–5</td><td>单机验证飞行完成，未进入量产装机</td></tr>
+            <tr><td>城市低空航路与空管融合</td><td class="num em">4</td><td>依赖外部体系，仍处试点</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>整体判断：<strong>「飞行器本身」已达可运行状态，「运行体系」尚未成熟。</strong>这一区分很重要——它意味着未来三年的主要风险不在产品，而在空域、起降场与运营规范。</p>
+    </section>
+
+    <section id="bottle">
+      <h2><span class="num">05</span>技术瓶颈在哪一层</h2>
+      <p>常见说法是「续航不行」。这个判断太粗，无法指导行动。按约束的硬度排序，真正的瓶颈有三层。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 3-4</b>　三层瓶颈及其破除条件</caption>
+          <thead><tr><th style="width:16%">层级</th><th style="width:26%">瓶颈</th><th style="width:26%">量化表现</th><th>破除条件</th></tr></thead>
+          <tbody>
+            <tr><td class="em">第一层<br>能量</td><td>电池系统比能量约 200 Wh/kg</td><td>200 kg 电池仅支撑 40 kWh、25 min</td><td>比能量提升至 350–400 Wh/kg，或采用混动增程</td></tr>
+            <tr><td class="em">第二层<br>气动</td><td>无翼面，全程靠旋翼产生升力</td><td>巡航功率约为悬停的 80%，无极小功率巡航状态</td><td>改变构型（复合翼 / 倾转旋翼），代价是取证重置</td></tr>
+            <tr><td class="em">第三层<br>运行</td><td>补能时间 120 min，远长于飞行 25 min</td><td>占空比约 1 : 4.8，单机日利用率被锁死</td><td>换电方案、快充能力、或机队规模摊薄</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>值得注意的是第三层。它既不是材料问题也不是气动问题，却对商业可行性的杀伤力最大——因为飞机可以等电池，运营不能等。第 05 章会把它算成一个具体的成本数字。</p>
+
+      <div class="note key">
+        <span class="lbl">对「换构型」的判断</span>
+        <p>亿航在 2025 年 10 月发布 VT35，设计续航约 200 公里，正是对第二层瓶颈的回应。但换构型意味着重新走一遍审定流程，此前积累的审定证据不能直接迁移。这是一条正确的路，但也是一条要再花数年的路。</p>
+      </div>
+    </section>
+
+    <section id="plan">
+      <h2><span class="num">06</span>若要验证：一份可执行的试飞大纲</h2>
+      <p>本文无法实测，但可以给出验证方案。以下五项构成一份最小可信的验证计划，用于检验本文的关键推断。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 3-5</b>　验证计划：假设、方法、判据</caption>
+          <thead><tr><th style="width:8%">编号</th><th style="width:28%">待验证假设</th><th style="width:34%">方法</th><th>通过判据</th></tr></thead>
+          <tbody>
+            <tr><td class="em">V1</td><td>电池系统比能量约 200 Wh/kg</td><td>称重单组电池并读取铭牌容量</td><td>实测值落在 180–220 Wh/kg</td></tr>
+            <tr><td class="em">V2</td><td>典型剖面单架次耗电约 40 kWh</td><td>满电起飞，按 30 km 观光航线飞行后回读剩余电量</td><td>耗电量 36–45 kWh</td></tr>
+            <tr><td class="em">V3</td><td>充电 120 min 为 0→100% 还是 20→95%</td><td>记录完整充电曲线与 SOC 区间</td><td>明确充放电窗口，用于修正占空比</td></tr>
+            <tr><td class="em">V4</td><td>单机日架次上限约 3 班</td><td>在真实运营点记录连续 30 天的架次与周转时间</td><td>日均架次 ≤ 4</td></tr>
+            <tr><td class="em">V5</td><td>单副旋翼失效后可控</td><td>地面台架注入单电机失效，观察姿态与高度保持能力</td><td>可维持可控飞行并安全着陆</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>V1 至 V4 只需一次现场访问即可完成，V5 需要台架条件。这五项如果全部通过，本文第 03、05 两章的结论即被确证；若有任一项偏离，相应结论需按实测值修正。</p>
+    </section>
+
+    <section id="verdict">
+      <h2><span class="num">07</span>本章判决</h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">判决 1</span>
+          <h4>技术可行性成立，但限于既定场景</h4>
+          <p>参数自洽、量级合理、已量产运行。它作为「10–30 公里短途载人飞行器」在技术上是可行的，作为「城市通勤飞行器」在技术上不成立。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 2</span>
+          <h4>领先来自取证，不来自性能</h4>
+          <p>与 Joby、Archer 相比，速度与航程落后一个量级，取证进度领先两到三年。用性能尺子评价它，必然得出错误结论。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 3</span>
+          <h4>最硬的技术瓶颈不在天上，在地面</h4>
+          <p>补能时间造成的低占空比，比电池能量密度更直接地压缩了商业空间。这是第 05 章的核心线索。</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager">
+      <a href="02-system.html"><span class="p-d">上一章</span><span class="p-t">← 02 系统分解与构型</span></a>
+      <a href="04-scenario.html" class="next"><span class="p-d">下一章</span><span class="p-t">04 应用场景与运行条件 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span><a href="07-evidence.html">证据与引用</a></span>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

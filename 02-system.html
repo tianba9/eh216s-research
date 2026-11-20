@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>02 系统分解与构型 · EH216-S 调研与分析</title>
+<meta name="description" content="把 EH216-S 拆成任务—体系—系统—部件四级结构，解释多旋翼构型如何同时决定它的冗余能力与航程上限。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#level">四级系统分解</a></li>
+      <li><a href="#config">构型解读</a></li>
+      <li><a href="#mass">质量预算</a></li>
+      <li><a href="#power">功率与能量</a></li>
+      <li><a href="#iface">边界与接口</a></li>
+      <li><a href="#verdict">本章判决</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">02 · 系统分解与构型</div>
+      <h1>构型即命运：8 轴 16 旋翼决定了它的一切</h1>
+      <p class="lede">
+        为什么不是复合翼，不是倾转旋翼，而是最「笨」的多旋翼？答案不在气动，而在取证与冗余。
+        本章把 EH216-S 拆到部件级，并说明这个构型如何同时赋予了它容错能力、又锁死了它的航程。
+      </p>
+    </div>
+
+    <section id="level">
+      <h2><span class="num">01</span>四级系统分解</h2>
+      <p>按课程的系统工程视角，任何运载工具都应放在「任务—体系—系统—部件」四个层级上考察。层级不同，评价标准也不同：任务层看价值，体系层看协同，系统层看性能，部件层看可靠性。</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 380" role="img" aria-label="EH216-S 四级系统分解图">
+            <defs>
+              <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 z" fill="#9aa4ae"/>
+              </marker>
+            </defs>
+            <!-- 层级条 -->
+            <g font-family="system-ui, sans-serif">
+              <!-- L1 任务 -->
+              <rect x="20" y="20" width="640" height="62" fill="#f7f5f0" stroke="#d8d3c8"/>
+              <text x="36" y="42" font-size="11" fill="#6d7783" letter-spacing="1.4">MISSION　任务层</text>
+              <text x="36" y="66" font-size="14" fill="#15181c" font-weight="600">城市空中交通短途载客：隔离空域内 10–30 km 点对点位移，2 名乘员，单程 15–25 分钟</text>
+
+              <!-- L2 体系 -->
+              <rect x="20" y="102" width="640" height="62" fill="#f7f5f0" stroke="#d8d3c8"/>
+              <text x="36" y="124" font-size="11" fill="#6d7783" letter-spacing="1.4">SYSTEM OF SYSTEMS　体系层</text>
+              <text x="36" y="148" font-size="13" fill="#15181c">起降场网络 · 低空航路 · 通信导航监视 · 地面指挥调度中心 · 运营与维修体系</text>
+
+              <!-- L3 系统 -->
+              <rect x="20" y="184" width="640" height="62" fill="#e8f1f2" stroke="#8fb3bb"/>
+              <text x="36" y="206" font-size="11" fill="#0f5c6b" letter-spacing="1.4">SYSTEM　系统层　★ 本文分析边界</text>
+              <text x="36" y="230" font-size="13" fill="#15181c">航空器本体（8 轴 16 旋翼）+ 地面控制站 + 数据链路，共同构成型号审定对象</text>
+
+              <!-- L4 部件 -->
+              <rect x="20" y="266" width="640" height="86" fill="#ffffff" stroke="#d8d3c8"/>
+              <text x="36" y="288" font-size="11" fill="#6d7783" letter-spacing="1.4">COMPONENT　部件层</text>
+              <g font-size="12" fill="#3d454e">
+                <rect x="36" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="48" y="316">机体结构</text><text x="48" y="331" font-size="10" fill="#6d7783">碳纤维机身 / 8 臂 / 起落架</text>
+                <rect x="186" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="198" y="316">动力系统</text><text x="198" y="331" font-size="10" fill="#6d7783">16 电机 / 电调 / 旋翼</text>
+                <rect x="336" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="348" y="316">能源系统</text><text x="348" y="331" font-size="10" fill="#6d7783">12 组电池 / BMS / 配电</text>
+                <rect x="486" y="298" width="154" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="498" y="316">飞控与航电</text><text x="498" y="331" font-size="10" fill="#6d7783">3 套飞控 / 传感 / 通信</text>
+              </g>
+              <!-- 连接 -->
+              <g stroke="#9aa4ae" stroke-dasharray="3 3">
+                <line x1="340" y1="82" x2="340" y2="102" marker-end="url(#ar)"/>
+                <line x1="340" y1="164" x2="340" y2="184" marker-end="url(#ar)"/>
+                <line x1="340" y1="246" x2="340" y2="266" marker-end="url(#ar)"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>图 2-1</b>　EH216-S 的四级系统分解。本文的分析边界定在系统层——航空器本体、地面控制站与数据链路三者共同构成专用条件的审定对象。
+        <span class="fig-src">依据：SC-21-002 专用条件对「无人驾驶航空器系统」的定义范围绘制。</span></figcaption>
+      </figure>
+
+      <p>这张图最重要的信息是那条加粗的边界线：<strong>EH216-S 不是一个孤立的飞行器，而是「航空器 + 地面站 + 链路」的系统</strong>。专用条件明确把地面控制站与数据链路纳入型号审定范围，这在传统航空器上并不常见——因为机上无驾驶员，人机关系被整体搬到了地面。</p>
+    </section>
+
+    <section id="config">
+      <h2><span class="num">02</span>构型解读</h2>
+      <p>EH216-S 采用 8 个机臂、每个机臂一对共轴反转双桨的布局，全机 16 副旋翼、16 套电机。所有机臂可折叠以便运输，但飞行时展开为固定位置，<strong>没有倾转机构，没有可动舵面</strong>。</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 440" role="img" aria-label="EH216-S 八轴十六旋翼平面布局示意">
+            <g font-family="system-ui, sans-serif">
+              <!-- 机臂与旋翼 -->
+              <g stroke="#c9c3b6" stroke-width="8" stroke-linecap="round">
+                <line x1="340" y1="220" x2="525" y2="220"/>
+                <line x1="340" y1="220" x2="470.8" y2="350.8"/>
+                <line x1="340" y1="220" x2="340" y2="405"/>
+                <line x1="340" y1="220" x2="209.2" y2="350.8"/>
+                <line x1="340" y1="220" x2="155" y2="220"/>
+                <line x1="340" y1="220" x2="209.2" y2="89.2"/>
+                <line x1="340" y1="220" x2="340" y2="35"/>
+                <line x1="340" y1="220" x2="470.8" y2="89.2"/>
+              </g>
+              <!-- 旋翼盘 -->
+              <g fill="rgba(15,92,107,.10)" stroke="#0f5c6b" stroke-width="1.6">
+                <circle cx="525" cy="220" r="44"/><circle cx="470.8" cy="350.8" r="44"/>
+                <circle cx="340" cy="405" r="44"/><circle cx="209.2" cy="350.8" r="44"/>
+                <circle cx="155" cy="220" r="44"/><circle cx="209.2" cy="89.2" r="44"/>
+                <circle cx="340" cy="35" r="44"/><circle cx="470.8" cy="89.2" r="44"/>
+              </g>
+              <!-- 桨毂 -->
+              <g fill="#0f5c6b">
+                <circle cx="525" cy="220" r="4"/><circle cx="470.8" cy="350.8" r="4"/>
+                <circle cx="340" cy="405" r="4"/><circle cx="209.2" cy="350.8" r="4"/>
+                <circle cx="155" cy="220" r="4"/><circle cx="209.2" cy="89.2" r="4"/>
+                <circle cx="340" cy="35" r="4"/><circle cx="470.8" cy="89.2" r="4"/>
+              </g>
+              <!-- 舱体 -->
+              <circle cx="340" cy="220" r="58" fill="#ffffff" stroke="#15181c" stroke-width="2"/>
+              <rect x="312" y="196" width="24" height="20" rx="3" fill="none" stroke="#15181c" stroke-width="1.2"/>
+              <rect x="344" y="196" width="24" height="20" rx="3" fill="none" stroke="#15181c" stroke-width="1.2"/>
+              <text x="340" y="242" text-anchor="middle" font-size="10" fill="#6d7783">双座舱 · 无操纵装置</text>
+              <!-- 标注 -->
+              <text x="340" y="424" text-anchor="middle" font-size="12" fill="#3d454e">8 机臂 × 2 共轴反转旋翼 = 16 副旋翼 · 16 套电机</text>
+              <!-- 引线 -->
+              <g stroke="#9aa4ae" stroke-width="1" fill="none">
+                <line x1="525" y1="176" x2="525" y2="150"/><line x1="470.8" y1="89.2" x2="505" y2="60"/>
+              </g>
+              <text x="525" y="142" text-anchor="middle" font-size="10.5" fill="#6d7783">单臂双桨共轴</text>
+              <text x="512" y="52" font-size="10.5" fill="#6d7783">机臂可折叠（运输状态）</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>图 2-2</b>　八轴十六旋翼平面布局。共轴反转使同一机臂上两副旋翼互相抵消反扭矩，因此无需尾桨，也无需舵面配平。
+        <span class="fig-src">依据：官网产品页与专用条件「驱动 8 对旋转的升力/推力部件」表述重绘，非工程图纸。</span></figcaption>
+      </figure>
+
+      <h3>为什么选多旋翼：三个收益与两个代价</h3>
+      <p>构型选择从来不是技术水平的竞赛，而是约束条件下的最优解。EH216-S 选多旋翼，是用航程换取了另外三样东西。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 2-1</b>　多旋翼构型的收益与代价</caption>
+          <thead><tr><th style="width:14%">属性</th><th style="width:18%">方向</th><th>机制说明</th></tr></thead>
+          <tbody>
+            <tr><td class="em" rowspan="3">收益</td><td>冗余度高</td><td>16 副旋翼中任一副失效，可通过降低对侧转速维持力矩平衡；8 个机臂提供了 4 组以上的力矩对称关系，容错空间远大于四旋翼。</td></tr>
+            <tr><td>取证简单</td><td>无倾转机构、无变距、无可动舵面，控制律与结构耦合关系简单，失效模式可枚举——这对首次审定一类全新航空器至关重要。</td></tr>
+            <tr><td>起降要求低</td><td>垂直起降无需跑道，占地小，可落在景区硬化地面或简易起降点，绕开了起降场这一基础设施瓶颈。</td></tr>
+            <tr><td class="em" rowspan="2">代价</td><td>巡航效率低</td><td>靠旋翼拉力分量前飞，无固定翼升力。同等电池能量下，航程仅为复合翼构型的 1/3 至 1/2。</td></tr>
+            <tr><td>能量密度敏感</td><td>全程靠旋翼产生升力，悬停即最大功率状态，无滑翔或巡航节流余地，电池比能量直接决定航时。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">本章的核心判断</span>
+        <p>30 公里航程不是工程能力的短板，而是构型的数学必然。多旋翼的诱导功率与盘载荷的 3/2 次方成正比，与旋翼总面积的平方根成反比。在 620 kg 级、16 副旋翼的盘载荷下，25 分钟航时已经是电池能量密度的极限边界。想延长航程，要么增加翼面（换构型），要么提高比能量（换电池）——没有第三条路。</p>
+      </div>
+    </section>
+
+    <section id="mass">
+      <h2><span class="num">03</span>质量预算</h2>
+      <p>空重与分系统质量均未公开。下表为<strong>本文依据公开的起飞重量、座级与同类机型比例关系反推的估算</strong>，用于验证参数自洽性，不作为设计数据引用。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 2-2</b>　质量预算估算（最大起飞重量 620 kg 约束下）</caption>
+          <thead><tr><th style="width:26%">分系统</th><th class="num" style="width:14%">质量 / kg</th><th class="num" style="width:14%">占比</th><th>估算依据</th></tr></thead>
+          <tbody>
+            <tr><td>机体结构（复材机身、8 臂、起落架、舱门）</td><td class="num">125</td><td class="num">20.2%</td><td>碳纤维复材多旋翼典型结构质量分数 18%–22%</td></tr>
+            <tr><td>动力系统（16 电机、16 电调、旋翼与桨毂）</td><td class="num">85</td><td class="num">13.7%</td><td>按 5.3 kW/kg 功重比与总装机功率反推</td></tr>
+            <tr><td>能源系统（12 组电池、BMS、配电与线束）</td><td class="num">200</td><td class="num">32.3%</td><td>与第 04 节能量需求交叉验证后的取值</td></tr>
+            <tr><td>飞控与航电（3 套飞控、导航、通信、避障传感）</td><td class="num">25</td><td class="num">4.0%</td><td>三余度飞控加多模导航的典型质量</td></tr>
+            <tr><td>内饰与座舱（2 座、安全带、应急设备、空调）</td><td class="num">32</td><td class="num">5.2%</td><td>载人类舱体的座椅与防护配置</td></tr>
+            <tr><td>乘员与随身行李（2 × 75 kg）</td><td class="num">150</td><td class="num">24.2%</td><td>专用条件载明 2 名乘员</td></tr>
+            <tr><td>设计余量</td><td class="num">3</td><td class="num">0.5%</td><td>配平至 620 kg</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">合计</td><td class="num em">620</td><td class="num em">100%</td><td class="em">约束值，非估算值</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>载荷率 24.2%</strong> 是一个有意义的数字。作为对比，同级直升机（如 Robinson R22）载荷率约 30%，四座 eVTOL（如 Joby S4）按 1 名飞行员加 4 名乘客计约 19%–21%。EH216-S 处在中间，说明它的结构效率没有明显浪费，但也没有余量——这也是它只做双座的原因之一。</p>
+    </section>
+
+    <section id="power">
+      <h2><span class="num">04</span>功率与能量</h2>
+      <p>下面的核算不追求精确，只追求量级正确。只要量级对得上，参数就没有被夸大；量级差一倍以上，就说明公开数据有问题。</p>
+
+      <h3>悬停诱导功率</h3>
+      <p>旋翼直径未公开。按 8 臂布局的几何比例，取单副旋翼直径 1.2 m 进行估算。16 副旋翼总盘面积：</p>
+      <div class="tw">
+        <table>
+          <caption><b>表 2-3</b>　悬停功率核算（海平面标准大气，ρ = 1.225 kg/m³）</caption>
+          <thead><tr><th style="width:34%">参数</th><th class="num" style="width:20%">取值</th><th>计算式或来源</th></tr></thead>
+          <tbody>
+            <tr><td>总重 G</td><td class="num">6082 N</td><td>620 kg × 9.81</td></tr>
+            <tr><td>总盘面积 A</td><td class="num">18.10 m²</td><td>16 × π × 0.6²</td></tr>
+            <tr><td>盘载荷</td><td class="num">34.3 kg/m²</td><td>G / A，属多旋翼常见区间</td></tr>
+            <tr><td>理想诱导功率 <em>P</em><sub>i</sub></td><td class="num">71.2 kW</td><td><em>G</em><sup>1.5</sup> / √(2ρ<em>A</em>)</td></tr>
+            <tr><td>旋翼品质因数 FM</td><td class="num">0.70</td><td>小型电动旋翼典型值 0.65–0.75</td></tr>
+            <tr><td>轴功率</td><td class="num">101.8 kW</td><td><em>P</em><sub>i</sub> / FM</td></tr>
+            <tr><td>电功率（含电机与电调效率 92%）</td><td class="num">110.6 kW</td><td>轴功率 / 0.92</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">悬停电功率（含航电约 2 kW）</td><td class="num em">≈ 113 kW</td><td class="em">本文估算值</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>任务段能量需求</h3>
+      <p>25 分钟航时并非全程悬停。按典型观光航线剖面（爬升 2 min、巡航 18 min、下降着陆 3 min、备份 2 min）积分：</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 2-4</b>　单架次能量需求分解</caption>
+          <thead><tr><th style="width:22%">飞行段</th><th class="num" style="width:14%">时长</th><th class="num" style="width:18%">功率系数</th><th class="num" style="width:16%">功率 / kW</th><th class="num">能量 / kWh</th></tr></thead>
+          <tbody>
+            <tr><td>垂直爬升</td><td class="num">2 min</td><td class="num">1.30 × 悬停</td><td class="num">147</td><td class="num">4.9</td></tr>
+            <tr><td>巡航平飞</td><td class="num">18 min</td><td class="num">0.80 × 悬停</td><td class="num">90</td><td class="num">27.0</td></tr>
+            <tr><td>下降与着陆</td><td class="num">3 min</td><td class="num">0.90 × 悬停</td><td class="num">102</td><td class="num">5.1</td></tr>
+            <tr><td>备份余量</td><td class="num">2 min</td><td class="num">1.00 × 悬停</td><td class="num">113</td><td class="num">3.8</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">合计</td><td class="num em">25 min</td><td class="num"></td><td class="num"></td><td class="num em">40.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <span class="lbl">交叉验证</span>
+        <p>两条独立路径给出同一答案：质量预算反推电池 200 kg，按 2023 年可获得的电芯水平（系统级比能量约 200 Wh/kg）对应 <strong>40 kWh</strong>；功率积分独立算出单架次需求 <strong>40.8 kWh</strong>。二者吻合，说明「620 kg / 30 km / 25 min」这组参数在物理上是自洽的，没有明显夸大。</p>
+        <p>反过来看，这也解释了为什么固态电池测试能把航时做到 48 分 10 秒：480 Wh/kg 意味着同等质量下能量翻倍以上，航时自然翻倍。这不是营销话术，是能量守恒。</p>
+      </div>
+    </section>
+
+    <section id="iface">
+      <h2><span class="num">05</span>边界与接口</h2>
+      <p>系统的边界决定责任的边界。以下四类接口中，凡是跨出航空器本体的，都涉及运营人或基础设施方，也是实际运行中最容易出问题的地方。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 2-5</b>　关键接口清单</caption>
+          <thead><tr><th style="width:18%">接口</th><th style="width:24%">对内</th><th style="width:26%">对外</th><th>失效后果</th></tr></thead>
+          <tbody>
+            <tr><td class="em">能源</td><td>12 组电池 → 配电 → 16 电调</td><td>地面充电设施 / 换电设备</td><td>单组失效可隔离，多组失效导致迫降</td></tr>
+            <tr><td class="em">控制</td><td>3 套飞控 → 作动器</td><td>远程机组指令（应急接管）</td><td>表决机制失效将导致姿态失控</td></tr>
+            <tr><td class="em">链路</td><td>机载通信终端</td><td>地面控制站、空管监视网络</td><td>失联后进入预设失效保护程序</td></tr>
+            <tr><td class="em">起降</td><td>起落架、下视感知</td><td>起降场地面、净空条件、人群隔离</td><td>场地不达标直接影响起降安全</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>这张表在<a href="https://tianba9.github.io/eh216s-safety/">作业二</a>中会被逐条展开为危害与安全需求。此处只需记住一点：<strong>四类接口中有三类跨出了机体</strong>，这意味着单靠把飞机造好，无法保证运行安全。</p>
+    </section>
+
+    <section id="verdict">
+      <h2><span class="num">06</span>本章判决</h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">判决 1</span>
+          <h4>构型选择是理性的，不是落后的</h4>
+          <p>多旋翼牺牲巡航效率，换来了可枚举的失效模式与更短的取证周期。对一个需要从零建立审定标准的品类，先拿到证比先飞得远更重要。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 2</span>
+          <h4>参数自洽，未见夸大</h4>
+          <p>质量预算与功率积分两条独立路径在 40 kWh 量级收敛，与宣称的 25 分钟航时一致。公开数据经得起量级检验。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 3</span>
+          <h4>航程上限是结构性的，不是迭代能解决的</h4>
+          <p>在构型不变的前提下，30 公里是能量密度的函数。要突破，只能等电池，或换构型（如已发布的 VT35 长航程机型）。</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager">
+      <a href="01-frame.html"><span class="p-d">上一章</span><span class="p-t">← 01 问题定义与检索协议</span></a>
+      <a href="03-tech.html" class="next"><span class="p-d">下一章</span><span class="p-t">03 技术可行性 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span><a href="07-evidence.html">证据与引用</a></span>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

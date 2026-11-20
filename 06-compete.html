@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>06 竞品与综合判断 · EH216-S 调研与分析</title>
+<meta name="description" content="把 EH216-S 放进全球载人 eVTOL 竞争格局，用取证进度与航程两个维度定位，并给出风险清单与综合判断。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#map">竞争格局</a></li>
+      <li><a href="#score">五维对比</a></li>
+      <li><a href="#moat">护城河是否成立</a></li>
+      <li><a href="#risk">风险清单</a></li>
+      <li><a href="#final">综合判断</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">06 · 竞品与综合判断</div>
+      <h1>取得证与飞得远，是一道单选题</h1>
+      <p class="lede">
+        载人 eVTOL 行业存在一条真实的取舍曲线：构型越激进，性能越好，取证越慢。EH216-S 站在曲线的左下端——取证最前、性能最弱。
+        理解这条曲线，才能判断它的领先能维持多久。
+      </p>
+    </div>
+
+    <section id="map">
+      <h2><span class="num">01</span>竞争格局</h2>
+      <p>横轴是按审定阶段量化的取证进度，纵轴是设计航程。两者并不独立：倾转旋翼与复合翼换来航程，代价是审定复杂度。</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 400" role="img" aria-label="取证进度与航程的竞争定位">
+            <g font-family="system-ui, sans-serif">
+              <!-- 轴 -->
+              <line x1="70" y1="330" x2="650" y2="330" stroke="#15181c"/>
+              <line x1="70" y1="40" x2="70" y2="330" stroke="#15181c"/>
+              <g font-size="9.5" fill="#6d7783">
+                <text x="70" y="348">未受理</text><text x="190" y="348">已受理</text>
+                <text x="310" y="348">符合性验证</text><text x="440" y="348">最终审定</text><text x="560" y="348">已取证</text>
+              </g>
+              <text x="360" y="374" text-anchor="middle" font-size="11" fill="#3d454e">适航审定进度　→</text>
+              <text x="52" y="185" text-anchor="middle" font-size="11" fill="#3d454e" transform="rotate(-90 52 185)">设计航程　→</text>
+              <g font-size="9.5" fill="#6d7783" text-anchor="end">
+                <text x="64" y="300">30 km</text><text x="64" y="238">80 km</text><text x="64" y="176">160 km</text><text x="64" y="114">240 km</text>
+              </g>
+
+              <!-- 趋势提示线 -->
+              <path d="M600,290 C520,250 460,190 430,150" fill="none" stroke="#d8d3c8" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text x="470" y="126" font-size="9.5" fill="#9aa4ae">构型激进程度递增</text>
+
+              <!-- 数据点 -->
+              <g>
+                <circle cx="590" cy="292" r="9" fill="#0f5c6b"/>
+                <text x="590" y="272" font-size="11.5" fill="#0f5c6b" text-anchor="middle" font-weight="600">EH216-S</text>
+                <text x="590" y="312" font-size="9.5" fill="#6d7783" text-anchor="middle">四证齐全 · 30 km</text>
+
+                <circle cx="470" cy="150" r="8" fill="#a8500c"/>
+                <text x="484" y="146" font-size="11.5" fill="#a8500c">Joby S4</text>
+                <text x="484" y="161" font-size="9.5" fill="#6d7783">FAA 第五阶段</text>
+
+                <circle cx="400" cy="156" r="8" fill="#a8500c" opacity=".72"/>
+                <text x="414" y="182" font-size="11.5" fill="#a8500c">Archer Midnight</text>
+                <text x="414" y="197" font-size="9.5" fill="#6d7783">FAA 第四阶段</text>
+
+                <circle cx="215" cy="255" r="7" fill="#6d7783"/>
+                <text x="229" y="251" font-size="11.5" fill="#4a545f">小鹏汇天 X3-F</text>
+                <text x="229" y="266" font-size="9.5" fill="#6d7783">TC / PC 受理</text>
+
+                <circle cx="105" cy="120" r="7" fill="#9aa4ae"/>
+                <text x="119" y="116" font-size="11.5" fill="#6d7783">亿航 VT35</text>
+                <text x="119" y="131" font-size="9.5" fill="#9aa4ae">已发布 · 约 200 km</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>图 6-1</b>　取证进度与航程的竞争定位。EH216-S 位于右下角：取证最前、航程最短，这是多旋翼构型的必然位置，而非能力缺陷。
+        <span class="fig-src">取证进度按各国民航当局公开阶段划分，跨国民航体系不同，仅作相对位置参考。</span></figcaption>
+      </figure>
+
+      <p>这张图解释了行业的真正竞争逻辑：<strong>没有一款产品能同时占据右上角。</strong> Joby 与 Archer 用航程换审定周期，EH216-S 用航程换取证速度，小鹏汇天用分体式设计把适航范围压缩到飞行体、换取量产速度。三条路线各有代价。</p>
+    </section>
+
+    <section id="score">
+      <h2><span class="num">02</span>五维对比</h2>
+      <p>为使对比可操作，把竞争要素拆成五项打分。评分标准与第 04 章一致，5 分制，分值越高越有利。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 6-1</b>　四款产品的五维对比</caption>
+          <thead>
+            <tr><th style="width:20%">维度</th><th class="num">EH216-S</th><th class="num">Joby S4</th><th class="num">Archer Midnight</th><th class="num">小鹏汇天 X3-F</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">取证进度</td><td class="num em">5</td><td class="num">3</td><td class="num">3</td><td class="num">2</td></tr>
+            <tr><td class="em">性能（航程 / 速度）</td><td class="num">1</td><td class="num">5</td><td class="num">4</td><td class="num">2</td></tr>
+            <tr><td class="em">运力密度（座级 × 架次）</td><td class="num">2</td><td class="num">5</td><td class="num">5</td><td class="num">3</td></tr>
+            <tr><td class="em">成本竞争力</td><td class="num">3</td><td class="num">2</td><td class="num">3</td><td class="num">5</td></tr>
+            <tr><td class="em">场景独特性</td><td class="num">4</td><td class="num">3</td><td class="num">3</td><td class="num">4</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">合计</td><td class="num em">15</td><td class="num em">18</td><td class="num em">18</td><td class="num em">16</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">评分说明：取证进度按公开阶段折算；运力密度综合座级与日架次（Joby 与 Archer 为 4 座级、可高频周转）；成本竞争力含购机价与单座成本；场景独特性指是否存在替代方案。</p>
+
+      <p>总分上 EH216-S 并不领先，甚至略低。但这个总分具有误导性——<strong>它掩盖了一个事实：在「当前可运营」这一子集里，EH216-S 是唯一的选择。</strong>其他三款尚未取得型号合格证，无论评分多高，都无法在 2026 年提供服务。</p>
+    </section>
+
+    <section id="moat">
+      <h2><span class="num">03</span>护城河是否成立</h2>
+      <p>取证领先是否构成可持续优势，取决于三个条件。逐条检验后，结论是有条件成立。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 6-2</b>　护城河成立条件的检验</caption>
+          <thead><tr><th style="width:24%">条件</th><th style="width:36%">检验结果</th><th>判断</th></tr></thead>
+          <tbody>
+            <tr><td class="em">审定的可复制性低</td><td>新构型需重新建立审定基础，专用条件仅适用于该型号。Joby、Archer 走各自路径，不能引用 EH216-S 的证据。</td><td><strong>成立。</strong>审定证据不可迁移。</td></tr>
+            <tr><td class="em">运行数据可积累为壁垒</td><td>9 万架次运行数据可支撑可靠性论证与保险定价，后来者需重新积累。</td><td><strong>部分成立。</strong>数据价值真实，但领先幅度随时间收敛。</td></tr>
+            <tr><td class="em">技术路线不会被绕过</td><td>若复合翼或倾转旋翼在 2028 年前取得 TC，其航程优势将直接覆盖 EH216-S 的场景。</td><td><strong>不成立。</strong>这是主要威胁。</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>综合判断：<strong>护城河存在，但宽度约三到四年。</strong> 它的作用不是永久领先，而是换到一张「先进入市场、先积累运营数据、先建立客户关系」的入场券。窗口期内的关键动作不是提性能，而是把运营网络与客户锁定下来——这与它 2026 年的战略重心（推进常态化运营、扩大海外布局）是吻合的。</p>
+    </section>
+
+    <section id="risk">
+      <h2><span class="num">04</span>风险清单</h2>
+      <p>以下五项风险按「发生概率 × 影响程度」排序。每项都给出可观测的触发信号，便于后续跟踪。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 6-3</b>　主要风险、触发信号与影响</caption>
+          <thead>
+            <tr><th style="width:8%">序</th><th style="width:22%">风险</th><th style="width:34%">可观测触发信号</th><th>影响</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">R1</td><td>订单转化为收入的速度不足</td><td>连续两个季度交付量低于 40 架；应收账款周转天数上升</td><td>现金流承压，产能闲置</td></tr>
+            <tr><td class="em">R2</td><td>运营端持续无法盈利</td><td>OC 持证运营商缩减航线或停运</td><td>「卖设备」模式失去下游支撑</td></tr>
+            <tr><td class="em">R3</td><td>发生一起监管确认的运行事故</td><td>民航局发布事件通报或暂停运行</td><td>公众接受度与订单同步下挫，影响全行业</td></tr>
+            <tr><td class="em">R4</td><td>竞品在 2027–2028 年取得 TC</td><td>Joby 或 Archer 获得 FAA 型号合格证</td><td>航程优势直接侵蚀短途接驳市场</td></tr>
+            <tr><td class="em">R5</td><td>地方财政收紧导致采购收缩</td><td>更多城市暂停低空经济直接奖补</td><td>国资平台订单退坡，需求侧失速</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>其中 R5 已经出现早期信号。2026 年下半年多地暂停直接奖补，资金转向基础设施与政府购买服务。这对依赖项目制订单的商业模式是实质性压力测试。</p>
+    </section>
+
+    <section id="final">
+      <h2><span class="num">05</span>综合判断</h2>
+
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">判断 1</span>
+          <h4>技术可行性：成立，但限定在 30 公里以内</h4>
+          <p>参数自洽、可量产、已商业运行。作为短途载人飞行器技术可行；作为城市通勤工具技术不成立，且短期内无法通过迭代解决。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判断 2</span>
+          <h4>场景可行性：观光成立，通勤不成立</h4>
+          <p>五维评分 17 分对 11 分，差距是结构性的。隔离空域、低运力、门到门时间三项约束共同把通勤排除在当前阶段之外。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判断 3</span>
+          <h4>市场可行性：需求存在，商业模式未闭合</h4>
+          <p>单座成本 556 元、票价 300–500 元，运营端接近盈亏平衡但不产生利润。企业盈利依赖整机销售毛利，而非运营服务。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判断 4</span>
+          <h4>竞争地位：三年窗口，胜负取决于窗口内的动作</h4>
+          <p>取证领先三到四年，但性能落后一个量级。窗口期的价值在于锁定运营网络与客户，而不是提升参数。若竞品在 2028 年前取证，短途接驳市场将被直接覆盖。</p>
+        </div>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">一句话总结</span>
+        <p>EH216-S 不是一款好飞机，而是一张稀缺的证。它证明了一件此前无人证明的事：无人驾驶载人飞行器可以通过中国民航的审定。这张证的价值，远大于它 30 公里的航程。</p>
+      </div>
+    </section>
+
+    <nav class="pager">
+      <a href="05-market.html"><span class="p-d">上一章</span><span class="p-t">← 05 市场与商业可行性</span></a>
+      <a href="07-evidence.html" class="next"><span class="p-d">下一章</span><span class="p-t">07 证据矩阵与引用 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span><a href="07-evidence.html">证据与引用</a></span>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

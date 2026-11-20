@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>05 市场与商业可行性 · EH216-S 调研与分析</title>
+<meta name="description" content="用单机日架次、单座成本与三情境推演，检验 EH216-S 的单位经济模型能否闭合，并说明市场规模三种口径为何不可混用。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#scale">市场规模：三种口径</a></li>
+      <li><a href="#demand">需求侧：订单结构</a></li>
+      <li><a href="#util">运力：单机日架次</a></li>
+      <li><a href="#unit">单位经济模型</a></li>
+      <li><a href="#scenario">三情境推演</a></li>
+      <li><a href="#verdict">本章判决</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">05 · 市场与商业可行性</div>
+      <h1>算一架飞机的账：单座成本 556 元从哪来</h1>
+      <p class="lede">
+        市场规模是宏观叙事，单位经济模型才是生死线。本章把「一架飞机一年能赚多少」拆成四个可核算的量：
+        日架次、单架次成本、单座定价、年利用率。所有假设都写在表里，你可以用自己的数字替换后重算。
+      </p>
+    </div>
+
+    <section id="scale">
+      <h2><span class="num">01</span>市场规模：三种口径，不能混用</h2>
+      <p>低空经济的规模数据在公开材料中差异达数千亿元。这不是数据错误，而是统计边界不同。引用时不标口径，等于制造混乱。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 5-1</b>　低空经济市场规模的三种口径</caption>
+          <thead>
+            <tr><th style="width:20%">口径</th><th class="num" style="width:16%">2025 年</th><th class="num" style="width:18%">2026 年</th><th style="width:18%">远期</th><th>统计边界</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">赛迪研究院（窄）</td><td class="num">7151 亿元</td><td class="num">—</td><td class="num">—</td><td>低空飞行器制造、运营服务与直接配套</td></tr>
+            <tr><td class="em">赛迪顾问（窄）</td><td class="num">8592 亿元</td><td class="num">10645 亿元</td><td class="num">2030 年 2.0–2.5 万亿</td><td>含基础设施与相关配套产业</td></tr>
+            <tr><td class="em">中国民航局（宽）</td><td class="num">1.5 万亿元</td><td class="num">—</td><td class="num">2035 年 3.5 万亿</td><td>叠加通用航空存量与更广的运营服务</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">说明：三者不可相加，也不可互相替代。窄口径适合描述「低空经济核心产业」，宽口径适合描述「低空经济及相关产业」的整体盘面。<span class="ev ev-med">研究机构</span></p>
+
+      <div class="note warn">
+        <span class="lbl">一个必须写进结论的反向信号</span>
+        <p>2026 年 9 月起，杭州废止「低空 21 条」征求意见稿，广州天河、深圳光明暂停低空经济直接奖补。政策逻辑并非不看好产业，而是资金从「补企业」转向「建基础设施、设产业基金、政府购买服务」。这意味着<strong>依赖补贴、缺乏真实场景的企业将加速出清</strong>。<span class="ev ev-med">媒体调查</span></p>
+      </div>
+
+      <p>把这条信号与第 03 章的占空比结论放在一起，市场的真实约束就清楚了：<strong>行业的规模叙事由政策驱动，而单机经济性由周转率决定，两者并不同步。</strong></p>
+    </section>
+
+    <section id="demand">
+      <h2><span class="num">02</span>需求侧：订单结构比订单数量重要</h2>
+      <p>公开报道的订单数字很亮眼：国内批量订单超 1100 架，在手意向订单超 1000 架。但订单的构成决定了它的含金量。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 5-2</b>　订单的三种性质与含义</caption>
+          <thead><tr><th style="width:20%">类型</th><th style="width:26%">典型客户</th><th style="width:24%">付款特征</th><th>对企业的含义</th></tr></thead>
+          <tbody>
+            <tr><td class="em">批量实单</td><td>地方文旅、交通集团（如太原西山文旅 50 架、温州文成 30 架）</td><td>部分全款或分期</td><td>可确认收入，但客户集中在少数区域</td></tr>
+            <tr><td class="em">金融租赁</td><td>租赁公司 + 地方平台</td><td>租赁模式，现金流前置</td><td>加速回款，但若运营不及预期将形成资产减值压力</td></tr>
+            <tr><td class="em">意向订单</td><td>多方签署的框架协议</td><td>多数未付定金</td><td>不构成收入，不确定性高</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>2025 年的交付曲线印证了这种结构的不稳定：全年 221 架，其中 Q4 单季 100 架，前三季度合计仅 121 架。企业解释为客户付款进度推迟导致订单积压，收入在 Q4 集中确认。<span class="ev ev-off">财报</span>这种「前低后高」的确认节奏，说明需求侧仍是项目制、批次化的，尚未形成稳定出货节拍。</p>
+
+      <div class="note">
+        <span class="lbl">一个判断</span>
+        <p>当前订单反映的是<strong>地方产业布局意愿</strong>：采购方多为地方国资平台与文旅企业，买的是「低空经济名片」而非运力。这类需求真实存在，但它的规模由财政预算决定，而非由出行需求决定——这也解释了为什么订单高度集中于有政策抓手的地区。</p>
+      </div>
+    </section>
+
+    <section id="util">
+      <h2><span class="num">03</span>运力：单机日架次的天花板</h2>
+      <p>这是全章最关键的计算，也是最容易被忽略的。航时只有 25 分钟，但补能需要 120 分钟，飞行时间只占一个运营循环的 16%。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 5-3</b>　单机日架次测算（8 小时运营窗口 = 480 min）</caption>
+          <thead><tr><th style="width:34%">环节</th><th class="num" style="width:18%">耗时 / min</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>单架次飞行</td><td class="num">25</td><td>含爬升、巡航 30 km、下降着陆</td></tr>
+            <tr><td>补能（充电）</td><td class="num">120</td><td>官网口径，未公开是否含冷却与检测</td></tr>
+            <tr><td>旅客上下与检查</td><td class="num">10</td><td>系固、舱门、绕机检查</td></tr>
+            <tr><td class="em">单循环合计</td><td class="num em">155</td><td>占空比 = 25 / 155 ≈ 16%</td></tr>
+            <tr><td class="em">日架次上限</td><td class="num em">3</td><td>floor(480 / 155) = 3</td></tr>
+            <tr><td>年架次（300 天）</td><td class="num">900</td><td>—</td></tr>
+            <tr><td class="em">年可售座位</td><td class="num em">1800</td><td>900 架次 × 2 座</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>1800 个座位/年是什么概念？</strong> 一台 8 米级游船一天就能运送这个数量。运力密度不足通勤场景所需的一个数量级，这正是第 04 章「运力匹配」只得 1 分的原因。</p>
+    </section>
+
+    <section id="unit">
+      <h2><span class="num">04</span>单位经济模型</h2>
+      <p>按单机、单年、300 运营天建模。折旧按 10 年直线、残值零处理；维护按购机价 8%/年；人员按每架分摊 2 人计。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 5-4</b>　单机年成本结构（基准情形：120 min 充电）</caption>
+          <thead><tr><th style="width:30%">成本项</th><th class="num" style="width:18%">金额 / 万元</th><th class="num" style="width:14%">占比</th><th>测算依据</th></tr></thead>
+          <tbody>
+            <tr><td>折旧</td><td class="num">23.9</td><td class="num">23.9%</td><td>239 万元 ÷ 10 年</td></tr>
+            <tr><td>维护与航材</td><td class="num">19.1</td><td class="num">19.1%</td><td>购机价 8%/年</td></tr>
+            <tr><td>人员（远程机组 + 地勤）</td><td class="num">24.0</td><td class="num">24.0%</td><td>2 人 × 12 万元/年</td></tr>
+            <tr><td>起降场与场地分摊</td><td class="num">15.0</td><td class="num">15.0%</td><td>含场地租金、照明、消防</td></tr>
+            <tr><td>保险</td><td class="num">7.2</td><td class="num">7.2%</td><td>机身险与第三方责任险，约机身价 3%</td></tr>
+            <tr><td>电力</td><td class="num">2.9</td><td class="num">2.9%</td><td>40 kWh × 0.8 元/kWh × 900 架次</td></tr>
+            <tr><td>管理与其他</td><td class="num">8.0</td><td class="num">8.0%</td><td>营销、培训、系统分摊</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">年成本合计</td><td class="num em">100.1</td><td class="num em">100%</td><td class="em">本文估算</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="kpis">
+        <div class="kpi"><div class="v">1112<small>元/架次</small></div><div class="k">单架次成本</div></div>
+        <div class="kpi"><div class="v">556<small>元/人</small></div><div class="k">盈亏平衡单价</div></div>
+        <div class="kpi"><div class="v">18.5<small>元/座公里</small></div><div class="k">单座公里成本</div></div>
+        <div class="kpi"><div class="v">7<small>倍于出租车</small></div><div class="k">相对地面交通成本比</div></div>
+      </div>
+
+      <p>盈亏平衡单价 556 元/人，与公开报道的 299–498 元票价区间高度接近，甚至略高。<span class="ev ev-med">票价区间来自行业自媒体，可信度中等</span>这意味着<strong>按当前票价运营，单机层面接近盈亏平衡但不产生利润</strong>，企业盈利仍依赖整机销售毛利（2025 年毛利率 62.0%），而非运营服务。</p>
+
+      <div class="note key">
+        <span class="lbl">这个模型最重要的发现</span>
+        <p>成本结构中，折旧、人员、场地、保险四项合计占 70%，全部是「按年计」的固定成本，与飞多少架次无关。这意味着<strong>提高利用率是唯一的降本路径</strong>——而降本的唯一杠杆，是缩短补能时间。下一节的敏感性分析会给出量化结果。</p>
+      </div>
+    </section>
+
+    <section id="scenario">
+      <h2><span class="num">05</span>三情境推演与敏感性</h2>
+      <p>补能时间是唯一能大幅改变结论的变量。下表按五种补能方案重算单座成本，其余假设不变。</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 340" role="img" aria-label="补能时间对单座成本的敏感性">
+            <g font-family="system-ui, sans-serif">
+              <text x="20" y="24" font-size="11" fill="#6d7783" letter-spacing="1.2">补能时间 → 单座成本（元/人）</text>
+
+              <!-- 网格（先画，避免压住条形） -->
+              <g stroke="#eeece6">
+                <line x1="180" y1="52" x2="180" y2="286"/><line x1="300" y1="52" x2="300" y2="286"/>
+                <line x1="420" y1="52" x2="420" y2="286"/><line x1="540" y1="52" x2="540" y2="286"/>
+              </g>
+
+              <!-- 条形：0.6 px/元 -->
+              <g>
+                <rect x="60" y="54" width="334" height="28" fill="#a8500c"/>
+                <text x="402" y="73" font-size="11.5" fill="#a8500c">556 元　充电 120 min · 3 架次/日</text>
+
+                <rect x="60" y="100" width="334" height="28" fill="#c07a3a"/>
+                <text x="402" y="119" font-size="11" fill="#8a5a2a">556 元　充电 90 min · 3 架次/日（未跨台阶）</text>
+
+                <rect x="60" y="146" width="200" height="28" fill="#0f5c6b"/>
+                <text x="268" y="165" font-size="11.5" fill="#0f5c6b">334 元　充电 60 min · 5 架次/日</text>
+
+                <rect x="60" y="192" width="143" height="28" fill="#0f5c6b" opacity=".78"/>
+                <text x="211" y="211" font-size="11.5" fill="#0f5c6b">238 元　充电 30 min · 7 架次/日</text>
+
+                <rect x="60" y="238" width="83" height="28" fill="#0f5c6b" opacity=".58"/>
+                <text x="151" y="257" font-size="11.5" fill="#0f5c6b">139 元　换电 5 min · 12 架次/日</text>
+              </g>
+
+              <!-- 轴 -->
+              <line x1="60" y1="286" x2="660" y2="286" stroke="#cfcabf"/>
+              <g font-size="9.5" fill="#6d7783">
+                <text x="60" y="302">0</text><text x="174" y="302">200</text><text x="294" y="302">400</text>
+                <text x="414" y="302">600</text><text x="534" y="302">800</text>
+              </g>
+
+              <!-- 台阶标注 -->
+              <text x="60" y="326" font-size="10.5" fill="#a8500c">台阶效应：架次取整使成本呈阶梯下降，90 → 60 min 才跨过一个阈值</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>图 5-1</b>　补能时间对单座成本的敏感性。因日架次取整，成本呈台阶式下降而非线性下降——这是运营优化中最容易被忽视的非线性。
+        <span class="fig-src">本文估算，假设同表 5-4，仅改变补能时间。</span></figcaption>
+      </figure>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 5-5</b>　三种情境：利用率决定生死</caption>
+          <thead>
+            <tr><th style="width:16%">情境</th><th style="width:22%">前提</th><th class="num">年架次</th><th class="num">单座成本</th><th class="num">年收入</th><th>结论</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">保守</td><td>充电 120 min，客流不足，年运营 200 天</td><td class="num">600</td><td class="num">834 元</td><td class="num">36 万元</td><td>单机年亏 64 万元</td></tr>
+            <tr><td class="em">基准</td><td>充电 120 min，满负荷 300 天</td><td class="num">900</td><td class="num">556 元</td><td class="num">72 万元</td><td>单机年亏 28 万元</td></tr>
+            <tr><td class="em">乐观</td><td>改用换电 5 min，满负荷 300 天</td><td class="num">3600</td><td class="num">139 元</td><td class="num">216 万元</td><td>单机年毛利约 116 万元</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">年收入按票价 300 元/人、每架次 2 人估算（保守与基准取 300 元，乐观取 300 元的高客流情形）。若票价提至 500 元，基准情境收入升至 90 万元，仍低于成本。</p>
+
+      <p>结论相当清晰：<strong>在充电模式下，单机运营无法自负盈亏，企业必须靠卖飞机赚钱；只有把补能时间压到 10 分钟以内，运营本身才成为一门生意。</strong>这解释了为什么换电方案、快充能力在产业界被反复提及——它不是技术炫技，是商业模型的前提。</p>
+    </section>
+
+    <section id="verdict">
+      <h2><span class="num">06</span>本章判决</h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">判决 1</span>
+          <h4>市场规模叙事成立，但与单机经济性无关</h4>
+          <p>万亿级市场是产业政策的结果，单位经济模型是周转率的结果。前者不能证明后者，两者必须分开讨论。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 2</span>
+          <h4>当前商业模式本质是卖设备，不是卖运力</h4>
+          <p>单座成本 556 元、票价 300–500 元，运营端勉强打平甚至亏损。2025 年 62.0% 的毛利率来自整机销售，不是运营服务。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">判决 3</span>
+          <h4>补能时间是比电池能量密度更急的瓶颈</h4>
+          <p>能量密度决定能飞多远，补能时间决定一年能飞几次。在固定成本占 70% 的结构下，后者对盈亏的影响更大、且更容易通过工程手段解决。</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="pager">
+      <a href="04-scenario.html"><span class="p-d">上一章</span><span class="p-t">← 04 应用场景与运行条件</span></a>
+      <a href="06-compete.html" class="next"><span class="p-d">下一章</span><span class="p-t">06 竞品与综合判断 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span><a href="07-evidence.html">证据与引用</a></span>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>

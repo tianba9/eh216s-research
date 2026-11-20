@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>亿航 EH216-S 全方位调研与分析 · 飞行汽车技术基础</title>
+<meta name="description" content="以系统工程的证据链方法，对亿航 EH216-S 载人级自动驾驶飞行器做技术可行性、应用场景与市场可行性的深度调研分析。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <b>EH216-S 调研与分析</b>
+      <span>Fundamentals of Flying Vehicle Technology</span>
+    </a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a>
+      <a href="02-system.html">系统</a>
+      <a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a>
+      <a href="05-market.html">市场</a>
+      <a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#conclusions">五条核心结论</a></li>
+      <li><a href="#facts">对象事实卡</a></li>
+      <li><a href="#route">阅读路径</a></li>
+      <li><a href="#method">方法与证据规则</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">课程作业一 · 全方位调研与分析</div>
+      <h1>亿航 EH216-S：把「能飞」变成「能交付」的第一张证</h1>
+      <p class="lede">
+        这不是一篇产品介绍。它要回答一个可以被证伪的问题：一款航程 30 公里、航时 25 分钟、没有驾驶员的双座飞行器，
+        凭什么在 2023 年拿到全球第一张载人 eVTOL 型号合格证，又凭什么在 2026 年才开始卖出第一张观光票。
+        本文用一条完整的证据链拆解它的技术边界、场景边界与商业边界，并明确指出哪些结论有证据、哪些只是推断。
+      </p>
+    </div>
+
+    <div class="kpis">
+      <div class="kpi"><div class="v">4<small>证齐全</small></div><div class="k">TC / AC / PC / OC</div></div>
+      <div class="kpi"><div class="v">620<small>kg</small></div><div class="k">最大起飞重量</div></div>
+      <div class="kpi"><div class="v">30<small>km</small></div><div class="k">设计航程</div></div>
+      <div class="kpi"><div class="v">25<small>min</small></div><div class="k">最长航时</div></div>
+      <div class="kpi"><div class="v">239<small>万元</small></div><div class="k">中国市场指导价</div></div>
+      <div class="kpi"><div class="v">9<small>万+架次</small></div><div class="k">累计安全飞行</div></div>
+    </div>
+
+    <section id="conclusions">
+      <h2><span class="num">01</span>五条核心结论</h2>
+      <p>以下五条构成本次调研的判断主线。每条都标注了支撑它的证据等级，以及它不能被用来支持什么。</p>
+
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">结论 01 · 竞争壁垒</span>
+          <h4>真正的护城河不是构型，而是审定证据链</h4>
+          <p>EH216-S 是全球唯一同时持有 TC、AC、PC、OC 的载人 eVTOL<span class="ev ev-off">官方</span>。
+          截至 2026 年 9 月，Joby 处于 FAA 五阶段审定的最后一阶段，自方工作完成 20%、局方接受 10%；Archer 于 2026 年 4 月关闭第三阶段，
+          两家均未取得型号合格证<span class="ev ev-med">媒体分析</span>。多旋翼构型可以照抄，三套飞控的失效概率论证与九万架次运行数据不能照抄。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">结论 02 · 场景边界</span>
+          <h4>参数把它的市场锁死在「体验」，不在「通勤」</h4>
+          <p>航程 30 公里、航时 25 分钟、充电约 120 分钟。按 25 分钟飞行加 120 分钟补能加 10 分钟周转测算，
+          单机日理论架次约 3 班，年可售座位不足 2000 人次<span class="ev ev-est">本文估算</span>。
+          这个周转率不足以支撑通勤产品所需的运力密度，只能支撑景区点对点观光。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">结论 03 · 需求质量</span>
+          <h4>订单规模成立，需求真实性尚未验证</h4>
+          <p>在手意向订单超 1000 架，国内批量订单超 1100 架<span class="ev ev-med">企业经媒体</span>。
+          但客户主要是地方国资平台与金融租赁公司，多数意向订单未支付定金<span class="ev ev-med">媒体调查</span>。
+          这类订单反映的是地方产业布局意愿，不是终端出行需求。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">结论 04 · 财务状态</span>
+          <h4>跨过了「能不能卖」，没跨过「能不能赚」</h4>
+          <p>2025 年营收 5.095 亿元、同比增长 11.7%，毛利率 62.0%，交付 221 架；但全年净亏损 2.31 亿元。
+          Q4 单季净利润 1050 万元，为上市后首次 GAAP 季度盈利<span class="ev ev-off">财报</span>。
+          规模效应出现拐点迹象，尚不构成稳态盈利能力。</p>
+        </div>
+        <div class="verdict">
+          <span class="n">结论 05 · 关键变量</span>
+          <h4>唯一能改写上述结论的变量是电池能量密度</h4>
+          <p>2024 年 11 月，搭载 480 Wh/kg 固态电池的 EH216-S 完成 48 分 10 秒飞行，较传统电池提升 60%–90%<span class="ev ev-lit">企业单点测试</span>。
+          若该指标在 2026 年如期量产，航时翻倍将把场景从景区观光推进到城际接驳；若不能，30 公里的边界在未来三年内不会移动。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="facts">
+      <h2><span class="num">02</span>对象事实卡</h2>
+      <p>下表是全站的数据基线。凡涉及数值，后续章节一律以此表为准；出现来源冲突的，在备注列保留冲突而不是抹平它。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 1</b>　EH216-S 基本事实与数据基线（截至 2026 年 11 月）</caption>
+          <thead>
+            <tr><th style="width:22%">项目</th><th style="width:38%">数值</th><th>来源与说明</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">型号</td><td>EH216-S（EH216 系列载人标准版）</td><td>区别于 EH216-F 消防版、EH216-L 物流版</td></tr>
+            <tr><td class="em">制造商</td><td>亿航智能（Nasdaq: EH），总部广州</td><td>2019 年纳斯达克上市</td></tr>
+            <tr><td class="em">构型</td><td>8 轴 16 旋翼，共轴双桨，纯电多旋翼</td><td>专用条件表述为「驱动 8 对旋转的升力/推力部件」</td></tr>
+            <tr><td class="em">座级与操纵</td><td>2 名乘员，机上无驾驶员、无操纵装置</td><td>全程按预设飞行计划自动飞行</td></tr>
+            <tr><td class="em">最大起飞重量</td><td>620 kg</td><td>官网口径；二手来源多记为 650 kg，<strong>此处采用官方值并保留冲突</strong></td></tr>
+            <tr><td class="em">外形尺寸</td><td>宽 5.73 m × 高 1.93 m，长 6.05 m</td><td>宽高为官网值，长度为媒体引述值</td></tr>
+            <tr><td class="em">性能</td><td>航程 30 km；航时 25 min；最大速度 130 km/h；正常平飞 90 km/h</td><td>官网与专用条件一致</td></tr>
+            <tr><td class="em">补能</td><td>充电约 120 min</td><td>官网口径；换电方案未公开</td></tr>
+            <tr><td class="em">运行限域</td><td>低空隔离空域，最大高度约 120 m（AGL）</td><td>专用条件限定为 UAM 环境商业载客</td></tr>
+            <tr><td class="em">价格</td><td>中国指导价 239 万元/架；海外 41 万美元</td><td>2024-02-01 公布，2024-04-01 生效</td></tr>
+            <tr><td class="em">适航证件</td><td>TC 2023-10-13；AC 2023-12-21；PC 2024-04-07；OC 2025-03-28</td><td>运输类航空器四证顺序，OC 由运营人持有</td></tr>
+            <tr><td class="em">审定基础</td><td>SC-21-002 专用条件，2022-02-09 生效</td><td>七大类要求，详见<a href="07-evidence.html">证据章节</a></td></tr>
+            <tr><td class="em">交付与财务</td><td>2024 年 216 架；2025 年 221 架（含 6 架 VT35）；2025 营收 5.095 亿元</td><td>2025 财报，毛利率 62.0%，净亏损 2.31 亿元</td></tr>
+            <tr><td class="em">安全记录</td><td>累计 9 万+ 架次，零事故</td><td>截至 2026-06，<strong>企业自述，未经独立审计</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">数据基线说明：凡官方与二手来源冲突（如最大起飞重量、最大飞行高度），本文一律采用官方值并在正文标注冲突，不做静默取舍。</p>
+    </section>
+
+    <section id="route">
+      <h2><span class="num">03</span>阅读路径</h2>
+      <p>本页属于课程作业一，回答「能不能做、卖给谁」。与之配套的课程作业二回答「凭什么安全、监管为何认」，两站共用同一套事实基线。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 2</b>　章节导读：每一章要解决的问题与产出的判决</caption>
+          <thead><tr><th style="width:26%">章节</th><th style="width:40%">要回答的问题</th><th>产出</th></tr></thead>
+          <tbody>
+            <tr><td><a href="01-frame.html">01 问题定义与检索协议</a></td><td>为什么这个问题值得问，答案从哪来</td><td>4 条可证伪命题、双语句检索式、证据分级规则</td></tr>
+            <tr><td><a href="02-system.html">02 系统分解与构型</a></td><td>它由哪些层级构成，边界与接口在哪</td><td>任务—体系—系统—部件四级分解、质量与功率预算</td></tr>
+            <tr><td><a href="03-tech.html">03 技术可行性</a></td><td>这些参数在物理上是否自洽</td><td>悬停功率与能量核算、参数自洽性检验、TRL 判定</td></tr>
+            <tr><td><a href="04-scenario.html">04 场景与运行条件</a></td><td>它能在什么条件下飞、为谁飞</td><td>场景矩阵、ODD 七要素划定</td></tr>
+            <tr><td><a href="05-market.html">05 市场与商业可行性</a></td><td>单位经济模型能否闭合</td><td>单机日架次、单座成本、三种情境与敏感性</td></tr>
+            <tr><td><a href="06-compete.html">06 竞品与综合判断</a></td><td>相对位置在哪，风险是什么</td><td>四机对比矩阵、五维评分、风险清单</td></tr>
+            <tr><td><a href="07-evidence.html">07 证据矩阵与引用</a></td><td>每个数字能不能被追溯</td><td>20 条来源、可支撑论断、局限声明</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">姊妹篇</span>
+        <p>课程作业二《EH216-S 全方位安全分析》承接本站，把同一个对象放进系统安全工程的八步框架中，做危害识别、冗余架构论证与运行安全论证。两站可独立阅读，也可对读。
+        <a href="https://tianba9.github.io/eh216s-safety/">前往作业二 →</a></p>
+      </div>
+    </section>
+
+    <section id="method">
+      <h2><span class="num">04</span>方法与证据规则</h2>
+      <p>本文不采用「先有结论再找材料」的写法。全部判断建立在三类动作之上：可复现的检索、分级的证据、可核算的数字。</p>
+
+      <h3>证据分级</h3>
+      <ul>
+        <li><span class="ev ev-off">官方</span>监管机构文件、上市公司财报与公告、制造商官网技术页。可直接作为事实引用。</li>
+        <li><span class="ev ev-std">标准</span>适航专用条件、行业标准。用于界定合规要求，不用于描述产品性能。</li>
+        <li><span class="ev ev-med">媒体分析</span>行业媒体、券商研报、专业媒体调查。用于补足时序与竞争态势，需交叉验证。</li>
+        <li><span class="ev ev-lit">企业自述经转述</span>制造商口径经媒体转述的运营数据。注明未经独立审计。</li>
+        <li><span class="ev ev-est">本文估算</span>基于公开参数的计算。全部标注假设，并做敏感性检验。</li>
+      </ul>
+
+      <h3>三条自我约束</h3>
+      <ol>
+        <li><strong>不追单点预测。</strong>市场规模给区间与口径，不给一个漂亮数字。</li>
+        <li><strong>不抹平冲突。</strong>官方 620 kg 与二手 650 kg 并存呈现，并说明取舍理由。</li>
+        <li><strong>区分「已验证」与「已宣称」。</strong>九万架次零事故是企业自述；四证齐全是可查的监管事实。</li>
+      </ol>
+    </section>
+
+    <nav class="pager">
+      <a href="01-frame.html" class="next"><span class="p-d">下一章</span><span class="p-t">01 问题定义与检索协议 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span>研究对象：亿航智能 EH216-S　|　<a href="07-evidence.html">证据与引用</a></span>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>01 问题定义与检索协议 · EH216-S 调研与分析</title>
+<meta name="description" content="把模糊的调研任务拆成四条可证伪命题，并给出可复现的中英文检索协议、证据分级规则与口径冲突处理办法。">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <nav class="topnav">
+      <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
+      <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
+    </nav>
+    <span class="tag-assign">作业一 · 调研与分析</span>
+  </div>
+</header>
+
+<div class="shell">
+  <aside class="toc">
+    <p class="toc-title">本页</p>
+    <ol>
+      <li><a href="#question">从任务到可证伪命题</a></li>
+      <li><a href="#protocol">检索协议</a></li>
+      <li><a href="#screen">筛选与纳入</a></li>
+      <li><a href="#grade">证据分级与冲突处理</a></li>
+      <li><a href="#limit">方法局限</a></li>
+    </ol>
+    <div class="sub">
+      <p class="toc-title">全站章节</p>
+      <ol>
+        <li><a href="01-frame.html">问题定义与检索协议</a></li>
+        <li><a href="02-system.html">系统分解与构型</a></li>
+        <li><a href="03-tech.html">技术可行性</a></li>
+        <li><a href="04-scenario.html">应用场景与运行条件</a></li>
+        <li><a href="05-market.html">市场与商业可行性</a></li>
+        <li><a href="06-compete.html">竞品与综合判断</a></li>
+        <li><a href="07-evidence.html">证据矩阵与引用</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <div class="eyebrow">01 · 问题定义与检索协议</div>
+      <h1>先把问题问对，再去找答案</h1>
+      <p class="lede">
+        「调研一款飞行汽车」是个无法被证伪的任务，写完一万字也无法判断对错。本章把它拆成四条有明确判据的命题，
+        并记录检索过程，使读者可以按同样的路径复现、或推翻本文的结论。
+      </p>
+    </div>
+
+    <section id="question">
+      <h2><span class="num">01</span>从任务到可证伪命题</h2>
+      <p>课程要求覆盖技术可行性、应用场景、市场可行性三个维度。这三个词本身仍是模糊的，需要各自落到可测量的判据上。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 1-1</b>　四条命题、判据与本文的判决</caption>
+          <thead>
+            <tr><th style="width:8%">编号</th><th style="width:30%">命题</th><th style="width:34%">判据（什么情况下算被推翻）</th><th>本文判决</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="em">P1</td>
+              <td>EH216-S 的公开性能参数在物理上自洽，不存在无法解释的夸大。</td>
+              <td>由功率与能量守恒推出的续航显著低于宣称值，或推重比不成立。</td>
+              <td><strong>成立。</strong>能量核算落在 40 kWh 量级，与 620 kg 级多旋翼可比，见<a href="03-tech.html">第 03 章</a>。</td>
+            </tr>
+            <tr>
+              <td class="em">P2</td>
+              <td>该产品的构型决定了它的市场边界是短途点对点，而非城市通勤。</td>
+              <td>存在可商业运营的通勤航线案例，且单机日运力可支撑通勤密度。</td>
+              <td><strong>成立。</strong>单机日理论架次约 3 班，运力密度差一个数量级。</td>
+            </tr>
+            <tr>
+              <td class="em">P3</td>
+              <td>当前订单规模反映产业布局意愿，而非终端出行需求。</td>
+              <td>订单主要来自终端消费者或高频运营主体，且定金比例高。</td>
+              <td><strong>成立。</strong>客户以地方国资平台与租赁公司为主，多数未付定金。</td>
+            </tr>
+            <tr>
+              <td class="em">P4</td>
+              <td>电池能量密度是当前唯一能改变 P2 判决的技术变量。</td>
+              <td>构型、气动或空域改革中存在同等量级的约束解除路径。</td>
+              <td><strong>部分成立。</strong>空域与基础设施是并行约束，但在航时未突破前不构成有效瓶颈解除。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <span class="lbl">为什么这样设计</span>
+        <p>P1 检验「数据可不可信」，P2 检验「产品定位对不对」，P3 检验「需求真不真」，P4 检验「未来会不会变」。四条合起来覆盖技术、场景、市场三个维度，且每条都能被一组具体数据推翻——这才是可写的调研。</p>
+      </div>
+    </section>
+
+    <section id="protocol">
+      <h2><span class="num">02</span>检索协议</h2>
+      <p>检索按「先官方、再标准、后学术、末媒体」的优先级推进。原因很直接：产品性能的权威来源是制造商与监管机构，不是二手报道；而媒体独有的价值在于时序与竞争态势，不在于参数。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 1-2</b>　检索协议：概念词、同义词与来源类型</caption>
+          <thead><tr><th style="width:16%">概念组</th><th style="width:34%">中文检索词</th><th style="width:30%">英文检索词</th><th>首选来源</th></tr></thead>
+          <tbody>
+            <tr><td class="em">对象</td><td>EH216-S、亿航智能、无人驾驶载人航空器</td><td>EHang, EH216-S, pilotless passenger eVTOL</td><td>制造商官网、SEC 6-K 财报</td></tr>
+            <tr><td class="em">适航</td><td>型号合格证、标准适航证、生产许可证、运营合格证、专用条件</td><td>type certificate, airworthiness certificate, special condition, SC-21-002</td><td>中国民航局、民航报</td></tr>
+            <tr><td class="em">技术</td><td>多旋翼、共轴双桨、分布式电推进、冗余飞控</td><td>multirotor, coaxial rotor, distributed electric propulsion, redundant flight control</td><td>专用条件、学术综述</td></tr>
+            <tr><td class="em">场景</td><td>低空观光、城市空中交通、隔离空域、起降场</td><td>UAM, isolated airspace, vertiport, aerial sightseeing</td><td>行业报告、地方试点文件</td></tr>
+            <tr><td class="em">市场</td><td>低空经济、市场规模、订单、单座成本</td><td>low-altitude economy, market size, unit economics</td><td>赛迪、民航局、券商研报</td></tr>
+            <tr><td class="em">竞品</td><td>Joby、Archer、小鹏汇天、陆地航母、VT35</td><td>Joby S4, Archer Midnight, AeroHT, type certification progress</td><td>竞品官网、适航当局公告</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>实际使用的检索式</h3>
+      <p>以下为可直接复用的检索串，按来源类型分组。中文来源用于监管与市场，英文来源用于技术对标与竞品进度。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 1-3</b>　检索式与命中用途</caption>
+          <thead><tr><th style="width:22%">来源</th><th style="width:52%">检索式</th><th>用途</th></tr></thead>
+          <tbody>
+            <tr><td>通用检索引擎</td><td><code>亿航 EH216-S 技术参数 最大起飞重量 航程 续航</code></td><td>建立参数基线</td></tr>
+            <tr><td>通用检索引擎</td><td><code>EH216-S 型号合格审定专用条件 2022 中国民航局</code></td><td>定位审定基准原文与七类要求</td></tr>
+            <tr><td>财报与公告</td><td><code>亿航智能 2025年 交付量 营收 EH216 订单 财报</code></td><td>经营指标与交付节奏</td></tr>
+            <tr><td>行业研究</td><td><code>低空经济 市场规模 2025 2030 预测 赛迪 民航局</code></td><td>市场规模的多口径对照</td></tr>
+            <tr><td>英文来源</td><td><code>Joby Archer eVTOL FAA type certification progress 2026</code></td><td>竞品取证阶段判定</td></tr>
+            <tr><td>英文来源</td><td><code>EHang EH216-S suggested retail price RMB</code></td><td>价格锚点的一手确认</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note warn">
+        <span class="lbl">一个实操细节</span>
+        <p>检索「亿航 事故」时，返回结果大量为无关内容，未能获得任何经监管机构确认的事故记录。这不等于「不存在事故」，只能说明「公开渠道未见监管确认的事故」。本文据此把「零事故」标注为企业自述，而非事实断言。</p>
+      </div>
+    </section>
+
+    <section id="screen">
+      <h2><span class="num">03</span>筛选与纳入</h2>
+      <p>本文最终纳入 20 条来源，构成<a href="07-evidence.html">证据矩阵</a>的全部内容。筛选遵循四条排除规则。</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>表 1-4</b>　纳入与排除标准</caption>
+          <thead><tr><th style="width:18%">判定</th><th style="width:40%">标准</th><th>本文实例</th></tr></thead>
+          <tbody>
+            <tr><td class="em">纳入</td><td>监管机构文件、上市公司披露、制造商官网技术页</td><td>SC-21-002 专用条件、2025 年 6-K 财报、产品页参数</td></tr>
+            <tr><td class="em">纳入</td><td>可追溯至一手信源的行业研究与媒体调查</td><td>赛迪低空经济报告、华夏时报订单结构调查</td></tr>
+            <tr><td>排除</td><td>无法追溯原始出处的转载，或数据自相矛盾且无说明</td><td>部分自媒体「650 kg / 200 m AGL」参数表，与官网冲突且未注明来源</td></tr>
+            <tr><td>排除</td><td>纯宣传性内容，无可核验信息</td><td>发布会通稿中的形容词堆砌段落</td></tr>
+            <tr><td>排除</td><td>与研究对象不构成同一型号</td><td>EH216-F 消防版、EH216-L 物流版的性能数据</td></tr>
+            <tr><td>降级保留</td><td>信息有价值但仅单一来源，且来源为企业自身</td><td>固态电池 48 分钟测试、9 万架次零事故</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="grade">
+      <h2><span class="num">04</span>证据分级与冲突处理</h2>
+      <p>调研中最容易出错的地方不是找不到资料，而是把二手当一手、把预测当事实。本文用两级规则来控制这一点。</p>
+
+      <h3>分级：五档标签</h3>
+      <p>正文中每个关键数字后都带标签，读者可据此判断这句话能被用到什么程度。<span class="ev ev-off">官方</span>可直接引用；<span class="ev ev-std">标准</span>用于界定要求；<span class="ev ev-med">媒体分析</span>需交叉验证；<span class="ev ev-lit">企业自述</span>注明未经审计；<span class="ev ev-est">本文估算</span>必须给出假设。</p>
+
+      <h3>冲突处理：三条规则</h3>
+      <ol>
+        <li><strong>同维度冲突取官方值。</strong>最大起飞重量官网记 620 kg，多个二手来源记 650 kg。本文取 620 kg，并在事实卡保留冲突提示——因为官网是设计方的一手披露，二手表格无法说明其修订依据。</li>
+        <li><strong>口径不同不合并。</strong>低空经济规模存在三个数量级相近但含义不同的读数：赛迪窄口径 2025 年 7151.2 亿元、赛迪顾问口径 8591.7 亿元、民航局宽口径 1.5 万亿元。三者统计边界不同，<em>不可相加、不可互相替代</em>，本文在<a href="05-market.html">第 05 章</a>分列呈现。</li>
+        <li><strong>预测标注为预测。</strong>「2030 年 2 万亿元」是机构预测，不是既成事实。本文在引用时一律保留其预测属性与发布机构。</li>
+      </ol>
+
+      <div class="note key">
+        <span class="lbl">一个被保留的矛盾</span>
+        <p>官网记最大飞行高度与专用条件的运行限域表述存在差异（媒体转述为 120 m AGL / 1000 m MSL，另有来源记为 200 m AGL / 3000 m MSL）。本文在场景章采用「低空隔离空域」这一法定表述，不用具体高度数字支撑论证——因为该数字未被官方技术页明确，且不同批次资料不一。</p>
+      </div>
+    </section>
+
+    <section id="limit">
+      <h2><span class="num">05</span>方法局限</h2>
+      <ul>
+        <li><strong>无一手访谈。</strong>本文未接触制造商、运营人或监管方，全部结论建立在公开材料之上。</li>
+        <li><strong>关键参数缺失。</strong>空重、旋翼直径、电池组容量与化学体系均未公开。第 03 章的功率核算因此依赖假设区间，只能作为量级判断，不能作为设计结论。</li>
+        <li><strong>运营数据为企业自述。</strong>架次与安全记录无法独立核验，本文按最低可信等级使用。</li>
+        <li><strong>市场判断有时效。</strong>2026 年 3 月刚开始售票运营，单位经济模型缺少真实客流数据，第 05 章的情境分析属推演而非观测。</li>
+      </ul>
+      <p>承认这些局限不削弱结论，反而界定了结论的适用范围。本文的立场是：在证据不完整时，给出带边界条件的判断，好过给出无边界条件的断言。</p>
+    </section>
+
+    <nav class="pager">
+      <a href="index.html"><span class="p-d">返回</span><span class="p-t">← 首页</span></a>
+      <a href="02-system.html" class="next"><span class="p-d">下一章</span><span class="p-t">02 系统分解与构型 →</span></a>
+    </nav>
+  </main>
+</div>
+
+<footer class="foot">
+  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span><a href="07-evidence.html">证据与引用</a></span>
+</footer>
+<script src="assets/main.js"></script>
+</body>
+</html>
