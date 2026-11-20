@@ -9,21 +9,22 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body id="top">
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main" data-en="Skip to content">跳到正文</a>
 
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="章节导航">
-      <a href="01-frame.html">方法</a>
-      <a href="02-system.html">系统</a>
-      <a href="03-tech.html" class="active" aria-current="page">技术</a>
-      <a href="04-scenario.html">场景</a>
-      <a href="05-market.html">市场</a>
-      <a href="06-compete.html">判断</a>
-      <a href="07-evidence.html">证据</a>
-      <a href="08-summary.html">总结</a>
+      <a href="01-frame.html" data-en="Method">方法</a>
+      <a href="02-system.html" data-en="System">系统</a>
+      <a href="03-tech.html" class="active" aria-current="page" data-en="Tech">技术</a>
+      <a href="04-scenario.html" data-en="Scenario">场景</a>
+      <a href="05-market.html" data-en="Market">市场</a>
+      <a href="06-compete.html" data-en="Verdict">判断</a>
+      <a href="07-evidence.html" data-en="Evidence">证据</a>
+      <a href="08-summary.html" data-en="Summary">总结</a>
     </nav>
+    <button class="lang" type="button" aria-label="切换语言 / Switch language" title="切换语言 / Switch language">EN</button>
     <a class="sister-link" href="https://tianba9.github.io/eh216s-safety/" title="切换至卷二：全方位安全分析">卷二·安全分析 ↗</a>
   </div>
 </header>
@@ -31,27 +32,27 @@
 <div class="shell">
 
   <aside class="toc-nav" aria-label="全站章节">
-    <p class="toc-title">全站章节</p>
+    <p class="toc-title" data-en="Site Chapters">全站章节</p>
                   <ol>
-        <li class="nav-home"><a href="index.html">首页</a></li>
-        <li><a href="01-frame.html">01 问题定义与检索协议</a></li>
-        <li><a href="02-system.html">02 系统分解与构型</a></li>
-        <li><a href="03-tech.html" class="active" aria-current="page">03 技术可行性</a></li>
-        <li><a href="04-scenario.html">04 应用场景与运行条件</a></li>
-        <li><a href="05-market.html">05 市场与商业可行性</a></li>
-        <li><a href="06-compete.html">06 竞品与综合判断</a></li>
-        <li><a href="07-evidence.html">07 证据矩阵与引用</a></li>
-        <li><a href="08-summary.html">08 全文总结</a></li>
+        <li class="nav-home"><a href="index.html" data-en="Home">首页</a></li>
+        <li><a href="01-frame.html" data-en="01 Problem Definition &amp; Search Protocol">01 问题定义与检索协议</a></li>
+        <li><a href="02-system.html" data-en="02 System Decomposition &amp; Configuration">02 系统分解与构型</a></li>
+        <li><a href="03-tech.html" class="active" aria-current="page" data-en="03 Technical Feasibility">03 技术可行性</a></li>
+        <li><a href="04-scenario.html" data-en="04 Scenarios &amp; Operating Conditions">04 应用场景与运行条件</a></li>
+        <li><a href="05-market.html" data-en="05 Market &amp; Commercial Feasibility">05 市场与商业可行性</a></li>
+        <li><a href="06-compete.html" data-en="06 Competitors &amp; Overall Judgment">06 竞品与综合判断</a></li>
+        <li><a href="07-evidence.html" data-en="07 Evidence Matrix &amp; References">07 证据矩阵与引用</a></li>
+        <li><a href="08-summary.html" data-en="08 Overall Conclusion">08 全文总结</a></li>
       </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">首页</a><span class="sep">›</span><span class="cur">03 技术可行性</span></div>
-        <div class="head-nav"><a href="02-system.html" title="上一章：02 系统分解与构型">‹ 02 系统分解与构型</a><a href="04-scenario.html" title="下一章：04 应用场景与运行条件">04 应用场景与运行条件 ›</a></div>
+        <div class="crumb"><a href="index.html" data-en="Home">首页</a><span class="sep">›</span><span class="cur" data-en="03 Technical Feasibility">03 技术可行性</span></div>
+        <div class="head-nav"><a href="02-system.html" title="上一章：02 系统分解与构型" data-en="‹ 02 System Decomposition &amp; Configuration">‹ 02 系统分解与构型</a><a href="04-scenario.html" title="下一章：04 应用场景与运行条件" data-en="04 Scenarios &amp; Operating Conditions ›">04 应用场景与运行条件 ›</a></div>
       </div>
-      <h1>这些数字经得起算：三重检验下的参数可信度</h1>
+      <h1 data-en="The Numbers Hold Up">这些数字经得起算：三重检验下的参数可信度</h1>
       <p class="lede">
         厂商给的参数往往无法直接验证——没有风洞数据，没有空重，没有旋翼直径。但仍然可以检验：
         时间能否闭合、功率量级是否合理、横向置于同级机型中是否异常。三重检验都通过，参数就可以采信。
@@ -59,7 +60,7 @@
     </div>
 
     <section id="method">
-      <h2><span class="num">01</span>三种检验方法</h2>
+      <h2><span class="num">01</span><span data-en="Three Verification Methods">三种检验方法</span></h2>
       <p>在关键数据缺失的条件下，可行性判断不靠信任，靠交叉。本报告采用三种互相独立的检验路径。</p>
 
       <div class="tw">
@@ -76,7 +77,7 @@
     </section>
 
     <section id="closure">
-      <h2><span class="num">02</span>时间闭合检验</h2>
+      <h2><span class="num">02</span><span data-en="Time-Closure Check">时间闭合检验</span></h2>
       <p>这是最便宜也最有效的检验。公布值：航程 30 km、正常平飞 90 km/h、最长航时 25 min。若以 90 km/h 巡航，30 km 需 20 分钟，剩余 5 分钟须覆盖爬升、下降、着陆与备份。</p>
 
       <figure>
@@ -129,7 +130,7 @@
     </section>
 
     <section id="bench">
-      <h2><span class="num">03</span>横向对标</h2>
+      <h2><span class="num">03</span><span data-en="Benchmarking">横向对标</span></h2>
       <p>把 EH216-S 放回同级机型中，看它的位置是否异常。下表只对比可公开获取的参数，缺口处留空而不推测。</p>
 
       <div class="tw">
@@ -159,7 +160,7 @@
     </section>
 
     <section id="trl">
-      <h2><span class="num">04</span>成熟度判定</h2>
+      <h2><span class="num">04</span><span data-en="Maturity Assessment">成熟度判定</span></h2>
       <p>技术成熟度（TRL）按分系统评估，避免用整机一个数字掩盖差异。判定依据是该分系统是否已在真实运行环境中经受过验证。</p>
 
       <div class="tw">
@@ -181,7 +182,7 @@
     </section>
 
     <section id="bottle">
-      <h2><span class="num">05</span>技术瓶颈在哪一层</h2>
+      <h2><span class="num">05</span><span data-en="Where the Bottleneck Really Is">技术瓶颈在哪一层</span></h2>
       <p>常见说法是「续航不行」。这个判断太粗，无法指导行动。按约束的硬度排序，真正的瓶颈有三层。</p>
 
       <div class="tw">
@@ -221,7 +222,7 @@
       <p class="t-foot">模型：电池组质量固定 200 kg，电量与比能量成正比，航时与航程按基准架次能耗 40.8 kWh 线性折算。实测的 480 Wh/kg 为电芯级，折合系统级约 390 Wh/kg，代入后得 47.8 分钟，与 48 分 10 秒的试飞结果吻合。</p>
 
     <section id="plan">
-      <h2><span class="num">06</span>若要验证：一份可执行的试飞大纲</h2>
+      <h2><span class="num">06</span><span data-en="If Verification Were Possible: A Flight-Test Outline">若要验证：一份可执行的试飞大纲</span></h2>
       <p>本报告无法实测，但可以给出验证方案。以下五项构成一份最小可信的验证计划，用于检验本报告的关键推断。</p>
 
       <div class="tw">
@@ -241,7 +242,7 @@
     </section>
 
     <section id="verdict">
-      <h2><span class="num">07</span>本章判决</h2>
+      <h2><span class="num">07</span><span data-en="Chapter Verdict">本章判决</span></h2>
       <div class="verdicts">
         <div class="verdict">
           <span class="n">判决 1</span>
@@ -262,7 +263,7 @@
     </section>
 
     <section id="sum">
-      <h2><span class="num">08</span>本章总结</h2>
+      <h2><span class="num">08</span><span data-en="Chapter Summary">本章总结</span></h2>
       <div class="sum">
         <p>三种检验互相独立：时间闭合看三个参数是否来自同一次任务剖面，量级检验看功率与能量是否落在物理区间，横向对标看相对同级机型有无异常。三项都通过——这只说明「可信」，不说明「领先」。</p>
         <p>与 Joby、Archer 相比，速度与航程差一个量级；EH216-S 的领先在取证进度。瓶颈分三层，最硬的一层不在天上：补能时间锁死了单机日利用率。</p>
@@ -270,30 +271,31 @@
     </section>
 
     <nav class="pager" aria-label="章节翻页">
-      <a href="02-system.html"><span class="p-d">上一章</span><span class="p-t">← 02 系统分解与构型</span></a>
-      <a href="04-scenario.html" class="next"><span class="p-d">下一章</span><span class="p-t">04 应用场景与运行条件 →</span></a>
+      <a href="02-system.html"><span class="p-d" data-en="Previous">上一章</span><span class="p-t" data-en="← 02 System Decomposition &amp; Configuration">← 02 系统分解与构型</span></a>
+      <a href="04-scenario.html" class="next"><span class="p-d" data-en="Next">下一章</span><span class="p-t" data-en="04 Scenarios &amp; Operating Conditions →">04 应用场景与运行条件 →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="本页目录">
-    <p class="toc-title">本页</p>
+    <p class="toc-title" data-en="On This Page">本页</p>
         <ol>
-      <li><a href="#method">三种检验方法</a></li>
-      <li><a href="#closure">时间闭合检验</a></li>
-      <li><a href="#bench">横向对标</a></li>
-      <li><a href="#trl">成熟度判定</a></li>
-      <li><a href="#bottle">技术瓶颈在哪一层</a></li>
-      <li><a href="#plan">若要验证：一份可执行的试飞大纲</a></li>
-      <li><a href="#verdict">本章判决</a></li>
-      <li><a href="#sum">本章总结</a></li>
+      <li><a href="#method" data-en="Three Verification Methods">三种检验方法</a></li>
+      <li><a href="#closure" data-en="Time-Closure Check">时间闭合检验</a></li>
+      <li><a href="#bench" data-en="Benchmarking">横向对标</a></li>
+      <li><a href="#trl" data-en="Maturity Assessment">成熟度判定</a></li>
+      <li><a href="#bottle" data-en="Where the Bottleneck Really Is">技术瓶颈在哪一层</a></li>
+      <li><a href="#plan" data-en="If Verification Were Possible: A Flight-Test Outline">若要验证：一份可执行的试飞大纲</a></li>
+      <li><a href="#verdict" data-en="Chapter Verdict">本章判决</a></li>
+      <li><a href="#sum" data-en="Chapter Summary">本章总结</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
-  <span><a class="home" href="index.html">首页</a>　·　飞行汽车技术基础 2026</span>
-  <span><a href="#top" class="back-to-top">↑ 返回顶部</a>　|　<a href="07-evidence.html">证据与引用</a></span>
+  <span><a class="home" href="index.html" data-en="Home">首页</a>　·　<span data-en="Fundamentals of Flying Vehicle Technology 2026">飞行汽车技术基础 2026</span></span>
+  <span><a href="#top" class="back-to-top" data-en="↑ Back to top">↑ 返回顶部</a>　|　<a href="07-evidence.html" data-en="Evidence &amp; References">证据与引用</a></span>
 </footer>
+<script src="assets/lang.js"></script>
 <script src="assets/main.js"></script>
 <script src="assets/calc.js"></script>
 </body>

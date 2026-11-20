@@ -9,21 +9,22 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body id="top">
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main" data-en="Skip to content">跳到正文</a>
 
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="章节导航">
-      <a href="01-frame.html">方法</a>
-      <a href="02-system.html">系统</a>
-      <a href="03-tech.html">技术</a>
-      <a href="04-scenario.html" class="active" aria-current="page">场景</a>
-      <a href="05-market.html">市场</a>
-      <a href="06-compete.html">判断</a>
-      <a href="07-evidence.html">证据</a>
-      <a href="08-summary.html">总结</a>
+      <a href="01-frame.html" data-en="Method">方法</a>
+      <a href="02-system.html" data-en="System">系统</a>
+      <a href="03-tech.html" data-en="Tech">技术</a>
+      <a href="04-scenario.html" class="active" aria-current="page" data-en="Scenario">场景</a>
+      <a href="05-market.html" data-en="Market">市场</a>
+      <a href="06-compete.html" data-en="Verdict">判断</a>
+      <a href="07-evidence.html" data-en="Evidence">证据</a>
+      <a href="08-summary.html" data-en="Summary">总结</a>
     </nav>
+    <button class="lang" type="button" aria-label="切换语言 / Switch language" title="切换语言 / Switch language">EN</button>
     <a class="sister-link" href="https://tianba9.github.io/eh216s-safety/" title="切换至卷二：全方位安全分析">卷二·安全分析 ↗</a>
   </div>
 </header>
@@ -31,27 +32,27 @@
 <div class="shell">
 
   <aside class="toc-nav" aria-label="全站章节">
-    <p class="toc-title">全站章节</p>
+    <p class="toc-title" data-en="Site Chapters">全站章节</p>
                   <ol>
-        <li class="nav-home"><a href="index.html">首页</a></li>
-        <li><a href="01-frame.html">01 问题定义与检索协议</a></li>
-        <li><a href="02-system.html">02 系统分解与构型</a></li>
-        <li><a href="03-tech.html">03 技术可行性</a></li>
-        <li><a href="04-scenario.html" class="active" aria-current="page">04 应用场景与运行条件</a></li>
-        <li><a href="05-market.html">05 市场与商业可行性</a></li>
-        <li><a href="06-compete.html">06 竞品与综合判断</a></li>
-        <li><a href="07-evidence.html">07 证据矩阵与引用</a></li>
-        <li><a href="08-summary.html">08 全文总结</a></li>
+        <li class="nav-home"><a href="index.html" data-en="Home">首页</a></li>
+        <li><a href="01-frame.html" data-en="01 Problem Definition &amp; Search Protocol">01 问题定义与检索协议</a></li>
+        <li><a href="02-system.html" data-en="02 System Decomposition &amp; Configuration">02 系统分解与构型</a></li>
+        <li><a href="03-tech.html" data-en="03 Technical Feasibility">03 技术可行性</a></li>
+        <li><a href="04-scenario.html" class="active" aria-current="page" data-en="04 Scenarios &amp; Operating Conditions">04 应用场景与运行条件</a></li>
+        <li><a href="05-market.html" data-en="05 Market &amp; Commercial Feasibility">05 市场与商业可行性</a></li>
+        <li><a href="06-compete.html" data-en="06 Competitors &amp; Overall Judgment">06 竞品与综合判断</a></li>
+        <li><a href="07-evidence.html" data-en="07 Evidence Matrix &amp; References">07 证据矩阵与引用</a></li>
+        <li><a href="08-summary.html" data-en="08 Overall Conclusion">08 全文总结</a></li>
       </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">首页</a><span class="sep">›</span><span class="cur">04 应用场景与运行条件</span></div>
-        <div class="head-nav"><a href="03-tech.html" title="上一章：03 技术可行性">‹ 03 技术可行性</a><a href="05-market.html" title="下一章：05 市场与商业可行性">05 市场与商业可行性 ›</a></div>
+        <div class="crumb"><a href="index.html" data-en="Home">首页</a><span class="sep">›</span><span class="cur" data-en="04 Scenarios &amp; Operating Conditions">04 应用场景与运行条件</span></div>
+        <div class="head-nav"><a href="03-tech.html" title="上一章：03 技术可行性" data-en="‹ 03 Technical Feasibility">‹ 03 技术可行性</a><a href="05-market.html" title="下一章：05 市场与商业可行性" data-en="05 Market &amp; Commercial Feasibility ›">05 市场与商业可行性 ›</a></div>
       </div>
-      <h1>能飞不等于能运营：场景是被约束筛出来的</h1>
+      <h1 data-en="Flying Is Not Operating">能飞不等于能运营：场景是被约束筛出来的</h1>
       <p class="lede">
         同一架飞行器，在景区上空是产品，在城市上空是风险，在急救通道上是公共资源。
         场景不是营销部门挑的，而是由需求刚性、支付能力、监管许可与运力匹配四个条件共同筛出来的结果。
@@ -59,7 +60,7 @@
     </div>
 
     <section id="matrix">
-      <h2><span class="num">01</span>场景矩阵</h2>
+      <h2><span class="num">01</span><span data-en="Scenario Matrix">场景矩阵</span></h2>
       <p>用两个维度筛选：横轴是监管与空域的可获得性，纵轴是需求的刚性与支付意愿。只有落在右上象限的场景，才具备当前阶段的落地条件。</p>
 
       <figure>
@@ -68,7 +69,7 @@
             <g font-family="system-ui, sans-serif">
               <!-- 象限底色 -->
               <rect x="80" y="30" width="270" height="160" fill="#f7f5f0"/>
-              <rect x="350" y="30" width="270" height="160" fill="#e8f1f2"/>
+              <rect x="350" y="30" width="270" height="160" fill="#eef5f0"/>
               <rect x="80" y="190" width="270" height="160" fill="#faf9f5"/>
               <rect x="350" y="190" width="270" height="160" fill="#f7f5f0"/>
               <!-- 轴 -->
@@ -81,14 +82,14 @@
               <text x="62" y="190" text-anchor="middle" font-size="11.5" fill="#3d454e" transform="rotate(-90 62 190)">需求刚性与支付意愿　→</text>
               <!-- 象限标签 -->
               <text x="94" y="50" font-size="10" fill="#9aa4ae" letter-spacing="1">需求弱 · 监管难</text>
-              <text x="606" y="50" font-size="10" fill="#0f5c6b" text-anchor="end" letter-spacing="1">优先落地区</text>
+              <text x="606" y="50" font-size="10" fill="#1f6b45" text-anchor="end" letter-spacing="1">优先落地区</text>
               <text x="94" y="336" font-size="10" fill="#9aa4ae" letter-spacing="1">暂缓区</text>
               <text x="606" y="336" font-size="10" fill="#9aa4ae" text-anchor="end" letter-spacing="1">需求存疑区</text>
               <!-- 场景点 -->
               <g>
-                <circle cx="540" cy="88" r="9" fill="#0f5c6b"/>
+                <circle cx="540" cy="88" r="9" fill="#1f6b45"/>
                 <text x="556" y="92" font-size="12" fill="#15181c">景区低空观光</text>
-                <circle cx="470" cy="140" r="7.5" fill="#0f5c6b" opacity=".62"/>
+                <circle cx="470" cy="140" r="7.5" fill="#1f6b45" opacity=".65"/>
                 <text x="486" y="144" font-size="11.5" fill="#3d454e">海岛 / 山区短途接驳</text>
                 <circle cx="300" cy="112" r="7.5" fill="#a8500c"/>
                 <text x="286" y="116" font-size="11.5" fill="#3d454e" text-anchor="end">应急医疗转运</text>
@@ -108,7 +109,7 @@
     </section>
 
     <section id="score">
-      <h2><span class="num">02</span>五维评分</h2>
+      <h2><span class="num">02</span><span data-en="Five-Dimension Scoring">五维评分</span></h2>
       <p>为避免「看着都挺好」的模糊判断，把每个场景拆成五项可打分的要求，每项 1 至 5 分。</p>
 
       <div class="tw">
@@ -118,11 +119,11 @@
             <tr><th style="width:22%">场景</th><th class="num">需求刚性</th><th class="num">支付能力</th><th class="num">监管可行</th><th class="num">运力匹配</th><th class="num">合计</th></tr>
           </thead>
           <tbody>
-            <tr><td class="em">景区低空观光</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num em">17</td></tr>
-            <tr><td class="em">海岛 / 山区接驳</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num em">16</td></tr>
-            <tr><td class="em">应急医疗转运</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num em">14</td></tr>
-            <tr><td class="em">空中广告 / 表演</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">5</td><td class="num em">13</td></tr>
-            <tr><td class="em">城市空中通勤</td><td class="num">4</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num em">11</td></tr>
+            <tr><td class="em">景区低空观光</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num em t-ok">17</td></tr>
+            <tr><td class="em">海岛 / 山区接驳</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num em t-ok">16</td></tr>
+            <tr><td class="em">应急医疗转运</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num em t-warn">14</td></tr>
+            <tr><td class="em">空中广告 / 表演</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">5</td><td class="num em t-warn">13</td></tr>
+            <tr><td class="em">城市空中通勤</td><td class="num">4</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num em t-no">11</td></tr>
           </tbody>
         </table>
       </div>
@@ -132,7 +133,7 @@
     </section>
 
     <section id="odd">
-      <h2><span class="num">03</span>ODD 七要素</h2>
+      <h2><span class="num">03</span><span data-en="Seven ODD Elements">ODD 七要素</span></h2>
       <p>运行设计域（ODD）定义「在什么条件下可以飞」。专用条件已把运行环境限定为低空隔离空域内的商业载客，这意味着并非所有天气、所有场地、所有时段都在设计范围之内。</p>
 
       <div class="tw">
@@ -158,7 +159,7 @@
     </section>
 
     <section id="isolated">
-      <h2><span class="num">04</span>隔离空域的代价</h2>
+      <h2><span class="num">04</span><span data-en="The Cost of Segregated Airspace">隔离空域的代价</span></h2>
       <p>「隔离空域」四个字在商业上意味着三件事，值得单独说明，因为它是监管现状与商业模式之间最直接的连接点。</p>
 
       <div class="tw">
@@ -176,7 +177,7 @@
     </section>
 
     <section id="path">
-      <h2><span class="num">05</span>落地路径</h2>
+      <h2><span class="num">05</span><span data-en="Deployment Path">落地路径</span></h2>
       <p>课程材料给出的判断是「专业化场景与大众化场景双线并行」。从 EH216-S 的实际轨迹看，路径更接近三段式，且每一段的门槛是递进的。</p>
 
       <div class="tw">
@@ -194,7 +195,7 @@
     </section>
 
     <section id="verdict">
-      <h2><span class="num">06</span>本章判决</h2>
+      <h2><span class="num">06</span><span data-en="Chapter Verdict">本章判决</span></h2>
       <div class="verdicts">
         <div class="verdict">
           <span class="n">判决 1</span>
@@ -215,7 +216,7 @@
     </section>
 
     <section id="sum">
-      <h2><span class="num">07</span>本章总结</h2>
+      <h2><span class="num">07</span><span data-en="Chapter Summary">本章总结</span></h2>
       <div class="sum">
         <p>场景不是营销分类，而是需求、监管与运力的组合。五维评分把五类场景排出 17 到 11 分，景区观光与短途接驳构成唯一闭环组合，与它实际进入的商业运营点吻合。</p>
         <p>隔离空域的三重代价——不能组网、不能混飞、不能入城——决定了它只能做预约制体验。再加上门到门时间几乎抹平速度优势，通勤在当前阶段不成立。</p>
@@ -223,29 +224,30 @@
     </section>
 
     <nav class="pager" aria-label="章节翻页">
-      <a href="03-tech.html"><span class="p-d">上一章</span><span class="p-t">← 03 技术可行性</span></a>
-      <a href="05-market.html" class="next"><span class="p-d">下一章</span><span class="p-t">05 市场与商业可行性 →</span></a>
+      <a href="03-tech.html"><span class="p-d" data-en="Previous">上一章</span><span class="p-t" data-en="← 03 Technical Feasibility">← 03 技术可行性</span></a>
+      <a href="05-market.html" class="next"><span class="p-d" data-en="Next">下一章</span><span class="p-t" data-en="05 Market &amp; Commercial Feasibility →">05 市场与商业可行性 →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="本页目录">
-    <p class="toc-title">本页</p>
+    <p class="toc-title" data-en="On This Page">本页</p>
         <ol>
-      <li><a href="#matrix">场景矩阵</a></li>
-      <li><a href="#score">五维评分</a></li>
-      <li><a href="#odd">ODD 七要素</a></li>
-      <li><a href="#isolated">隔离空域的代价</a></li>
-      <li><a href="#path">落地路径</a></li>
-      <li><a href="#verdict">本章判决</a></li>
-      <li><a href="#sum">本章总结</a></li>
+      <li><a href="#matrix" data-en="Scenario Matrix">场景矩阵</a></li>
+      <li><a href="#score" data-en="Five-Dimension Scoring">五维评分</a></li>
+      <li><a href="#odd" data-en="Seven ODD Elements">ODD 七要素</a></li>
+      <li><a href="#isolated" data-en="The Cost of Segregated Airspace">隔离空域的代价</a></li>
+      <li><a href="#path" data-en="Deployment Path">落地路径</a></li>
+      <li><a href="#verdict" data-en="Chapter Verdict">本章判决</a></li>
+      <li><a href="#sum" data-en="Chapter Summary">本章总结</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
-  <span><a class="home" href="index.html">首页</a>　·　飞行汽车技术基础 2026</span>
-  <span><a href="#top" class="back-to-top">↑ 返回顶部</a>　|　<a href="07-evidence.html">证据与引用</a></span>
+  <span><a class="home" href="index.html" data-en="Home">首页</a>　·　<span data-en="Fundamentals of Flying Vehicle Technology 2026">飞行汽车技术基础 2026</span></span>
+  <span><a href="#top" class="back-to-top" data-en="↑ Back to top">↑ 返回顶部</a>　|　<a href="07-evidence.html" data-en="Evidence &amp; References">证据与引用</a></span>
 </footer>
+<script src="assets/lang.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>

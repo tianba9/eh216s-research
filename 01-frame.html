@@ -9,21 +9,22 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body id="top">
-<a class="skip" href="#main">跳到正文</a>
+<a class="skip" href="#main" data-en="Skip to content">跳到正文</a>
 
 <header class="topbar">
   <div class="topbar-in">
     <a class="brand" href="index.html"><b>EH216-S 调研与分析</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="章节导航">
-      <a href="01-frame.html" class="active" aria-current="page">方法</a>
-      <a href="02-system.html">系统</a>
-      <a href="03-tech.html">技术</a>
-      <a href="04-scenario.html">场景</a>
-      <a href="05-market.html">市场</a>
-      <a href="06-compete.html">判断</a>
-      <a href="07-evidence.html">证据</a>
-      <a href="08-summary.html">总结</a>
+      <a href="01-frame.html" class="active" aria-current="page" data-en="Method">方法</a>
+      <a href="02-system.html" data-en="System">系统</a>
+      <a href="03-tech.html" data-en="Tech">技术</a>
+      <a href="04-scenario.html" data-en="Scenario">场景</a>
+      <a href="05-market.html" data-en="Market">市场</a>
+      <a href="06-compete.html" data-en="Verdict">判断</a>
+      <a href="07-evidence.html" data-en="Evidence">证据</a>
+      <a href="08-summary.html" data-en="Summary">总结</a>
     </nav>
+    <button class="lang" type="button" aria-label="切换语言 / Switch language" title="切换语言 / Switch language">EN</button>
     <a class="sister-link" href="https://tianba9.github.io/eh216s-safety/" title="切换至卷二：全方位安全分析">卷二·安全分析 ↗</a>
   </div>
 </header>
@@ -31,27 +32,27 @@
 <div class="shell">
 
   <aside class="toc-nav" aria-label="全站章节">
-    <p class="toc-title">全站章节</p>
+    <p class="toc-title" data-en="Site Chapters">全站章节</p>
                   <ol>
-        <li class="nav-home"><a href="index.html">首页</a></li>
-        <li><a href="01-frame.html" class="active" aria-current="page">01 问题定义与检索协议</a></li>
-        <li><a href="02-system.html">02 系统分解与构型</a></li>
-        <li><a href="03-tech.html">03 技术可行性</a></li>
-        <li><a href="04-scenario.html">04 应用场景与运行条件</a></li>
-        <li><a href="05-market.html">05 市场与商业可行性</a></li>
-        <li><a href="06-compete.html">06 竞品与综合判断</a></li>
-        <li><a href="07-evidence.html">07 证据矩阵与引用</a></li>
-        <li><a href="08-summary.html">08 全文总结</a></li>
+        <li class="nav-home"><a href="index.html" data-en="Home">首页</a></li>
+        <li><a href="01-frame.html" class="active" aria-current="page" data-en="01 Problem Definition &amp; Search Protocol">01 问题定义与检索协议</a></li>
+        <li><a href="02-system.html" data-en="02 System Decomposition &amp; Configuration">02 系统分解与构型</a></li>
+        <li><a href="03-tech.html" data-en="03 Technical Feasibility">03 技术可行性</a></li>
+        <li><a href="04-scenario.html" data-en="04 Scenarios &amp; Operating Conditions">04 应用场景与运行条件</a></li>
+        <li><a href="05-market.html" data-en="05 Market &amp; Commercial Feasibility">05 市场与商业可行性</a></li>
+        <li><a href="06-compete.html" data-en="06 Competitors &amp; Overall Judgment">06 竞品与综合判断</a></li>
+        <li><a href="07-evidence.html" data-en="07 Evidence Matrix &amp; References">07 证据矩阵与引用</a></li>
+        <li><a href="08-summary.html" data-en="08 Overall Conclusion">08 全文总结</a></li>
       </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">首页</a><span class="sep">›</span><span class="cur">01 问题定义与检索协议</span></div>
-        <div class="head-nav"><a href="index.html" class="hn-home" title="返回首页">‹ 首页</a><a href="02-system.html" title="下一章：02 系统分解与构型">02 系统分解与构型 ›</a></div>
+        <div class="crumb"><a href="index.html" data-en="Home">首页</a><span class="sep">›</span><span class="cur" data-en="01 Problem Definition &amp; Search Protocol">01 问题定义与检索协议</span></div>
+        <div class="head-nav"><a href="index.html" class="hn-home" title="返回首页" data-en="‹ Home">‹ 首页</a><a href="02-system.html" title="下一章：02 系统分解与构型" data-en="02 System Decomposition &amp; Configuration ›">02 系统分解与构型 ›</a></div>
       </div>
-      <h1>先把问题问对，再去找答案</h1>
+      <h1 data-en="Ask the Right Question First">先把问题问对，再去找答案</h1>
       <p class="lede">
         「调研一款飞行汽车」是个无法被证伪的任务，写完一万字也无法判断对错。本章把它拆成四条有明确判据的命题，
         并记录检索过程，使读者可以按同样的路径复现、或推翻本报告的结论。
@@ -59,7 +60,7 @@
     </div>
 
     <section id="question">
-      <h2><span class="num">01</span>从任务到可证伪命题</h2>
+      <h2><span class="num">01</span><span data-en="From Task to Falsifiable Claims">从任务到可证伪命题</span></h2>
       <p>课程要求覆盖技术可行性、应用场景、市场可行性三个维度。这三个词本身仍是模糊的，需要各自落到可测量的判据上。</p>
 
       <div class="tw">
@@ -104,7 +105,7 @@
     </section>
 
     <section id="protocol">
-      <h2><span class="num">02</span>检索协议</h2>
+      <h2><span class="num">02</span><span data-en="Search Protocol">检索协议</span></h2>
       <p>检索按「先官方、再标准、后学术、末媒体」的优先级推进。原因很直接：产品性能的权威来源是制造商与监管机构，不是二手报道；而媒体独有的价值在于时序与竞争态势，不在于参数。</p>
 
       <div class="tw">
@@ -147,8 +148,8 @@
     </section>
 
     <section id="screen">
-      <h2><span class="num">03</span>筛选与纳入</h2>
-      <p>本报告最终纳入 20 条来源，构成<a href="07-evidence.html">证据矩阵</a>的全部内容。筛选遵循四条排除规则。</p>
+      <h2><span class="num">03</span><span data-en="Screening &amp; Inclusion">筛选与纳入</span></h2>
+      <p>本报告最终纳入 20 条来源，构成<a href="07-evidence.html" data-en="Evidence Matrix">证据矩阵</a>的全部内容。筛选遵循四条排除规则。</p>
 
       <div class="tw">
         <table>
@@ -167,7 +168,7 @@
     </section>
 
     <section id="grade">
-      <h2><span class="num">04</span>证据分级与冲突处理</h2>
+      <h2><span class="num">04</span><span data-en="Evidence Grading &amp; Conflict Handling">证据分级与冲突处理</span></h2>
       <p>调研中最容易出错的地方不是找不到资料，而是把二手当一手、把预测当事实。本报告用两级规则来控制这一点。</p>
 
       <h3>分级：五档标签</h3>
@@ -187,7 +188,7 @@
     </section>
 
     <section id="limit">
-      <h2><span class="num">05</span>方法局限</h2>
+      <h2><span class="num">05</span><span data-en="Method Limitations">方法局限</span></h2>
       <ul>
         <li><strong>无一手访谈。</strong>本报告未接触制造商、运营人或监管方，全部结论建立在公开材料之上。</li>
         <li><strong>关键参数缺失。</strong>空重、旋翼直径、电池组容量与化学体系均未公开。第 03 章的功率核算因此依赖假设区间，只能作为量级判断，不能作为设计结论。</li>
@@ -198,7 +199,7 @@
     </section>
 
     <section id="sum">
-      <h2><span class="num">06</span>本章总结</h2>
+      <h2><span class="num">06</span><span data-en="Chapter Summary">本章总结</span></h2>
       <div class="sum">
         <p>这一章做的不是检索，而是把「调研」变成可检验的东西。四条命题各自绑定一个能被数据推翻的判据；检索按官方、标准、学术、媒体的顺序分级；20 条来源逐条标注它能支撑什么、不能支撑什么。冲突不抹平——620 kg 与 650 kg 并置，三种市场口径分列。</p>
         <p>方法上只有一句话：结论的可信度取决于读者能否按同样路径复现，而不取决于论证的篇幅。</p>
@@ -206,27 +207,28 @@
     </section>
 
     <nav class="pager" aria-label="章节翻页">
-      <a href="02-system.html" class="next"><span class="p-d">下一章</span><span class="p-t">02 系统分解与构型 →</span></a>
+      <a href="02-system.html" class="next"><span class="p-d" data-en="Next">下一章</span><span class="p-t" data-en="02 System Decomposition &amp; Configuration →">02 系统分解与构型 →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="本页目录">
-    <p class="toc-title">本页</p>
+    <p class="toc-title" data-en="On This Page">本页</p>
         <ol>
-      <li><a href="#question">从任务到可证伪命题</a></li>
-      <li><a href="#protocol">检索协议</a></li>
-      <li><a href="#screen">筛选与纳入</a></li>
-      <li><a href="#grade">证据分级与冲突处理</a></li>
-      <li><a href="#limit">方法局限</a></li>
-      <li><a href="#sum">本章总结</a></li>
+      <li><a href="#question" data-en="From Task to Falsifiable Claims">从任务到可证伪命题</a></li>
+      <li><a href="#protocol" data-en="Search Protocol">检索协议</a></li>
+      <li><a href="#screen" data-en="Screening &amp; Inclusion">筛选与纳入</a></li>
+      <li><a href="#grade" data-en="Evidence Grading &amp; Conflict Handling">证据分级与冲突处理</a></li>
+      <li><a href="#limit" data-en="Method Limitations">方法局限</a></li>
+      <li><a href="#sum" data-en="Chapter Summary">本章总结</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
-  <span><a class="home" href="index.html">首页</a>　·　飞行汽车技术基础 2026</span>
-  <span><a href="#top" class="back-to-top">↑ 返回顶部</a>　|　<a href="07-evidence.html">证据与引用</a></span>
+  <span><a class="home" href="index.html" data-en="Home">首页</a>　·　<span data-en="Fundamentals of Flying Vehicle Technology 2026">飞行汽车技术基础 2026</span></span>
+  <span><a href="#top" class="back-to-top" data-en="↑ Back to top">↑ 返回顶部</a>　|　<a href="07-evidence.html" data-en="Evidence &amp; References">证据与引用</a></span>
 </footer>
+<script src="assets/lang.js"></script>
 <script src="assets/main.js"></script>
 </body>
 </html>
