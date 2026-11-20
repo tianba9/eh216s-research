@@ -16,7 +16,6 @@
       <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
       <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
     </nav>
-    <span class="tag-assign">作业一 · 调研与分析</span>
   </div>
 </header>
 
@@ -58,7 +57,7 @@
 
     <section id="method">
       <h2><span class="num">01</span>三种检验方法</h2>
-      <p>在关键数据缺失的条件下，可行性判断不靠信任，靠交叉。本文采用三种互相独立的检验路径。</p>
+      <p>在关键数据缺失的条件下，可行性判断不靠信任，靠交叉。本报告采用三种互相独立的检验路径。</p>
 
       <div class="tw">
         <table>
@@ -115,7 +114,7 @@
           </svg>
         </div>
         <figcaption><b>图 3-1</b>　时间预算与航程闭合。若把备份余量计入，实际可用巡航时间为 20 分钟，恰好飞完 30 公里。
-        <span class="fig-src">数据：官网公布值；分段时长为本文按典型观光航线剖面分配。</span></figcaption>
+        <span class="fig-src">数据：官网公布值；分段时长为本报告按典型观光航线剖面分配。</span></figcaption>
       </figure>
 
       <p>闭合的意义在于「一致」。如果厂商分别吹嘘三个数字，它们几乎不可能恰好拼成一个完整的任务剖面。三数严丝合缝，说明这组参数是真实试飞剖面的记录。</p>
@@ -148,7 +147,7 @@
           </tbody>
         </table>
       </div>
-      <p class="t-foot">数据来源：亿航官网与财报；Joby、Archer 官网与公开报道；小鹏汇天官网与行业报道。空白表示公开渠道未见可靠数据，本文不作推测。</p>
+      <p class="t-foot">数据来源：亿航官网与财报；Joby、Archer 官网与公开报道；小鹏汇天官网与行业报道。空白表示公开渠道未见可靠数据，本报告不作推测。</p>
 
       <div class="note warn">
         <span class="lbl">对标后必须承认的差距</span>
@@ -202,9 +201,25 @@
       </div>
     </section>
 
+      <div class="calc" id="calc-energy">
+        <p class="calc-head">互动测算 · 电池比能量 → 航时与航程</p>
+        <label class="calc-row">
+          <span class="lb">系统级比能量</span>
+          <input type="range" id="e-in" min="150" max="450" step="5" value="200" aria-label="系统级比能量">
+          <output id="e-v">200 Wh/kg</output>
+        </label>
+        <div class="calc-out">
+          <div><b id="e-kwh">40.0</b><span>可用电量 kWh</span></div>
+          <div><b id="e-min">24.5</b><span>航时 min</span></div>
+          <div><b id="e-km">29.4</b><span>航程 km</span></div>
+        </div>
+        <p class="calc-note" id="e-note">—</p>
+      </div>
+      <p class="t-foot">模型：电池组质量固定 200 kg，电量与比能量成正比，航时与航程按基准架次能耗 40.8 kWh 线性折算。实测的 480 Wh/kg 为电芯级，折合系统级约 390 Wh/kg，代入后得 47.8 分钟，与 48 分 10 秒的试飞结果吻合。</p>
+
     <section id="plan">
       <h2><span class="num">06</span>若要验证：一份可执行的试飞大纲</h2>
-      <p>本文无法实测，但可以给出验证方案。以下五项构成一份最小可信的验证计划，用于检验本文的关键推断。</p>
+      <p>本报告无法实测，但可以给出验证方案。以下五项构成一份最小可信的验证计划，用于检验本报告的关键推断。</p>
 
       <div class="tw">
         <table>
@@ -219,7 +234,7 @@
           </tbody>
         </table>
       </div>
-      <p>V1 至 V4 只需一次现场访问即可完成，V5 需要台架条件。这五项如果全部通过，本文第 03、05 两章的结论即被确证；若有任一项偏离，相应结论需按实测值修正。</p>
+      <p>V1 至 V4 只需一次现场访问即可完成，V5 需要台架条件。这五项如果全部通过，本报告第 03、05 两章的结论即被确证；若有任一项偏离，相应结论需按实测值修正。</p>
     </section>
 
     <section id="verdict">
@@ -251,9 +266,10 @@
 </div>
 
 <footer class="foot">
-  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span>飞行汽车技术基础 2026</span>
   <span><a href="07-evidence.html">证据与引用</a></span>
 </footer>
 <script src="assets/main.js"></script>
+<script src="assets/calc.js"></script>
 </body>
 </html>

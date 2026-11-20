@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>07 证据矩阵与引用 · EH216-S 调研与分析</title>
-<meta name="description" content="全部 20 条来源的证据矩阵、可支撑论断、参考文献与本文的局限声明。">
+<meta name="description" content="全部 20 条来源的证据矩阵、可支撑论断、参考文献与本报告的局限声明。">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -16,7 +16,6 @@
       <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
       <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
     </nav>
-    <span class="tag-assign">作业一 · 调研与分析</span>
   </div>
 </header>
 
@@ -49,7 +48,7 @@
       <h1>每一条结论都能回溯到一句话</h1>
       <p class="lede">
         本页是全文的证据底座。20 条来源按编号排列，每条都注明类型、可信度与「它能支撑什么、不能支撑什么」。
-        凡本文的估算，都在此列明假设，供读者替换后重算。
+        凡本报告的估算，都在此列明假设，供读者替换后重算。
       </p>
     </div>
 
@@ -116,40 +115,40 @@
 
     <section id="limit">
       <h2><span class="num">03</span>局限与未披露信息</h2>
-      <p>以下信息在公开渠道确实缺失，本文不做推测填补，而是明确标注为缺口。这既是诚实，也是界定结论适用范围的方式。</p>
+      <p>以下信息在公开渠道确实缺失，本报告不做推测填补，而是明确标注为缺口。这既是诚实，也是界定结论适用范围的方式。</p>
 
       <div class="tw">
         <table>
           <caption><b>表 7-2</b>　关键信息缺口及对结论的影响</caption>
-          <thead><tr><th style="width:26%">缺失信息</th><th style="width:34%">为何重要</th><th>本文的处置</th></tr></thead>
+          <thead><tr><th style="width:26%">缺失信息</th><th style="width:34%">为何重要</th><th>本报告的处置</th></tr></thead>
           <tbody>
             <tr><td class="em">空重与分系统质量</td><td>决定载荷率与结构效率的真实水平</td><td>按同级机型比例反推，标注为估算</td></tr>
             <tr><td class="em">旋翼直径与桨叶参数</td><td>影响盘载荷与诱导功率的精度</td><td>取 1.2 m 假设，仅用于量级判断</td></tr>
             <tr><td class="em">电池组容量、化学体系与循环寿命</td><td>决定真实补能策略与全生命周期成本</td><td>按 40 kWh 反推，未讨论衰减</td></tr>
             <tr><td class="em">单机实际运营成本</td><td>是单位经济模型的核心输入</td><td>按行业通行比例估算，误差可能达 ±30%</td></tr>
             <tr><td class="em">真实客流与客座率</td><td>决定运营收入</td><td>2026 年 3 月才开始售票，无公开数据</td></tr>
-            <tr><td class="em">适航审定中的具体符合性方法</td><td>决定安全论证的深度</td><td>在作业二中按公开的审定基础推断</td></tr>
+            <tr><td class="em">适航审定中的具体符合性方法</td><td>决定安全论证的深度</td><td>在姊妹篇中按公开的审定基础推断</td></tr>
           </tbody>
         </table>
       </div>
 
       <div class="note warn">
         <span class="lbl">对全部估算的统一提醒</span>
-        <p>第 02 章的质量预算、第 03 章的功率核算、第 05 章的单位经济模型，均建立在上表所列的假设之上。这些估算的用途是<strong>判断量级与识别约束</strong>，不是给出精确答案。若获得实测数据，应以实测替换假设并重算——本文已把公式与假设全部写出，就是为了让这件事可执行。</p>
+        <p>第 02 章的质量预算、第 03 章的功率核算、第 05 章的单位经济模型，均建立在上表所列的假设之上。这些估算的用途是<strong>判断量级与识别约束</strong>，不是给出精确答案。若获得实测数据，应以实测替换假设并重算——本报告已把公式与假设全部写出，就是为了让这件事可执行。</p>
       </div>
     </section>
 
     <section id="repro">
       <h2><span class="num">04</span>复现说明</h2>
-      <p>本文的全部计算可手工复算，核心公式如下：</p>
+      <p>本报告的全部计算可手工复算，核心公式如下：</p>
       <ul>
         <li><strong>悬停诱导功率</strong>：<em>P</em><sub>i</sub> = <em>G</em><sup>1.5</sup> / √(2ρ<em>A</em>)，其中 <em>G</em> 为总重、ρ 为空气密度、<em>A</em> 为总盘面积。</li>
-        <li><strong>盘载荷</strong>：<em>G</em> / <em>A</em>，本文取值 34.3 kg/m²。</li>
-        <li><strong>单架次能量</strong>：各飞行段功率对时间积分之和，本文得 40.8 kWh。</li>
-        <li><strong>日架次上限</strong>：floor(运营窗口 / 单循环耗时)，本文为 floor(480 / 155) = 3。</li>
+        <li><strong>盘载荷</strong>：<em>G</em> / <em>A</em>，本报告取值 34.3 kg/m²。</li>
+        <li><strong>单架次能量</strong>：各飞行段功率对时间积分之和，本报告得 40.8 kWh。</li>
+        <li><strong>日架次上限</strong>：floor(运营窗口 / 单循环耗时)，本报告为 floor(480 / 155) = 3。</li>
         <li><strong>单座成本</strong>：年总成本 / (年架次 × 2)。</li>
       </ul>
-      <p>站点为纯静态 HTML，无后端依赖，可直接在浏览器中打开或部署到任意静态托管。样式与脚本位于 <code>assets/</code> 目录。</p>
+     
     </section>
 
     <nav class="pager">
@@ -160,7 +159,7 @@
 </div>
 
 <footer class="foot">
-  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span>飞行汽车技术基础 2026</span>
   <span>研究对象：亿航智能 EH216-S</span>
 </footer>
 <script src="assets/main.js"></script>

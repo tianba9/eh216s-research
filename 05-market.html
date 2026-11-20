@@ -16,7 +16,6 @@
       <a href="01-frame.html">方法</a><a href="02-system.html">系统</a><a href="03-tech.html">技术</a>
       <a href="04-scenario.html">场景</a><a href="05-market.html">市场</a><a href="06-compete.html">判断</a>
     </nav>
-    <span class="tag-assign">作业一 · 调研与分析</span>
   </div>
 </header>
 
@@ -145,7 +144,7 @@
             <tr><td>保险</td><td class="num">7.2</td><td class="num">7.2%</td><td>机身险与第三方责任险，约机身价 3%</td></tr>
             <tr><td>电力</td><td class="num">2.9</td><td class="num">2.9%</td><td>40 kWh × 0.8 元/kWh × 900 架次</td></tr>
             <tr><td>管理与其他</td><td class="num">8.0</td><td class="num">8.0%</td><td>营销、培训、系统分摊</td></tr>
-            <tr style="background:#f7f5f0"><td class="em">年成本合计</td><td class="num em">100.1</td><td class="num em">100%</td><td class="em">本文估算</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">年成本合计</td><td class="num em">100.1</td><td class="num em">100%</td><td class="em">本报告估算</td></tr>
           </tbody>
         </table>
       </div>
@@ -212,7 +211,7 @@
           </svg>
         </div>
         <figcaption><b>图 5-1</b>　补能时间对单座成本的敏感性。因日架次取整，成本呈台阶式下降而非线性下降——这是运营优化中最容易被忽视的非线性。
-        <span class="fig-src">本文估算，假设同表 5-4，仅改变补能时间。</span></figcaption>
+        <span class="fig-src">本报告估算，假设同表 5-4，仅改变补能时间。</span></figcaption>
       </figure>
 
       <div class="tw">
@@ -232,6 +231,21 @@
 
       <p>结论相当清晰：<strong>在充电模式下，单机运营无法自负盈亏，企业必须靠卖飞机赚钱；只有把补能时间压到 10 分钟以内，运营本身才成为一门生意。</strong>这解释了为什么换电方案、快充能力在产业界被反复提及——它不是技术炫技，是商业模型的前提。</p>
     </section>
+
+      <div class="calc" id="calc-charge">
+        <p class="calc-head">互动测算 · 补能时间 → 单座成本</p>
+        <label class="calc-row">
+          <span class="lb">补能时间</span>
+          <input type="range" id="chg-in" min="5" max="180" step="5" value="120" aria-label="补能时间">
+          <output id="chg-v">120 min</output>
+        </label>
+        <div class="calc-out">
+          <div><b id="chg-sorties">3</b><span>架次 / 日</span></div>
+          <div><b id="chg-year">900</b><span>架次 / 年</span></div>
+          <div><b id="chg-seat">556</b><span>元 / 座</span></div>
+        </div>
+        <p class="calc-note" id="chg-note">—</p>
+      </div>
 
     <section id="verdict">
       <h2><span class="num">06</span>本章判决</h2>
@@ -262,9 +276,10 @@
 </div>
 
 <footer class="foot">
-  <span>飞行汽车技术基础 · 课程作业一 · 2026</span>
+  <span>飞行汽车技术基础 2026</span>
   <span><a href="07-evidence.html">证据与引用</a></span>
 </footer>
 <script src="assets/main.js"></script>
+<script src="assets/calc.js"></script>
 </body>
 </html>
