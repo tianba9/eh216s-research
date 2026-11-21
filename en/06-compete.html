@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Competitors & Verdict · EH216-S Research</title>
+<title>Competitors &amp; Verdict · EH216-S Research</title>
 <meta name="description" content="Certification progress and performance form a trade-off curve; no product occupies both ends.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
@@ -13,7 +13,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="index.html"><b>EH216-S Research & Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <a class="brand" href="index.html"><b>EH216-S Research &amp; Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="Chapter navigation">
       <a href="index.html">Home</a>
       <a href="01-frame.html">Framing</a>
@@ -35,13 +35,13 @@
     <p class="toc-title">Site Chapters</p>
     <ol>
         <li class="nav-home"><a href="index.html">Home</a></li>
-        <li><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li><a href="02-system.html">02 System Decomposition & Configuration</a></li>
+        <li><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+        <li><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
         <li><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li class="active"><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
+        <li><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+        <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+        <li class="active"><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+        <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
         <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
@@ -49,7 +49,7 @@
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">06 Competitors & Overall Judgment</span></div>
+        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">06 Competitors &amp; Overall Judgment</span></div>
         <div class="head-nav">
         <a href="05-market.html" title="Market">‹ Market</a>
         <a href="07-evidence.html" title="Evidence">Evidence ›</a>
@@ -57,33 +57,179 @@
       </div>
       <h1>Certification or Range: Pick One</h1>
       <p class="lede">
-Certification progress and performance form a trade-off curve; no product occupies both ends.
+The passenger eVTOL industry has a real trade-off curve: the more aggressive the configuration, the better the performance and the slower certification. The EH216-S sits at the lower-left end — furthest ahead in certification, weakest in performance. Understanding this curve is necessary to judge how long its lead can last.
       </p>
     </div>
 
-    <section id="s01">
+    <section id="map">
       <h2><span class="num">01</span>Competitive Landscape</h2>
-      <p>Joby and Archer lead in performance and remain inside FAA certification. AeroHT's modular design compresses certification to the flying module. EH216-S is the only one already in revenue service.</p>
+      <p>The horizontal axis quantifies certification progress by review stage; the vertical axis is design range. The two are not independent: tilt-rotors and compound wings buy range at the cost of certification complexity.</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 400" role="img" aria-label="Competitive positioning by certification progress and range">
+            <g font-family="system-ui, sans-serif">
+              <!-- axes -->
+              <line x1="70" y1="330" x2="650" y2="330" stroke="#15181c"/>
+              <line x1="70" y1="40" x2="70" y2="330" stroke="#15181c"/>
+              <g font-size="9.5" fill="#6d7783">
+                <text x="70" y="348">Not accepted</text><text x="190" y="348">Accepted</text>
+                <text x="310" y="348">Compliance verification</text><text x="440" y="348">Final review</text><text x="560" y="348">Certified</text>
+              </g>
+              <text x="360" y="374" text-anchor="middle" font-size="11" fill="#3d454e">Airworthiness certification progress →</text>
+              <text x="52" y="185" text-anchor="middle" font-size="11" fill="#3d454e" transform="rotate(-90 52 185)">Design range →</text>
+              <g font-size="9.5" fill="#6d7783" text-anchor="end">
+                <text x="64" y="300">30 km</text><text x="64" y="238">80 km</text><text x="64" y="176">160 km</text><text x="64" y="114">240 km</text>
+              </g>
+
+              <!-- trend hint line -->
+              <path d="M600,290 C520,250 460,190 430,150" fill="none" stroke="#d8d3c8" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <text x="470" y="126" font-size="9.5" fill="#9aa4ae">Increasing configuration aggressiveness</text>
+
+              <!-- data points -->
+              <g>
+                <circle cx="590" cy="292" r="9" fill="#0f5c6b"/>
+                <text x="590" y="272" font-size="11.5" fill="#0f5c6b" text-anchor="middle" font-weight="600">EH216-S</text>
+                <text x="590" y="312" font-size="9.5" fill="#6d7783" text-anchor="middle">All four certificates · 30 km</text>
+
+                <circle cx="470" cy="150" r="8" fill="#a8500c"/>
+                <text x="484" y="146" font-size="11.5" fill="#a8500c">Joby S4</text>
+                <text x="484" y="161" font-size="9.5" fill="#6d7783">FAA Stage 5</text>
+
+                <circle cx="400" cy="156" r="8" fill="#a8500c" opacity=".72"/>
+                <text x="414" y="182" font-size="11.5" fill="#a8500c">Archer Midnight</text>
+                <text x="414" y="197" font-size="9.5" fill="#6d7783">FAA Stage 4</text>
+
+                <circle cx="215" cy="255" r="7" fill="#6d7783"/>
+                <text x="229" y="251" font-size="11.5" fill="#4a545f">AeroHT X3-F</text>
+                <text x="229" y="266" font-size="9.5" fill="#6d7783">TC / PC accepted</text>
+
+                <circle cx="105" cy="120" r="7" fill="#9aa4ae"/>
+                <text x="119" y="116" font-size="11.5" fill="#6d7783">EHang VT35</text>
+                <text x="119" y="131" font-size="9.5" fill="#9aa4ae">Unveiled · about 200 km</text>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Fig. 6-1</b>　Competitive positioning by certification progress and range. The EH216-S sits in the lower-right: furthest in certification, shortest in range — the inevitable position of a multirotor configuration, not a capability defect.
+        <span class="fig-src">Certification progress follows stages published by national aviation authorities; systems differ across countries, so this is only a relative-position reference.</span></figcaption>
+      </figure>
+
+      <p>This figure explains the industry's real competitive logic: <strong>no product can occupy the upper-right corner.</strong> Joby and Archer trade range for certification time; the EH216-S trades range for certification speed; AeroHT uses a separable design to compress the airworthiness scope to the flying module in exchange for production speed. Each route has its price.</p>
     </section>
-    <section id="s02">
+
+    <section id="score">
       <h2><span class="num">02</span>Five-Dimension Comparison</h2>
-      <p>EH216-S does not lead in total score: 15 against 18 for its US peers. Yet within the subset “currently operable” it is the only option.</p>
+      <p>To make comparison actionable, competitive factors are broken into five scores. The criteria follow Chapter 04: a 5-point scale where higher is more favourable.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 6-1</b>　Five-dimension comparison of four products</caption>
+          <thead>
+            <tr><th style="width:20%">Dimension</th><th class="num">EH216-S</th><th class="num">Joby S4</th><th class="num">Archer Midnight</th><th class="num">AeroHT X3-F</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">Certification progress</td><td class="num em">5</td><td class="num">3</td><td class="num">3</td><td class="num">2</td></tr>
+            <tr><td class="em">Performance (range / speed)</td><td class="num">1</td><td class="num">5</td><td class="num">4</td><td class="num">2</td></tr>
+            <tr><td class="em">Capacity density (seats × sorties)</td><td class="num">2</td><td class="num">5</td><td class="num">5</td><td class="num">3</td></tr>
+            <tr><td class="em">Cost competitiveness</td><td class="num">3</td><td class="num">2</td><td class="num">3</td><td class="num">5</td></tr>
+            <tr><td class="em">Scenario uniqueness</td><td class="num">4</td><td class="num">3</td><td class="num">3</td><td class="num">4</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">Total</td><td class="num em">15</td><td class="num em">18</td><td class="num em">18</td><td class="num em">16</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">Scoring note: certification progress is converted from published stages; capacity density combines seat class and daily sorties (Joby and Archer are 4-seat with high turnover); cost competitiveness includes purchase price and cost per seat; scenario uniqueness asks whether alternatives exist.</p>
+
+      <p>The EH216-S does not lead on total score and is even slightly lower. But this total is misleading — <strong>it hides the fact that within the subset "currently operable", the EH216-S is the only option.</strong> The other three have not obtained type certificates and, however high their scores, cannot offer service in 2026.</p>
     </section>
-    <section id="s03">
+
+    <section id="moat">
       <h2><span class="num">03</span>Does the Moat Hold</h2>
-      <p>Partly. Certification evidence cannot be transferred, but the lead is only three to four years. A tilt-rotor with twice the range could erase its niche.</p>
+      <p>Whether the certification lead is a sustainable advantage depends on three conditions. Testing them one by one, the conclusion is "conditionally holds".</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 6-2</b>　Testing the conditions for the moat</caption>
+          <thead><tr><th style="width:24%">Condition</th><th style="width:36%">Test result</th><th>Judgment</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Low replicability of certification</td><td>A new configuration must rebuild its certification basis; the special condition applies only to this model. Joby and Archer follow their own paths and cannot cite EH216-S evidence.</td><td><strong>Holds.</strong> Certification evidence is not transferable.</td></tr>
+            <tr><td class="em">Operational data can become a barrier</td><td>9 ×10⁴ sorties of operational data support reliability argumentation and insurance pricing; latecomers must accumulate their own.</td><td><strong>Partly holds.</strong> The data value is real, but the lead converges over time.</td></tr>
+            <tr><td class="em">The technical route cannot be bypassed</td><td>If a compound-wing or tilt-rotor obtains its TC before 2028, its range advantage will directly cover EH216-S scenarios.</td><td><strong>Does not hold.</strong> This is the main threat.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Overall judgment: <strong>the moat exists but is about three to four years wide.</strong> Its role is not permanent leadership but an entry ticket — "first to market, first to accumulate operational data, first to build customer relationships". The key move during the window is not raising performance but locking in the operating network and customers — consistent with its 2026 strategic focus on advancing regular operations and expanding overseas.</p>
     </section>
-    <section id="s04">
+
+    <section id="risk">
       <h2><span class="num">04</span>Risk Register</h2>
-      <p>Five risks: slow order conversion, unprofitable operations, a regulator-confirmed incident, competitor certification by 2028, and local-budget tightening.</p>
+      <p>The five risks below are ordered by "probability × impact". Each has an observable trigger signal for later tracking.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 6-3</b>　Main risks, trigger signals and impacts</caption>
+          <thead>
+            <tr><th style="width:8%">No.</th><th style="width:22%">Risk</th><th style="width:34%">Observable trigger signal</th><th>Impact</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">R1</td><td>Orders convert to revenue too slowly</td><td>Two consecutive quarters below 40 aircraft delivered; rising days of receivables</td><td>Cash-flow pressure, idle capacity</td></tr>
+            <tr><td class="em">R2</td><td>Operations remain unprofitable</td><td>OC-licensed operators cut routes or suspend service</td><td>The "equipment-selling" model loses downstream support</td></tr>
+            <tr><td class="em">R3</td><td>A regulator-confirmed operational accident occurs</td><td>CAAC issues an incident bulletin or suspends operations</td><td>Public acceptance and orders fall together, affecting the whole industry</td></tr>
+            <tr><td class="em">R4</td><td>A competitor obtains TC in 2027–2028</td><td>Joby or Archer receives an FAA type certificate</td><td>Range advantage directly erodes the short-shuttle market</td></tr>
+            <tr><td class="em">R5</td><td>Local budget tightening cuts procurement</td><td>More cities suspend direct low-altitude subsidies</td><td>State-platform orders decline, demand stalls</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>R5 already shows early signals. In the second half of 2026 several regions suspended direct subsidies, shifting funds to infrastructure and government procurement of services. This is a substantive stress test for a business model reliant on project-based orders.</p>
     </section>
-    <section id="s05">
+
+    <section id="final">
       <h2><span class="num">05</span>Overall Judgment</h2>
-      <p>The moat buys entry, not permanence. The right use of the window is to lock in operators and customers rather than chase parameters.</p>
+
+      <div class="rating">
+        <div class="g">B</div>
+        <div class="rb">
+          <h4>Overall feasibility: conditionally feasible</h4>
+          <p>The rating is upper only when three conditions hold together: (1) scenarios locked to sightseeing and short shuttle; (2) recharge time cut below 60 minutes; (3) operating network and customers locked in before 2028. With all three it can be raised to A−; missing any one lowers it to C. This rating is a judgment, not a forecast.</p>
+        </div>
+      </div>
+
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">Judgment 1</span>
+          <h4>Technical feasibility: holds, but only within 30 km</h4>
+          <p>Parameters are self-consistent, mass-producible and in commercial operation. Technically feasible as a short-range passenger aircraft; not feasible as an urban commuting tool, and iteration cannot fix this in the near term.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Judgment 2</span>
+          <h4>Scenario feasibility: sightseeing holds, commuting does not</h4>
+          <p>Five-dimension scores of 17 against 11 show a structural gap. Segregated airspace, low capacity and door-to-door time together exclude commuting at the current stage.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Judgment 3</span>
+          <h4>Market feasibility: demand exists, the model is not closed</h4>
+          <p>At 556 yuan per seat and 300–500 yuan tickets, operations approach break-even but generate no profit. Profitability depends on aircraft-sales gross margin, not operations.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Judgment 4</span>
+          <h4>Competitive position: a three-year window, outcome depends on actions within it</h4>
+          <p>A three-to-four-year certification lead but performance an order of magnitude behind. The window's value lies in locking in the network and customers, not raising parameters. If a competitor certifies before 2028, the short-shuttle market will be directly covered.</p>
+        </div>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">In one sentence</span>
+        <p>The EH216-S is not a good aircraft but a scarce certificate. It proved something no one had proved before: an unmanned passenger aircraft can pass CAAC certification. The value of that certificate far exceeds its 30 km range.</p>
+      </div>
     </section>
-    <section id="s06">
+
+    <section id="sum">
       <h2><span class="num">06</span>Chapter Summary</h2>
-      <p>The rating is B, conditional on three things: stay in sightseeing and short shuttle, cut recharge below 60 minutes, and build the operating network before 2028.</p>
+      <div class="sum">
+        <p>Certification and performance form a trade-off curve; no product occupies both ends. In the five-dimension comparison the EH216-S does not lead on total score, but within the subset "currently operable" it is the only option.</p>
+        <p>The moat is about three to four years wide, resting on the non-transferability of certification evidence. The key action in the window is not raising parameters but locking in the network and customers — overall rating B, with three conditions stated in the conclusion.</p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
@@ -95,12 +241,12 @@ Certification progress and performance form a trade-off curve; no product occupi
   <aside class="toc" aria-label="On this page">
     <p class="toc-title">On This Page</p>
     <ol>
-      <li><a href="#s01">Competitive Landscape</a></li>
-      <li><a href="#s02">Five-Dimension Comparison</a></li>
-      <li><a href="#s03">Does the Moat Hold</a></li>
-      <li><a href="#s04">Risk Register</a></li>
-      <li><a href="#s05">Overall Judgment</a></li>
-      <li><a href="#s06">Chapter Summary</a></li>
+      <li><a href="#map">Competitive Landscape</a></li>
+      <li><a href="#score">Five-Dimension Comparison</a></li>
+      <li><a href="#moat">Does the Moat Hold</a></li>
+      <li><a href="#risk">Risk Register</a></li>
+      <li><a href="#final">Overall Judgment</a></li>
+      <li><a href="#sum">Chapter Summary</a></li>
     </ol>
   </aside>
 </div>

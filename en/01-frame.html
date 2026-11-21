@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>01 Problem Definition & Search Protocol · EH216-S Research</title>
-<meta name="description" content="Four falsifiable propositions, a reproducible bilingual search protocol, and explicit rules for grading evidence and handling conflicts.">
+<title>01 Problem Definition &amp; Search Protocol · EH216-S Research</title>
+<meta name="description" content="The vague research task is split into four falsifiable propositions, with a reproducible bilingual search protocol, evidence-grading rules and methods for handling conflicting calibers.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="index.html"><b>EH216-S Research & Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <a class="brand" href="index.html"><b>EH216-S Research &amp; Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="Chapter navigation">
       <a href="index.html">Home</a>
       <a href="01-frame.html" class="active" aria-current="page">Framing</a>
@@ -34,80 +34,199 @@
   <aside class="toc-nav" aria-label="Site chapters">
     <p class="toc-title">Site Chapters</p>
     <ol>
-        <li class="nav-home"><a href="index.html">Home</a></li>
-        <li class="active"><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li><a href="02-system.html">02 System Decomposition & Configuration</a></li>
-        <li><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
-        <li><a href="08-summary.html">08 Overall Conclusion</a></li>
+      <li class="nav-home"><a href="index.html">Home</a></li>
+      <li class="active"><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+      <li><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
+      <li><a href="03-tech.html">03 Technical Feasibility</a></li>
+      <li><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+      <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+      <li><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+      <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
+      <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">01 Problem Definition & Search Protocol</span></div>
-        <div class="head-nav">
-        <a href="index.html" title="Home">‹ Home</a>
-        <a href="02-system.html" title="System">System ›</a>
-        </div>
+        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">01 Problem Definition &amp; Search Protocol</span></div>
+        <div class="head-nav"><a href="index.html" class="hn-home" title="Back to home">‹ Home</a><a href="02-system.html" title="Next chapter: 02 System Decomposition &amp; Configuration">02 System Decomposition &amp; Configuration ›</a></div>
       </div>
-      <h1>Ask the Right Question First</h1>
+      <h1>Ask the Right Question First, Then Look for the Answer</h1>
       <p class="lede">
-This chapter does not merely search; it turns “research” into something testable. Four propositions are each tied to a criterion that data could overturn, and twenty sources are graded by what they can and cannot support.
+        “Researching a flying vehicle” is a task that cannot be falsified; even ten thousand words cannot tell right from wrong. This chapter splits it into four propositions with explicit criteria and records the search process, so that readers can reproduce the path — or overturn the report's conclusions.
       </p>
     </div>
 
-    <section id="s01">
-      <h2><span class="num">01</span>From task to falsifiable claims</h2>
-<p>The assignment asks for research on a flying-vehicle technology. That phrase is too vague. It is split into four propositions, each with a concrete disconfirming condition.</p><div class="tw"><table><caption><b>Table 1-1　Propositions and their tests</b></caption><thead><tr><th>No.</th><th>Proposition</th><th>Would be overturned if…</th><th>Verdict</th></tr></thead><tbody><tr><td>P1</td><td>The published figures are physically self-consistent</td><td>Derived endurance falls well below the claim, or the thrust-to-weight ratio fails</td><td><strong>Holds</strong></td></tr><tr><td>P2</td><td>The configuration confines the market to short point-to-point trips</td><td>A commercial commuter route exists with adequate daily capacity</td><td><strong>Holds</strong></td></tr><tr><td>P3</td><td>Order volume reflects industrial policy, not end-user demand</td><td>Buyers are end consumers and most orders carry deposits</td><td><strong>Holds</strong></td></tr><tr><td>P4</td><td>Battery specific energy is the only variable that changes P2</td><td>Another constraint is relieved at a comparable scale</td><td><strong>Partly holds</strong></td></tr></tbody></table></div><p>Method matters: credibility depends on whether a reader can follow the same path, not on the length of the argument.</p>
+    <section id="question">
+      <h2><span class="num">01</span><span>From Task to Falsifiable Claims</span></h2>
+      <p>The course assignment requires coverage of three dimensions: technical feasibility, application scenarios and market viability. These three terms are themselves vague and need to be reduced to measurable criteria.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 1-1</b>　Four propositions, their criteria and the verdicts of this report</caption>
+          <thead>
+            <tr><th style="width:8%">No.</th><th style="width:30%">Proposition</th><th style="width:34%">Criterion (under what conditions it is overturned)</th><th>This report's verdict</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="em">P1</td>
+              <td>The EH216-S's published performance figures are physically self-consistent, with no unexplained exaggeration.</td>
+              <td>Endurance derived from power and energy conservation falls significantly below the claim, or the thrust-to-weight ratio fails.</td>
+              <td><strong>Holds.</strong> Energy accounting falls in the 40 kWh range, comparable to a 620 kg-class multirotor; see <a href="03-tech.html">Chapter 03</a>.</td>
+            </tr>
+            <tr>
+              <td class="em">P2</td>
+              <td>The product's configuration confines its market boundary to short point-to-point trips rather than urban commuting.</td>
+              <td>A commercially operable commuter route exists, and the daily capacity per aircraft can support commuter density.</td>
+              <td><strong>Holds.</strong> Theoretical daily sorties per aircraft are about three, an order of magnitude short of commuter capacity density.</td>
+            </tr>
+            <tr>
+              <td class="em">P3</td>
+              <td>The current order volume reflects industrial-policy intent rather than end-user travel demand.</td>
+              <td>Orders come mainly from end consumers or high-frequency operators, with a high deposit ratio.</td>
+              <td><strong>Holds.</strong> Customers are mainly local state-owned platforms and leasing companies, and most have not paid a deposit.</td>
+            </tr>
+            <tr>
+              <td class="em">P4</td>
+              <td>Battery specific energy is currently the only technical variable that can change the P2 verdict.</td>
+              <td>A comparable pathway for relieving the constraint exists through configuration, aerodynamics or airspace reform.</td>
+              <td><strong>Partly holds.</strong> Airspace and infrastructure are parallel constraints, but until endurance breaks through they do not constitute effective bottleneck relief.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <span class="lbl">Why designed this way</span>
+        <p>P1 tests whether the data can be trusted, P2 whether the product positioning is right, P3 whether demand is genuine, and P4 whether the future may change. Together the four cover the technical, scenario and market dimensions, and each can be overturned by a specific set of data — that is research worth writing.</p>
+      </div>
     </section>
-    <section id="s02">
-      <h2><span class="num">02</span>Search protocol</h2>
-<p>Searches were run in Chinese and English, prioritising official disclosures, standards, academia and finally media. Media adds chronology and competitor status, not authoritative parameters.</p><div class="tw"><table><caption><b>Table 1-2　Concept groups</b></caption><thead><tr><th>Group</th><th>Chinese terms</th><th>English terms</th><th>Preferred source</th></tr></thead><tbody><tr><td>Subject</td><td>EH216-S, EHang Intelligent, pilotless passenger aircraft</td><td>EHang, EH216-S, pilotless passenger eVTOL</td><td>Company site, SEC filings</td></tr><tr><td>Certification</td><td>type certificate, special condition, operating certificate</td><td>type certificate, special condition</td><td>CAAC</td></tr><tr><td>Technology</td><td>multirotor, coaxial rotors, redundant flight control</td><td>multirotor, coaxial rotor, redundant flight control</td><td>SC-21-002, academic reviews</td></tr><tr><td>Scenarios</td><td>low-altitude sightseeing, segregated airspace, vertiport</td><td>UAM, isolated airspace, vertiport</td><td>Industry reports, local pilots</td></tr><tr><td>Market</td><td>low-altitude economy, market size, orders</td><td>low-altitude economy, unit economics</td><td>CCID, CAAC, broker research</td></tr></tbody></table></div>
+
+    <section id="protocol">
+      <h2><span class="num">02</span><span>Search Protocol</span></h2>
+      <p>Searches followed a priority order of “official first, then standards, then academia, and media last”. The reason is direct: the authoritative sources for product performance are the manufacturer and regulators, not secondary reporting; media's unique value lies in chronology and competitive dynamics, not in parameters.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 1-2</b>　Search protocol: concept terms, synonyms and source types</caption>
+          <thead><tr><th style="width:16%">Concept group</th><th style="width:34%">Chinese search terms (English gloss)</th><th style="width:30%">English search terms</th><th>Preferred source</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Subject</td><td>EH216-S, EHang Intelligent, pilotless passenger aircraft</td><td>EHang, EH216-S, pilotless passenger eVTOL</td><td>Manufacturer's website, SEC 6-K filings</td></tr>
+            <tr><td class="em">Certification</td><td>TC, standard AC, PC, OC, special condition</td><td>type certificate, airworthiness certificate, special condition, SC-21-002</td><td>CAAC, China Civil Aviation News</td></tr>
+            <tr><td class="em">Technology</td><td>multirotor, coaxial rotor pairs, distributed electric propulsion, redundant flight control</td><td>multirotor, coaxial rotor, distributed electric propulsion, redundant flight control</td><td>Special condition, academic reviews</td></tr>
+            <tr><td class="em">Scenarios</td><td>low-altitude sightseeing, UAM, segregated airspace, vertiport</td><td>UAM, isolated airspace, vertiport, aerial sightseeing</td><td>Industry reports, local pilot schemes</td></tr>
+            <tr><td class="em">Market</td><td>low-altitude economy, market size, orders, cost per seat</td><td>low-altitude economy, market size, unit economics</td><td>CCID, CAAC, broker research</td></tr>
+            <tr><td class="em">Competitors</td><td>Joby, Archer, XPeng AeroHT, Land Carrier, VT35</td><td>Joby S4, Archer Midnight, AeroHT, type certification progress</td><td>Competitors' websites, airworthiness authority announcements</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Query strings actually used</h3>
+      <p>The following query strings can be reused directly, grouped by source type. Chinese-language sources were used for regulation and market data; English-language sources for technical benchmarking and competitor progress.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 1-3</b>　Query strings and their uses</caption>
+          <thead><tr><th style="width:22%">Source</th><th style="width:52%">Query string</th><th>Use</th></tr></thead>
+          <tbody>
+            <tr><td>General search engines</td><td><code>EHang EH216-S technical parameters maximum take-off weight range endurance</code></td><td>Establish a parameter baseline</td></tr>
+            <tr><td>General search engines</td><td><code>EH216-S type certification special condition 2022 CAAC</code></td><td>Locate the original certification basis and the seven requirement categories</td></tr>
+            <tr><td>Filings and announcements</td><td><code>EHang Intelligent 2025 deliveries revenue EH216 orders financial report</code></td><td>Operating metrics and delivery pace</td></tr>
+            <tr><td>Industry research</td><td><code>low-altitude economy market size 2025 2030 forecast CCID CAAC</code></td><td>Cross-check market size across calibers</td></tr>
+            <tr><td>English-language sources</td><td><code>Joby Archer eVTOL FAA type certification progress 2026</code></td><td>Determine competitors' certification stage</td></tr>
+            <tr><td>English-language sources</td><td><code>EHang EH216-S suggested retail price RMB</code></td><td>First-hand confirmation of the price anchor</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note warn">
+        <span class="lbl">A practical detail</span>
+        <p>Searching for “EHang accident” returned mostly irrelevant results, and no accident record confirmed by a regulator was found. This does not mean “no accidents exist”; it only means “no regulator-confirmed accident was found in public channels”. Accordingly this report labels “zero accidents” as a company claim rather than a factual assertion.</p>
+      </div>
     </section>
-    <section id="s03">
-      <h2><span class="num">03</span>Screening and inclusion</h2>
-<p>Twenty sources form the evidence matrix. Four exclusion rules were applied: unattributable reposts, self-contradictory data without explanation, purely promotional copy, and material about a different EH216 variant.</p>
+
+    <section id="screen">
+      <h2><span class="num">03</span><span>Screening &amp; Inclusion</span></h2>
+      <p>The report finally included 20 sources, which make up the entire <a href="07-evidence.html">evidence matrix</a>. Screening followed four exclusion rules.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 1-4</b>　Inclusion and exclusion criteria</caption>
+          <thead><tr><th style="width:18%">Decision</th><th style="width:40%">Criterion</th><th>Example in this report</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Include</td><td>Regulator documents, listed-company disclosures, technical pages on the manufacturer's website</td><td>SC-21-002 special condition, 2025 6-K filing, product-page parameters</td></tr>
+            <tr><td class="em">Include</td><td>Industry research and media investigations traceable to first-hand sources</td><td>CCID low-altitude-economy report, China Business Times investigation into order structure</td></tr>
+            <tr><td>Exclude</td><td>Reposts whose original source cannot be traced, or self-contradictory data without explanation</td><td>Some self-media parameter tables listing “650 kg / 200 m AGL”, conflicting with the manufacturer's site and without source attribution</td></tr>
+            <tr><td>Exclude</td><td>Purely promotional content with no verifiable information</td><td>Adjective-stuffed passages in launch press releases</td></tr>
+            <tr><td>Exclude</td><td>Material about a different model from the research subject</td><td>Performance data of the EH216-F firefighting version and EH216-L logistics version</td></tr>
+            <tr><td>Retain at lower grade</td><td>Information is valuable but comes from a single source, and that source is the company itself</td><td>The 48-minute solid-state battery test and 90,000 sorties with zero accidents</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
-    <section id="s04">
-      <h2><span class="num">04</span>Evidence grading and conflict handling</h2>
-<p>Five labels appear inline throughout the volume: official, standard, academic, media and author's estimate. Three rules govern conflicts: within one dimension use the official figure; never merge different statistical calibers; keep forecasts labelled as forecasts.</p>
+
+    <section id="grade">
+      <h2><span class="num">04</span><span>Evidence Grading &amp; Conflict Handling</span></h2>
+      <p>The most common error in research is not failing to find material but treating secondary sources as first-hand and forecasts as facts. This report uses a two-tier set of rules to control this.</p>
+
+      <h3>Grading: five labels</h3>
+      <p>Every key figure in the text carries a label, allowing readers to judge how far a statement can be used. <span class="ev ev-off">Official</span> can be quoted directly; <span class="ev ev-std">Standard</span> defines requirements; <span class="ev ev-med">Media analysis</span> needs cross-verification; <span class="ev ev-lit">Company claim</span> is marked as unaudited; <span class="ev ev-est">Author's estimate</span> must state its assumptions.</p>
+
+      <h3>Conflict handling: three rules</h3>
+      <ol>
+        <li><strong>Conflicts within one dimension: use the official value.</strong> The manufacturer's site gives a maximum take-off weight of 620 kg while several secondary sources give 650 kg. This report uses 620 kg and retains a conflict note in the fact sheet — because the manufacturer's site is a first-hand disclosure by the designer, while secondary tables cannot explain their basis for revision.</li>
+        <li><strong>Different calibers are never merged.</strong> Three readings of low-altitude-economy scale are of similar magnitude but different meaning: CCID's narrow-caliber RMB 715.12bn for 2025, CCID Consulting's RMB 859.17bn, and CAAC's broad-caliber RMB 1.5tn. Their statistical boundaries differ; <em>they cannot be added or substituted for one another</em>, and this report presents them separately in <a href="05-market.html">Chapter 05</a>.</li>
+        <li><strong>Forecasts stay labelled as forecasts.</strong> The “RMB 2tn by 2030” figure is an institutional projection, not an accomplished fact. When cited, this report always retains its forecast status and issuing body.</li>
+      </ol>
+
+      <div class="note key">
+        <span class="lbl">A preserved contradiction</span>
+        <p>There is a discrepancy between the maximum altitude stated on the manufacturer's site and the operating envelope in the special condition (media report 120 m AGL / 1,000 m MSL, while another source gives 200 m AGL / 3,000 m MSL). In the scenarios chapter this report uses the statutory term “low-altitude segregated airspace” rather than a specific altitude figure to support the argument — because that figure is not stated on the official technical page and varies between batches of material.</p>
+      </div>
     </section>
-    <section id="s05">
-      <h2><span class="num">05</span>Method limitations</h2>
-<p>No interviews were conducted. Empty weight, rotor diameter and pack capacity are undisclosed, so the power calculation is a bounded estimate rather than a design result. Commercial judgement is time-sensitive: ticketed operation began only in March 2026.</p>
+
+    <section id="limit">
+      <h2><span class="num">05</span><span>Method Limitations</span></h2>
+      <ul>
+        <li><strong>No first-hand interviews.</strong> This report had no contact with the manufacturer, operator or regulator; all conclusions rest on public material.</li>
+        <li><strong>Key parameters missing.</strong> Empty weight, rotor diameter, battery-pack capacity and chemistry are all undisclosed. The power calculation in <a href="03-tech.html">Chapter 03</a> therefore relies on assumed ranges and can only serve as an order-of-magnitude judgment, not a design conclusion.</li>
+        <li><strong>Operating data is a company claim.</strong> Sortie and safety records cannot be independently verified, so this report uses them at the lowest credibility grade.</li>
+        <li><strong>Market judgments are time-sensitive.</strong> Ticketed operation only began in March 2026, and the unit economics model lacks real passenger-flow data; the scenario analysis in <a href="05-market.html">Chapter 05</a> is inference rather than observation.</li>
+      </ul>
+      <p>Acknowledging these limitations does not weaken the conclusions; it defines their scope. This report's position is that when evidence is incomplete, a judgment with boundary conditions is preferable to an assertion without them.</p>
     </section>
-    <section id="s06">
-      <h2><span class="num">06</span>Chapter Summary</h2>
-<div class="sum"><p>This chapter does not simply collect sources; it makes research testable. Four propositions each carry a criterion that data could overturn; searches are graded by source authority; twenty sources are labelled by what they can support.</p><p><strong>Credibility depends on reproducibility, not on the length of the argument.</strong></p></div>
+
+    <section id="sum">
+      <h2><span class="num">06</span><span>Chapter Summary</span></h2>
+      <div class="sum">
+        <p>This chapter did not simply search; it made “research” testable. Each of the four propositions is tied to a criterion that data could overturn; searches were graded in the order official, standards, academia, media; and each of the 20 sources is labelled with what it can and cannot support. Conflicts are not smoothed over — 620 kg and 650 kg are placed side by side, and the three market calibers are shown separately.</p>
+        <p>On method there is only one sentence: the credibility of a conclusion depends on whether a reader can reproduce the same path, not on the length of the argument.</p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
       <a href="index.html"><span class="p-d">Previous</span><span class="p-t">← Home</span></a>
-      <a href="02-system.html" class="next"><span class="p-d">Next</span><span class="p-t">System →</span></a>
+      <a href="02-system.html" class="next"><span class="p-d">Next</span><span class="p-t">02 System Decomposition &amp; Configuration →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="On this page">
     <p class="toc-title">On This Page</p>
     <ol>
-      <li><a href="#s01">Framing</a></li>
-      <li><a href="#s02">Search Protocol</a></li>
-      <li><a href="#s03">Screening</a></li>
-      <li><a href="#s04">Grading & Conflicts</a></li>
-      <li><a href="#s05">Limitations</a></li>
-      <li><a href="#s06">Chapter Summary</a></li>
+      <li><a href="#question">From Task to Falsifiable Claims</a></li>
+      <li><a href="#protocol">Search Protocol</a></li>
+      <li><a href="#screen">Screening &amp; Inclusion</a></li>
+      <li><a href="#grade">Evidence Grading &amp; Conflict Handling</a></li>
+      <li><a href="#limit">Method Limitations</a></li>
+      <li><a href="#sum">Chapter Summary</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
   <span><a class="home" href="index.html">Home</a>　·　Fundamentals of Flying Vehicle Technology 2026</span>
-  <span>Subject: EHang EH216-S　|　<a href="#top" class="back-to-top">↑ Back to top</a></span>
+  <span><a href="#top" class="back-to-top">↑ Back to top</a>　|　Subject: EHang Intelligent EH216-S　|　<a href="07-evidence.html">Evidence &amp; References</a></span>
 </footer>
 <script src="../assets/lang.js"></script>
 <script src="../assets/main.js"></script>

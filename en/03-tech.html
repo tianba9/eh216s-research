@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Technical Feasibility · EH216-S Research</title>
-<meta name="description" content="Three independent checks test whether the published figures are credible: time closure, order of magnitude and benchmarking.">
+<title>03 Technical Feasibility · EH216-S Research</title>
+<meta name="description" content="Time-closure checks, disc-loading benchmarking and TRL assessment are used to judge whether the EH216-S's published performance figures are credible and at which layer the technical bottleneck really lies.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="index.html"><b>EH216-S Research & Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <a class="brand" href="index.html"><b>EH216-S Research &amp; Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="Chapter navigation">
       <a href="index.html">Home</a>
       <a href="01-frame.html">Framing</a>
@@ -34,15 +34,15 @@
   <aside class="toc-nav" aria-label="Site chapters">
     <p class="toc-title">Site Chapters</p>
     <ol>
-        <li class="nav-home"><a href="index.html">Home</a></li>
-        <li><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li><a href="02-system.html">02 System Decomposition & Configuration</a></li>
-        <li class="active"><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
-        <li><a href="08-summary.html">08 Overall Conclusion</a></li>
+      <li class="nav-home"><a href="index.html">Home</a></li>
+      <li><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+      <li><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
+      <li class="active"><a href="03-tech.html">03 Technical Feasibility</a></li>
+      <li><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+      <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+      <li><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+      <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
+      <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
 
@@ -50,69 +50,246 @@
     <div class="page-head">
       <div class="ph-top">
         <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">03 Technical Feasibility</span></div>
-        <div class="head-nav">
-        <a href="02-system.html" title="System">‹ System</a>
-        <a href="04-scenario.html" title="Scenarios">Scenarios ›</a>
-        </div>
+        <div class="head-nav"><a href="02-system.html" title="Previous chapter: 02 System Decomposition &amp; Configuration">‹ 02 System Decomposition &amp; Configuration</a><a href="04-scenario.html" title="Next chapter: 04 Scenarios &amp; Operating Conditions">04 Scenarios &amp; Operating Conditions ›</a></div>
       </div>
-      <h1>The Numbers Hold Up</h1>
+      <h1>These Numbers Hold Up: Parameter Credibility Under Three Checks</h1>
       <p class="lede">
-Three independent checks test whether the published figures are credible: time closure, order of magnitude and benchmarking.
+        Manufacturers' figures often cannot be verified directly — there is no wind-tunnel data, no empty weight, no rotor diameter. They can still be checked: whether time closes, whether the power magnitude is reasonable, and whether the aircraft is abnormal when set beside its peers. If all three checks pass, the figures can be accepted.
       </p>
     </div>
 
-    <section id="s01">
-      <h2><span class="num">01</span>Three Verification Methods</h2>
-      <p>Time closure asks whether range, endurance and cruise speed come from one mission profile. Magnitude checks test power and energy against physical limits. Benchmarking looks for abnormal outliers among peers.</p>
+    <section id="method">
+      <h2><span class="num">01</span><span>Three Verification Methods</span></h2>
+      <p>With key data missing, feasibility judgments rest not on trust but on cross-checking. This report uses three mutually independent paths of verification.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 3-1</b>　Three verification paths and their logic</caption>
+          <thead><tr><th style="width:18%">Method</th><th style="width:36%">What it tests</th><th>Failure signal</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Time closure</td><td>Whether range, endurance and cruise speed can hold simultaneously</td><td>Time needed to cover the published range at the published cruise speed significantly exceeds the published endurance</td></tr>
+            <tr><td class="em">Order-of-magnitude check</td><td>Whether power, energy and disc loading fall within the physical range of same-class aircraft</td><td>Power density beyond current motor levels, or energy demand beyond the 620 kg carryable limit</td></tr>
+            <tr><td class="em">Benchmarking</td><td>Whether the performance distribution relative to similar products is abnormal</td><td>At equal configuration and seating class, one metric deviates markedly from the group</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
-    <section id="s02">
-      <h2><span class="num">02</span>Time-Closure Check</h2>
-      <p>A 30 km trip at 90 km/h takes 20 minutes; adding 2 minutes of climb and 3 of descent gives 25, exactly the published endurance. The three figures fit one flight profile rather than being independent marketing numbers.</p>
+
+    <section id="closure">
+      <h2><span class="num">02</span><span>Time-Closure Check</span></h2>
+      <p>This is the cheapest and most effective check. Published values: range 30 km, normal level flight 90 km/h, maximum endurance 25 min. Cruising at 90 km/h, 30 km takes 20 minutes, leaving 5 minutes to cover climb, descent, landing and reserve.</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 220" role="img" aria-label="Per-sortie time budget and range-closure check">
+            <g font-family="system-ui, sans-serif">
+              <text x="20" y="26" font-size="11" fill="#6d7783" letter-spacing="1.2">Per-sortie 25 min time budget (minutes)</text>
+              <line x1="20" y1="150" x2="660" y2="150" stroke="#cfcabf"/>
+              <g font-size="9.5" fill="#6d7783">
+                <text x="20" y="168">0</text><text x="140" y="168">5</text><text x="260" y="168">10</text>
+                <text x="380" y="168">15</text><text x="500" y="168">20</text><text x="620" y="168">25</text>
+              </g>
+              <g>
+                <rect x="20" y="70" width="48" height="56" fill="#a8500c"/>
+                <rect x="68" y="70" width="432" height="56" fill="#0f5c6b"/>
+                <rect x="500" y="70" width="72" height="56" fill="#5b7f86"/>
+                <rect x="572" y="70" width="48" height="56" fill="#c9c3b6"/>
+              </g>
+              <g font-size="11" fill="#ffffff" text-anchor="middle">
+                <text x="44" y="94" font-size="10">2</text>
+                <text x="44" y="110" font-size="8.5">Climb</text>
+                <text x="284" y="94">Cruise 18 min / 30 km @ 90 km/h</text>
+                <text x="284" y="112" font-size="10" opacity=".85">This is the main constraint on range and speed</text>
+                <text x="536" y="94" font-size="10">3</text>
+                <text x="536" y="110" font-size="8.5">Descent</text>
+              </g>
+              <text x="596" y="94" font-size="10" fill="#3d454e" text-anchor="middle">2</text>
+              <text x="596" y="110" font-size="8.5" fill="#3d454e" text-anchor="middle">Reserve</text>
+              <g stroke="#9aa4ae" stroke-dasharray="3 3">
+                <line x1="500" y1="70" x2="500" y2="52"/>
+              </g>
+              <text x="500" y="46" font-size="10" fill="#6d7783" text-anchor="middle">At 20 min: 30 km completed</text>
+              <text x="20" y="200" font-size="11" fill="#3d454e">Conclusion: climb 2 + cruise 18 + descent 3 + reserve 2 = 25 min, closing exactly with the published endurance, showing that the three figures come from one mission profile.</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Figure 3-1</b>　Time budget and range closure. If the reserve is included, the usable cruise time is 20 minutes, exactly enough to cover 30 km.
+        <span class="fig-src">Data: published values from the manufacturer's website; segment durations allocated by this report according to a typical sightseeing flight profile.</span></figcaption>
+      </figure>
+
+      <p>The significance of closure lies in “consistency”. If a manufacturer inflated three numbers separately, they would almost never fit exactly into a complete mission profile. The three figures fit seamlessly, indicating that they record a real flight-test profile.</p>
+
+      <div class="note">
+        <span class="lbl">A corollary obtained along the way</span>
+        <p>Average ground speed is only 72 km/h (30 km / 25 min), far below the 90 km/h level-flight speed. The entire difference is consumed by vertical take-off and landing and by acceleration/deceleration segments — for a multirotor the vertical phases are not only slow but also the most power-hungry. This explains why shortening the range cannot linearly extend endurance, and why “battery swapping” is closer to real operational needs than “fast charging”.</p>
+      </div>
     </section>
-    <section id="s03">
-      <h2><span class="num">03</span>Benchmarking</h2>
-      <p>Against Joby S4 and Archer Midnight, EH216-S trails by an order of magnitude in speed and range. Its lead is certification progress, not performance. Judging it by range alone produces the wrong conclusion.</p>
+
+    <section id="bench">
+      <h2><span class="num">03</span><span>Benchmarking</span></h2>
+      <p>Placing the EH216-S back among same-class aircraft, we ask whether its position is abnormal. The table compares only publicly available parameters; gaps are left blank rather than inferred.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 3-2</b>　Comparison of key parameters across four passenger-carrying eVTOLs</caption>
+          <thead>
+            <tr>
+              <th style="width:20%">Item</th><th>EH216-S</th><th>Joby S4</th><th>Archer Midnight</th><th>XPeng AeroHT X3-F</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">Configuration</td><td>8 arms, 16 coaxial rotors</td><td>Tilt-rotor (6 tiltable)</td><td>Compound wing (12 propellers, 6 tiltable)</td><td>6 arms, 6 propellers, twin ducts</td></tr>
+            <tr><td class="em">Seating</td><td>2 occupants, no pilot</td><td>1 pilot + 4 passengers</td><td>1 pilot + 4 passengers</td><td>2 occupants, optional pilot</td></tr>
+            <tr><td class="em">Maximum speed</td><td>130 km/h</td><td>about 322 km/h</td><td>about 241 km/h</td><td>Undisclosed</td></tr>
+            <tr><td class="em">Range</td><td>30 km</td><td>about 161 km</td><td>about 161 km (typical mission about 32 km)</td><td>Undisclosed (range extended by ground vehicle)</td></tr>
+            <tr><td class="em">Certification status</td><td><strong>All four: TC / AC / PC / OC</strong></td><td>FAA stage 5 of certification, not certificated</td><td>FAA stage 4 of certification, not certificated</td><td>TC and PC applications accepted</td></tr>
+            <tr><td class="em">Commercial operation</td><td>Ticketed sightseeing from March 2026</td><td>Targeting passenger service in 2026</td><td>Targeting launch in 2026</td><td>Small-batch delivery in Q4 2026</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">Data sources: EHang's official site and financial reports; Joby and Archer official sites and public reporting; XPeng AeroHT official site and industry reporting. Blank cells mean no reliable data was found in public channels; this report makes no inference.</p>
+
+      <div class="note warn">
+        <span class="lbl">The gap that must be acknowledged after benchmarking</span>
+        <p>In speed and range, the EH216-S trails same-class aircraft by an order of magnitude: 30 km against 161 km, 130 km/h against 322 km/h. This is not a product defect but the price of the configuration — a multirotor has no wing to provide lift. What it gains in return is a two-to-three-year lead in certification and an acceptable cost structure in two-seat, short-haul, low-frequency scenarios. <strong>It must be judged with the yardstick of “certification leadership”, not “performance leadership”.</strong></p>
+      </div>
     </section>
-    <section id="s04">
-      <h2><span class="num">04</span>Maturity Assessment</h2>
-      <p>Structure, propulsion and production are at TRL 9; flight control and energy at 8; autonomy and airspace integration lower. What is mature is the aircraft; what is immature is the operating system.</p>
+
+    <section id="trl">
+      <h2><span class="num">04</span><span>Maturity Assessment</span></h2>
+      <p>Technology readiness level (TRL) is assessed by subsystem, avoiding a single whole-aircraft figure that hides differences. The basis for judgment is whether the subsystem has been validated in a real operating environment.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 3-3</b>　Subsystem technology readiness assessment</caption>
+          <thead><tr><th style="width:30%">Subsystem</th><th style="width:12%">TRL</th><th>Basis</th></tr></thead>
+          <tbody>
+            <tr><td>Airframe structure and composite processes</td><td class="num em">9</td><td>More than 400 units in series production and delivery, in real commercial operation</td></tr>
+            <tr><td>Distributed electric propulsion (motors / ESCs / propellers)</td><td class="num em">9</td><td>As above, with failure modes statistically tracked in operation</td></tr>
+            <tr><td>Triple-redundant flight control and voting</td><td class="num em">8</td><td>Certificated and in operation, but lacking long-duration, high-density operating data</td></tr>
+            <tr><td>Lithium-battery energy system</td><td class="num em">8</td><td>Meets airworthiness requirements, but specific energy is near the chemistry ceiling</td></tr>
+            <tr><td>Autonomous flight and ground-station dispatch</td><td class="num em">7</td><td>Single-aircraft autonomy is mature; high-density multi-aircraft coordination is not yet routine</td></tr>
+            <tr><td>Solid-state battery</td><td class="num em">4–5</td><td>Single-aircraft validation flight completed, not yet in production installation</td></tr>
+            <tr><td>Urban low-altitude routes and ATC integration</td><td class="num em">4</td><td>Depends on external systems, still at pilot stage</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Overall judgment: <strong>the aircraft itself has reached an operable state, while the operating system is not yet mature.</strong> This distinction matters — it means the main risks over the next three years lie not in the product but in airspace, vertiports and operating rules.</p>
     </section>
-    <section id="s05">
-      <h2><span class="num">05</span>Where the Bottleneck Really Is</h2>
-      <p>Three layers: battery specific energy, the absence of wing-borne lift, and a 120-minute recharge against 25 minutes of flight. The third is structural and hardest to fix by software.</p>
+
+    <section id="bottle">
+      <h2><span class="num">05</span><span>Where the Bottleneck Really Is</span></h2>
+      <p>A common claim is that “endurance is inadequate”. This judgment is too coarse to guide action. Ranked by the hardness of the constraints, there are three layers of real bottleneck.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 3-4</b>　Three layers of bottleneck and their relief conditions</caption>
+          <thead><tr><th style="width:16%">Layer</th><th style="width:26%">Bottleneck</th><th style="width:26%">Quantitative manifestation</th><th>Relief condition</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Layer 1<br>Energy</td><td>Battery system specific energy about 200 Wh/kg</td><td>200 kg of batteries supports only 40 kWh and 25 min</td><td>Raise specific energy to 350–400 Wh/kg, or adopt hybrid range extension</td></tr>
+            <tr><td class="em">Layer 2<br>Aerodynamics</td><td>No wing surface; lift is produced by rotors throughout</td><td>Cruise power is about 80% of hover, with no minimum-power cruise state</td><td>Change configuration (compound wing / tilt-rotor), at the cost of restarting certification</td></tr>
+            <tr><td class="em">Layer 3<br>Operations</td><td>Recharge time 120 min, far longer than the 25 min flight</td><td>Duty cycle about 1 : 4.8, locking daily utilisation per aircraft</td><td>Battery swapping, fast-charging capability, or fleet-scale dilution</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>The third layer is worth noting. It is neither a materials nor an aerodynamics problem, yet it does the most damage to commercial viability — because the aircraft can wait for batteries, but operations cannot. <a href="05-market.html">Chapter 05</a> will turn it into a specific cost figure.</p>
+
+      <div class="note key">
+        <span class="lbl">Judgment on “changing configuration”</span>
+        <p>EHang released the VT35 in October 2025 with a design range of about 200 km, a direct response to the second-layer bottleneck. But changing configuration means going through the certification process again; previously accumulated certification evidence cannot be transferred directly. It is the right path, but one that will take several more years.</p>
+      </div>
     </section>
-    <section id="s06">
-      <h2><span class="num">06</span>If Verification Were Possible: A Flight-Test Outline</h2>
-      <p>Five tests would settle the estimates: weigh a battery pack, measure sortie energy, record the charging window, log 30 days of daily sorties, and inject a single motor failure on a test rig.</p>
+
+    <div class="calc" id="calc-energy">
+      <p class="calc-head">Interactive calculator · Battery specific energy → Endurance and range</p>
+      <label class="calc-row">
+        <span class="lb">System-level specific energy</span>
+        <input type="range" id="e-in" min="150" max="450" step="5" value="200" aria-label="System-level specific energy">
+        <output id="e-v">200 Wh/kg</output>
+      </label>
+      <div class="calc-out">
+        <div><b id="e-kwh">40.0</b><span>Available energy kWh</span></div>
+        <div><b id="e-min">24.5</b><span>Endurance min</span></div>
+        <div><b id="e-km">29.4</b><span>Range km</span></div>
+      </div>
+      <p class="calc-note" id="e-note">—</p>
+    </div>
+    <p class="t-foot">Model: battery-pack mass is fixed at 200 kg, energy is proportional to specific energy, and endurance and range scale linearly from the baseline sortie energy of 40.8 kWh. The measured 480 Wh/kg is at cell level, equivalent to about 390 Wh/kg at system level; substituting it gives 47.8 minutes, matching the 48 min 10 s flight-test result.</p>
+
+    <section id="plan">
+      <h2><span class="num">06</span><span>If Verification Were Possible: A Flight-Test Outline</span></h2>
+      <p>This report could not carry out measurements, but it can offer a verification plan. The five items below form a minimally credible validation plan for testing the report's key inferences.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 3-5</b>　Verification plan: hypotheses, methods and pass criteria</caption>
+          <thead><tr><th style="width:8%">No.</th><th style="width:28%">Hypothesis to verify</th><th style="width:34%">Method</th><th>Pass criterion</th></tr></thead>
+          <tbody>
+            <tr><td class="em">V1</td><td>Battery system specific energy is about 200 Wh/kg</td><td>Weigh one battery pack and read its nameplate capacity</td><td>Measured value falls in 180–220 Wh/kg</td></tr>
+            <tr><td class="em">V2</td><td>Energy use per sortie on a typical profile is about 40 kWh</td><td>Take off fully charged, fly the 30 km sightseeing route, then read the remaining energy</td><td>Energy consumed 36–45 kWh</td></tr>
+            <tr><td class="em">V3</td><td>Whether 120 min of charging means 0→100% or 20→95%</td><td>Record the full charging curve and SOC window</td><td>Define the charge/discharge window to correct the duty cycle</td></tr>
+            <tr><td class="em">V4</td><td>The daily sortie ceiling per aircraft is about three</td><td>Log sorties and turnaround times for 30 consecutive days at a real operating site</td><td>Average daily sorties ≤ 4</td></tr>
+            <tr><td class="em">V5</td><td>The aircraft remains controllable after a single rotor failure</td><td>Inject a single-motor failure on a ground rig and observe attitude and altitude hold</td><td>Controlled flight and a safe landing can be maintained</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>V1 to V4 need only a single site visit; V5 requires rig facilities. If all five pass, the conclusions of <a href="03-tech.html">Chapter 03</a> and <a href="05-market.html">Chapter 05</a> are confirmed; if any deviates, the corresponding conclusion must be revised against the measured value.</p>
     </section>
-    <section id="s07">
-      <h2><span class="num">07</span>Chapter Summary</h2>
-      <p>All three checks pass, so the figures are credible. Passing does not mean leading: EH216-S is a year or two behind in performance and years ahead in certification. The hardest bottleneck is on the ground, not in the air.</p>
+
+    <section id="verdict">
+      <h2><span class="num">07</span><span>Chapter Verdict</span></h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">Verdict 1</span>
+          <h4>Technical feasibility holds, but only within the defined scenario</h4>
+          <p>The figures are self-consistent, the magnitudes reasonable, and the aircraft is in series production and operation. As a “10–30 km short-haul passenger aircraft” it is technically feasible; as an “urban commuter aircraft” it is not.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 2</span>
+          <h4>The lead comes from certification, not performance</h4>
+          <p>Compared with Joby and Archer, it trails by an order of magnitude in speed and range but leads certification by two to three years. Judging it by a performance yardstick inevitably yields the wrong conclusion.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 3</span>
+          <h4>The hardest technical bottleneck is not in the air but on the ground</h4>
+          <p>The low duty cycle caused by recharge time compresses commercial space more directly than battery specific energy. This is the central thread of <a href="05-market.html">Chapter 05</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sum">
+      <h2><span class="num">08</span><span>Chapter Summary</span></h2>
+      <div class="sum">
+        <p>The three checks are independent: time closure asks whether the three figures come from the same mission profile, the magnitude check whether power and energy fall within physical limits, and benchmarking whether anything is abnormal relative to same-class aircraft. All three pass — this shows only “credibility”, not “leadership”.</p>
+        <p>Compared with Joby and Archer, speed and range are an order of magnitude behind; the EH216-S leads in certification progress. The bottleneck has three layers, and the hardest is not in the air: recharge time locks daily utilisation per aircraft.</p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
-      <a href="02-system.html"><span class="p-d">Previous</span><span class="p-t">← System</span></a>
-      <a href="04-scenario.html" class="next"><span class="p-d">Next</span><span class="p-t">Scenarios →</span></a>
+      <a href="02-system.html"><span class="p-d">Previous</span><span class="p-t">← 02 System Decomposition &amp; Configuration</span></a>
+      <a href="04-scenario.html" class="next"><span class="p-d">Next</span><span class="p-t">04 Scenarios &amp; Operating Conditions →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="On this page">
     <p class="toc-title">On This Page</p>
     <ol>
-      <li><a href="#s01">Three Verification Methods</a></li>
-      <li><a href="#s02">Time-Closure Check</a></li>
-      <li><a href="#s03">Benchmarking</a></li>
-      <li><a href="#s04">Maturity Assessment</a></li>
-      <li><a href="#s05">Where the Bottleneck Really Is</a></li>
-      <li><a href="#s06">If Verification Were Possible: A Flight-Test Outline</a></li>
-      <li><a href="#s07">Chapter Summary</a></li>
+      <li><a href="#method">Three Verification Methods</a></li>
+      <li><a href="#closure">Time-Closure Check</a></li>
+      <li><a href="#bench">Benchmarking</a></li>
+      <li><a href="#trl">Maturity Assessment</a></li>
+      <li><a href="#bottle">Where the Bottleneck Really Is</a></li>
+      <li><a href="#plan">If Verification Were Possible: A Flight-Test Outline</a></li>
+      <li><a href="#verdict">Chapter Verdict</a></li>
+      <li><a href="#sum">Chapter Summary</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
   <span><a class="home" href="index.html">Home</a>　·　Fundamentals of Flying Vehicle Technology 2026</span>
-  <span>Subject: EHang EH216-S　|　<a href="#top" class="back-to-top">↑ Back to top</a></span>
+  <span><a href="#top" class="back-to-top">↑ Back to top</a>　|　Subject: EHang Intelligent EH216-S　|　<a href="07-evidence.html">Evidence &amp; References</a></span>
 </footer>
 <script src="../assets/lang.js"></script>
 <script src="../assets/main.js"></script>

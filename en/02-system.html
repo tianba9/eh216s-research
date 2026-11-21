@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>02 System Decomposition & Configuration · EH216-S Research</title>
-<meta name="description" content="Four-level decomposition from mission to component, the coaxial multi-rotor trade-off, and a cross-checked mass and power budget.">
+<title>02 System Decomposition &amp; Configuration · EH216-S Research</title>
+<meta name="description" content="The EH216-S is decomposed into mission, system-of-systems, system and component levels, explaining how the multirotor configuration grants redundancy while fixing its range ceiling.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="index.html"><b>EH216-S Research & Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <a class="brand" href="index.html"><b>EH216-S Research &amp; Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="Chapter navigation">
       <a href="index.html">Home</a>
       <a href="01-frame.html">Framing</a>
@@ -34,80 +34,290 @@
   <aside class="toc-nav" aria-label="Site chapters">
     <p class="toc-title">Site Chapters</p>
     <ol>
-        <li class="nav-home"><a href="index.html">Home</a></li>
-        <li><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li class="active"><a href="02-system.html">02 System Decomposition & Configuration</a></li>
-        <li><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
-        <li><a href="08-summary.html">08 Overall Conclusion</a></li>
+      <li class="nav-home"><a href="index.html">Home</a></li>
+      <li><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+      <li class="active"><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
+      <li><a href="03-tech.html">03 Technical Feasibility</a></li>
+      <li><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+      <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+      <li><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+      <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
+      <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">02 System Decomposition & Configuration</span></div>
-        <div class="head-nav">
-        <a href="01-frame.html" title="Framing">‹ Framing</a>
-        <a href="03-tech.html" title="Tech">Tech ›</a>
-        </div>
+        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">02 System Decomposition &amp; Configuration</span></div>
+        <div class="head-nav"><a href="01-frame.html" title="Previous chapter: 01 Problem Definition &amp; Search Protocol">‹ 01 Problem Definition &amp; Search Protocol</a><a href="03-tech.html" title="Next chapter: 03 Technical Feasibility">03 Technical Feasibility ›</a></div>
       </div>
-      <h1>Configuration Is Destiny</h1>
+      <h1>Configuration Is Destiny: Eight Arms and Sixteen Rotors Decide Everything</h1>
       <p class="lede">
-Why not a compound wing or a tilt-rotor? The answer lies less in aerodynamics than in certification and redundancy. This chapter decomposes the EH216-S to component level and shows how its layout grants fault tolerance while fixing its range ceiling.
+        Why not a compound wing, why not a tilt-rotor, but the “dumbest” multirotor? The answer lies not in aerodynamics but in certification and redundancy. This chapter decomposes the EH216-S to component level and explains how this configuration both grants fault tolerance and locks its range.
       </p>
     </div>
 
-    <section id="s01">
-      <h2><span class="num">01</span>Four-level decomposition</h2>
-<p>The aircraft sits inside a mission, a system-of-systems and a set of components. Its certification boundary is unusual: the aircraft, the ground control station and the data link form one certificated system.</p>
+    <section id="level">
+      <h2><span class="num">01</span><span>Four-Level Decomposition</span></h2>
+      <p>From the systems-engineering perspective of the course, any vehicle should be examined at four levels: mission, system-of-systems, system and component. The evaluation criterion changes with the level: the mission level looks at value, the system-of-systems level at coordination, the system level at performance and the component level at reliability.</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 380" role="img" aria-label="Four-level system decomposition of the EH216-S">
+            <defs>
+              <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                <path d="M0,0 L6,3 L0,6 z" fill="#9aa4ae"/>
+              </marker>
+            </defs>
+            <g font-family="system-ui, sans-serif">
+              <rect x="20" y="20" width="640" height="62" fill="#f7f5f0" stroke="#d8d3c8"/>
+              <text x="36" y="42" font-size="11" fill="#6d7783" letter-spacing="1.4">MISSION　Mission level</text>
+              <text x="36" y="66" font-size="14" fill="#15181c" font-weight="600">UAM short-haul passenger carrying: 10–30 km point-to-point movement within segregated airspace, 2 occupants, 15–25 minutes one way</text>
+
+              <rect x="20" y="102" width="640" height="62" fill="#f7f5f0" stroke="#d8d3c8"/>
+              <text x="36" y="124" font-size="11" fill="#6d7783" letter-spacing="1.4">SYSTEM OF SYSTEMS　System-of-systems level</text>
+              <text x="36" y="148" font-size="13" fill="#15181c">Vertiport network · low-altitude routes · CNS (communications, navigation, surveillance) · ground command and dispatch centre · operations and maintenance system</text>
+
+              <rect x="20" y="184" width="640" height="62" fill="#e8f1f2" stroke="#8fb3bb"/>
+              <text x="36" y="206" font-size="11" fill="#0f5c6b" letter-spacing="1.4">SYSTEM　System level　★ Analysis boundary of this report</text>
+              <text x="36" y="230" font-size="13" fill="#15181c">Aircraft body (8 arms, 16 rotors) + ground control station + data link, together forming the subject of type certification</text>
+
+              <rect x="20" y="266" width="640" height="86" fill="#ffffff" stroke="#d8d3c8"/>
+              <text x="36" y="288" font-size="11" fill="#6d7783" letter-spacing="1.4">COMPONENT　Component level</text>
+              <g font-size="12" fill="#3d454e">
+                <rect x="36" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="48" y="316">Airframe structure</text><text x="48" y="331" font-size="10" fill="#6d7783">Carbon-fibre fuselage / 8 arms / landing gear</text>
+                <rect x="186" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="198" y="316">Propulsion</text><text x="198" y="331" font-size="10" fill="#6d7783">16 motors / ESCs / rotors</text>
+                <rect x="336" y="298" width="140" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="348" y="316">Energy system</text><text x="348" y="331" font-size="10" fill="#6d7783">12 battery packs / BMS / distribution</text>
+                <rect x="486" y="298" width="154" height="40" fill="#fbfaf7" stroke="#d8d3c8"/><text x="498" y="316">Flight control &amp; avionics</text><text x="498" y="331" font-size="10" fill="#6d7783">3 flight controls / sensors / comms</text>
+              </g>
+              <g stroke="#9aa4ae" stroke-dasharray="3 3">
+                <line x1="340" y1="82" x2="340" y2="102" marker-end="url(#ar)"/>
+                <line x1="340" y1="164" x2="340" y2="184" marker-end="url(#ar)"/>
+                <line x1="340" y1="246" x2="340" y2="266" marker-end="url(#ar)"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Figure 2-1</b>　Four-level system decomposition of the EH216-S. The analysis boundary of this report is set at the system level — the aircraft body, ground control station and data link together form the subject of certification under the special condition.
+        <span class="fig-src">Source: drawn according to the definition scope of “unmanned aircraft system” in the SC-21-002 special condition.</span></figcaption>
+      </figure>
+
+      <p>The most important information in this figure is the bold boundary line: <strong>the EH216-S is not an isolated flying vehicle but a system of “aircraft + ground station + link”</strong>. The special condition explicitly brings the ground control station and data link into the scope of type certification, which is unusual for conventional aircraft — because there is no pilot on board, the human–machine relationship has been moved entirely to the ground.</p>
     </section>
-    <section id="s02">
-      <h2><span class="num">02</span>Configuration analysis</h2>
-<p>Eight arms carry coaxial counter-rotating pairs: no tail rotor, no control surfaces. That simplicity shortens certification and multiplies redundancy, at the cost of cruise efficiency.</p><div class="tw"><table><caption><b>Table 2-1　Gains and costs</b></caption><thead><tr><th>Aspect</th><th>Direction</th><th>Mechanism</th></tr></thead><tbody><tr><td>Fault tolerance</td><td>Gain</td><td>Any one of 16 rotors can fail with torque compensation from the opposite side</td></tr><tr><td>Certification</td><td>Gain</td><td>No tilting mechanism or variable pitch; failure modes are enumerable</td></tr><tr><td>Site flexibility</td><td>Gain</td><td>Vertical take-off without a runway</td></tr><tr><td>Cruise efficiency</td><td>Cost</td><td>No wing-borne lift; forward flight still pays for lift</td></tr><tr><td>Energy sensitivity</td><td>Cost</td><td>Specific energy sets endurance almost directly</td></tr></tbody></table></div><p><strong>Thirty kilometres is not an engineering shortfall but a mathematical consequence of the configuration.</strong></p>
+
+    <section id="config">
+      <h2><span class="num">02</span><span>Configuration Analysis</span></h2>
+      <p>The EH216-S uses eight arms, each carrying a pair of coaxial counter-rotating propellers, for 16 rotors and 16 motors in total. All arms fold for transport but lock into a fixed position in flight; <strong>there is no tilting mechanism and no movable control surface</strong>.</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 440" role="img" aria-label="Plan-view layout of the EH216-S eight-arm, sixteen-rotor configuration">
+            <g font-family="system-ui, sans-serif">
+              <g stroke="#c9c3b6" stroke-width="8" stroke-linecap="round">
+                <line x1="340" y1="220" x2="525" y2="220"/>
+                <line x1="340" y1="220" x2="470.8" y2="350.8"/>
+                <line x1="340" y1="220" x2="340" y2="405"/>
+                <line x1="340" y1="220" x2="209.2" y2="350.8"/>
+                <line x1="340" y1="220" x2="155" y2="220"/>
+                <line x1="340" y1="220" x2="209.2" y2="89.2"/>
+                <line x1="340" y1="220" x2="340" y2="35"/>
+                <line x1="340" y1="220" x2="470.8" y2="89.2"/>
+              </g>
+              <g fill="rgba(15,92,107,.10)" stroke="#0f5c6b" stroke-width="1.6">
+                <circle cx="525" cy="220" r="44"/><circle cx="470.8" cy="350.8" r="44"/>
+                <circle cx="340" cy="405" r="44"/><circle cx="209.2" cy="350.8" r="44"/>
+                <circle cx="155" cy="220" r="44"/><circle cx="209.2" cy="89.2" r="44"/>
+                <circle cx="340" cy="35" r="44"/><circle cx="470.8" cy="89.2" r="44"/>
+              </g>
+              <g fill="#0f5c6b">
+                <circle cx="525" cy="220" r="4"/><circle cx="470.8" cy="350.8" r="4"/>
+                <circle cx="340" cy="405" r="4"/><circle cx="209.2" cy="350.8" r="4"/>
+                <circle cx="155" cy="220" r="4"/><circle cx="209.2" cy="89.2" r="4"/>
+                <circle cx="340" cy="35" r="4"/><circle cx="470.8" cy="89.2" r="4"/>
+              </g>
+              <circle cx="340" cy="220" r="58" fill="#ffffff" stroke="#15181c" stroke-width="2"/>
+              <rect x="312" y="196" width="24" height="20" rx="3" fill="none" stroke="#15181c" stroke-width="1.2"/>
+              <rect x="344" y="196" width="24" height="20" rx="3" fill="none" stroke="#15181c" stroke-width="1.2"/>
+              <text x="340" y="242" text-anchor="middle" font-size="10" fill="#6d7783">Two-seat cabin · no flight controls</text>
+              <text x="340" y="424" text-anchor="middle" font-size="12" fill="#3d454e">8 arms × 2 coaxial counter-rotating rotors = 16 rotors · 16 motors</text>
+              <g stroke="#9aa4ae" stroke-width="1" fill="none">
+                <line x1="525" y1="176" x2="525" y2="150"/><line x1="470.8" y1="89.2" x2="505" y2="60"/>
+              </g>
+              <text x="525" y="142" text-anchor="middle" font-size="10.5" fill="#6d7783">Coaxial pair on one arm</text>
+              <text x="512" y="52" font-size="10.5" fill="#6d7783">Arms foldable (transport configuration)</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Figure 2-2</b>　Plan-view layout of the eight-arm, sixteen-rotor configuration. Coaxial counter-rotation lets the two rotors on each arm cancel each other's torque, so no tail rotor and no control-surface trimming are needed.
+        <span class="fig-src">Source: redrawn from the official product page and the special condition's wording “driving eight pairs of rotating lift/thrust components”; not an engineering drawing.</span></figcaption>
+      </figure>
+
+      <h3>Why the multirotor: three gains and two costs</h3>
+      <p>Configuration choice is never a contest of technical sophistication but an optimum under constraints. The EH216-S chose the multirotor, trading range for three other things.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 2-1</b>　Gains and costs of the multirotor configuration</caption>
+          <thead><tr><th style="width:14%">Attribute</th><th style="width:18%">Direction</th><th>Mechanism</th></tr></thead>
+          <tbody>
+            <tr><td class="em" rowspan="3">Gain</td><td>High redundancy</td><td>If any one of the 16 rotors fails, torque balance can be maintained by reducing the speed of the opposite rotor; the eight arms provide more than four sets of moment symmetry, giving far greater fault-tolerance headroom than a quadcopter.</td></tr>
+            <tr><td>Simple certification</td><td>With no tilting mechanism, no variable pitch and no movable control surfaces, the control laws and structural coupling are simple and failure modes are enumerable — crucial for the first certification of an entirely new class of aircraft.</td></tr>
+            <tr><td>Low take-off/landing requirements</td><td>Vertical take-off and landing need no runway and occupy little space; it can land on hardened ground at scenic sites or simple landing points, bypassing the vertiport infrastructure bottleneck.</td></tr>
+            <tr><td class="em" rowspan="2">Cost</td><td>Low cruise efficiency</td><td>Forward flight relies on the thrust component of the rotors, with no wing-borne lift. For the same battery energy, the range is only one-third to one-half that of a compound-wing configuration.</td></tr>
+            <tr><td>Sensitive to specific energy</td><td>Lift is produced by rotors throughout; hover is the maximum-power state with no glide or cruise throttling margin, so battery specific energy directly determines endurance.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">The core judgment of this chapter</span>
+        <p>The 30 km range is not a shortfall of engineering capability but a mathematical necessity of the configuration. Multirotor induced power is proportional to the 3/2 power of disc loading and inversely proportional to the square root of total rotor area. At 620 kg class with 16 rotors, 25 minutes of endurance is already the limiting boundary of battery specific energy. To extend range, one must either add wing area (change configuration) or raise specific energy (change battery) — there is no third path.</p>
+      </div>
     </section>
-    <section id="s03">
-      <h2><span class="num">03</span>Mass budget</h2>
-<div class="tw"><table><caption><b>Table 2-2　Estimated mass budget</b></caption><thead><tr><th>Subsystem</th><th>kg</th><th>Share</th><th>Basis</th></tr></thead><tbody><tr><td>Structure</td><td>125</td><td>20.2%</td><td>Composite airframe, arms, landing gear</td></tr><tr><td>Propulsion</td><td>85</td><td>13.7%</td><td>16 motors, ESCs, rotors</td></tr><tr><td>Energy</td><td>200</td><td>32.3%</td><td>12 battery groups, BMS, wiring</td></tr><tr><td>Avionics</td><td>25</td><td>4.0%</td><td>Triple flight control, navigation, comms</td></tr><tr><td>Interior</td><td>32</td><td>5.2%</td><td>Two seats, restraints, doors</td></tr><tr><td>Occupants</td><td>150</td><td>24.2%</td><td>Two persons at 75 kg</td></tr><tr><td>Margin</td><td>3</td><td>0.5%</td><td>Balances to 620 kg</td></tr><tr><td><strong>Total</strong></td><td><strong>620</strong></td><td><strong>100%</strong></td><td>Constraint, not estimate</td></tr></tbody></table></div><p>Payload fraction is 24.2%, comparable to light helicopters and above four-seat eVTOLs. It leaves little room for error.</p>
+
+    <section id="mass">
+      <h2><span class="num">03</span><span>Mass Budget</span></h2>
+      <p>Empty weight and subsystem masses are undisclosed. The table below is an estimate inferred by this report from the published take-off weight, seating class and proportional relationships of similar aircraft; it serves to check parameter self-consistency and is not to be cited as design data.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 2-2</b>　Estimated mass budget (under the 620 kg MTOW constraint)</caption>
+          <thead><tr><th style="width:26%">Subsystem</th><th class="num" style="width:14%">Mass / kg</th><th class="num" style="width:14%">Share</th><th>Basis</th></tr></thead>
+          <tbody>
+            <tr><td>Structure (composite fuselage, 8 arms, landing gear, doors)</td><td class="num">125</td><td class="num">20.2%</td><td>Typical structural mass fraction of carbon-fibre composite multirotors: 18%–22%</td></tr>
+            <tr><td>Propulsion (16 motors, 16 ESCs, rotors and hubs)</td><td class="num">85</td><td class="num">13.7%</td><td>Inferred from a 5.3 kW/kg power-to-weight ratio and total installed power</td></tr>
+            <tr><td>Energy system (12 battery packs, BMS, distribution and wiring)</td><td class="num">200</td><td class="num">32.3%</td><td>Value after cross-checking against the energy requirement in Section 04</td></tr>
+            <tr><td>Flight control and avionics (3 flight-control channels, navigation, communications, obstacle sensors)</td><td class="num">25</td><td class="num">4.0%</td><td>Typical mass of triple-redundant flight control plus multi-mode navigation</td></tr>
+            <tr><td>Interior and cabin (2 seats, restraints, emergency equipment, air conditioning)</td><td class="num">32</td><td class="num">5.2%</td><td>Seating and protective fittings of a passenger-carrying cabin</td></tr>
+            <tr><td>Occupants and personal baggage (2 × 75 kg)</td><td class="num">150</td><td class="num">24.2%</td><td>The special condition specifies 2 occupants</td></tr>
+            <tr><td>Design margin</td><td class="num">3</td><td class="num">0.5%</td><td>Balances to 620 kg</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">Total</td><td class="num em">620</td><td class="num em">100%</td><td class="em">Constraint, not an estimate</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p><strong>Payload fraction of 24.2%</strong> is a meaningful figure. For comparison, a same-class helicopter such as the Robinson R22 has a payload fraction of about 30%, while a four-seat eVTOL such as the Joby S4 works out at about 19%–21% with one pilot plus four passengers. The EH216-S sits in the middle: its structural efficiency shows no obvious waste but leaves no margin either — one reason it carries only two seats.</p>
     </section>
-    <section id="s04">
-      <h2><span class="num">04</span>Power and energy</h2>
-<p>With a 620 kg mass and 16 rotors, each rotor produces about 380 N in hover. Assuming a 1.2 m diameter, total disc area is 18.1 m² and ideal induced power is 71.2 kW; with a figure of merit of 0.70 and 92% electrical efficiency, hover demand is about 113 kW.</p><div class="tw"><table><caption><b>Table 2-3　Sortie energy</b></caption><thead><tr><th>Segment</th><th>Time</th><th>Power factor</th><th>Energy</th></tr></thead><tbody><tr><td>Climb</td><td>2 min</td><td>1.30× hover</td><td>4.9 kWh</td></tr><tr><td>Cruise</td><td>18 min</td><td>0.80× hover</td><td>27.0 kWh</td></tr><tr><td>Descent</td><td>3 min</td><td>0.90× hover</td><td>5.1 kWh</td></tr><tr><td>Reserve</td><td>2 min</td><td>1.00× hover</td><td>3.8 kWh</td></tr><tr><td><strong>Total</strong></td><td><strong>25 min</strong></td><td></td><td><strong>40.8 kWh</strong></td></tr></tbody></table></div><p>The mass budget implies 200 kg × 200 Wh/kg = 40 kWh; the power integral gives 40.8 kWh. Two independent paths converge, so the published figures are not exaggerated.</p>
+
+    <section id="power">
+      <h2><span class="num">04</span><span>Power &amp; Energy</span></h2>
+      <p>The calculations below do not seek precision, only the correct order of magnitude. If the magnitude matches, the figures have not been exaggerated; if it is off by more than a factor of two, the published data is questionable.</p>
+
+      <h3>Hover induced power</h3>
+      <p>Rotor diameter is undisclosed. Based on the geometry of an eight-arm layout, a single-rotor diameter of 1.2 m is assumed. Total disc area of the 16 rotors:</p>
+      <div class="tw">
+        <table>
+          <caption><b>Table 2-3</b>　Hover power calculation (ISA at sea level, ρ = 1.225 kg/m³)</caption>
+          <thead><tr><th style="width:34%">Parameter</th><th class="num" style="width:20%">Value</th><th>Formula or source</th></tr></thead>
+          <tbody>
+            <tr><td>All-up weight <em>G</em></td><td class="num">6082 N</td><td>620 kg × 9.81</td></tr>
+            <tr><td>Total disc area <em>A</em></td><td class="num">18.10 m²</td><td>16 × π × 0.6²</td></tr>
+            <tr><td>Disc loading</td><td class="num">34.3 kg/m²</td><td><em>G</em> / <em>A</em>, within the usual multirotor range</td></tr>
+            <tr><td>Ideal induced power <em>P</em><sub>i</sub></td><td class="num">71.2 kW</td><td><em>G</em><sup>1.5</sup> / √(2ρ<em>A</em>)</td></tr>
+            <tr><td>Rotor figure of merit FM</td><td class="num">0.70</td><td>Typical value for small electric rotors: 0.65–0.75</td></tr>
+            <tr><td>Shaft power</td><td class="num">101.8 kW</td><td><em>P</em><sub>i</sub> / FM</td></tr>
+            <tr><td>Electrical power (including 92% motor and ESC efficiency)</td><td class="num">110.6 kW</td><td>Shaft power / 0.92</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">Hover electrical power (including about 2 kW for avionics)</td><td class="num em">≈ 113 kW</td><td class="em">Author's estimate</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Mission-segment energy requirement</h3>
+      <p>The 25-minute endurance is not all hover. Integrating over a typical sightseeing flight profile (climb 2 min, cruise 18 min, descent and landing 3 min, reserve 2 min):</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 2-4</b>　Breakdown of energy requirement per sortie</caption>
+          <thead><tr><th style="width:22%">Flight segment</th><th class="num" style="width:14%">Duration</th><th class="num" style="width:18%">Power factor</th><th class="num" style="width:16%">Power / kW</th><th class="num">Energy / kWh</th></tr></thead>
+          <tbody>
+            <tr><td>Vertical climb</td><td class="num">2 min</td><td class="num">1.30 × hover</td><td class="num">147</td><td class="num">4.9</td></tr>
+            <tr><td>Cruise / level flight</td><td class="num">18 min</td><td class="num">0.80 × hover</td><td class="num">90</td><td class="num">27.0</td></tr>
+            <tr><td>Descent and landing</td><td class="num">3 min</td><td class="num">0.90 × hover</td><td class="num">102</td><td class="num">5.1</td></tr>
+            <tr><td>Reserve</td><td class="num">2 min</td><td class="num">1.00 × hover</td><td class="num">113</td><td class="num">3.8</td></tr>
+            <tr style="background:#f7f5f0"><td class="em">Total</td><td class="num em">25 min</td><td class="num"></td><td class="num"></td><td class="num em">40.8</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">
+        <span class="lbl">Cross-validation</span>
+        <p>Two independent paths give the same answer: the mass budget implies a 200 kg battery, which at cell levels available in 2023 (about 200 Wh/kg at system level) corresponds to <strong>40 kWh</strong>; the power integral independently yields <strong>40.8 kWh</strong> per sortie. They agree, showing that the set of figures “620 kg / 30 km / 25 min” is physically self-consistent and not obviously exaggerated.</p>
+        <p>Conversely, this also explains why the solid-state battery test could reach 48 min 10 s of endurance: 480 Wh/kg means more than double the energy for the same mass, so endurance naturally doubles. This is not marketing rhetoric but conservation of energy.</p>
+      </div>
     </section>
-    <section id="s05">
-      <h2><span class="num">05</span>Boundaries and interfaces</h2>
-<div class="tw"><table><caption><b>Table 2-4　Key interfaces</b></caption><thead><tr><th>Interface</th><th>Internal</th><th>External</th><th>Failure consequence</th></tr></thead><tbody><tr><td>Energy</td><td>12 packs → distribution → 16 ESCs</td><td>Ground charging</td><td>One pack isolable; several mean forced landing</td></tr><tr><td>Control</td><td>Three flight-control channels → actuators</td><td>Remote crew commands</td><td>Voting failure risks loss of attitude</td></tr><tr><td>Link</td><td>Onboard terminal</td><td>Ground station and ATC</td><td>Loss of link triggers fail-safe</td></tr><tr><td>Landing</td><td>Gear, downward sensing</td><td>Surface, clearance, crowd</td><td>Site quality directly affects safety</td></tr></tbody></table></div><p>Three of four interfaces cross outside the aircraft: building a good vehicle is not enough to guarantee safe operation.</p>
+
+    <section id="iface">
+      <h2><span class="num">05</span><span>Boundaries &amp; Interfaces</span></h2>
+      <p>The boundary of the system determines the boundary of responsibility. Of the four interface types below, any that extend beyond the aircraft body involve the operator or infrastructure provider, and are also where real-world operations are most likely to go wrong.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 2-5</b>　Inventory of key interfaces</caption>
+          <thead><tr><th style="width:18%">Interface</th><th style="width:24%">Internal</th><th style="width:26%">External</th><th>Failure consequence</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Energy</td><td>12 battery packs → distribution → 16 ESCs</td><td>Ground charging facilities / battery-swapping equipment</td><td>A single pack failure can be isolated; multiple failures cause a forced landing</td></tr>
+            <tr><td class="em">Control</td><td>3 flight-control channels → actuators</td><td>Remote crew commands (emergency takeover)</td><td>Failure of the voting mechanism risks loss of attitude control</td></tr>
+            <tr><td class="em">Link</td><td>Onboard communication terminal</td><td>Ground control station, ATC surveillance network</td><td>Loss of link triggers the pre-set fail-safe procedure</td></tr>
+            <tr><td class="em">Landing</td><td>Landing gear, downward sensing</td><td>Vertiport surface, clearance conditions, crowd separation</td><td>A substandard site directly affects take-off and landing safety</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>This table is expanded item by item into hazards and safety requirements in the <a href="https://tianba9.github.io/eh216s-safety/en/">sister volume</a>. Here it is enough to remember one point: <strong>three of the four interfaces cross outside the aircraft body</strong>, which means that building a good aircraft alone cannot guarantee safe operation.</p>
     </section>
-    <section id="s06">
-      <h2><span class="num">06</span>Chapter Summary</h2>
-<div class="sum"><p>At component level the trade-off becomes concrete: 8 arms and 16 rotors buy fault tolerance and a shorter approval path, at the price of cruise efficiency and range. The mass budget gives a 24.2% payload fraction; the power integral gives 40.8 kWh, consistent with the mass-derived 40 kWh.</p><p><strong>Thirty kilometres is a structural limit of a multi-rotor at 620 kg with current batteries.</strong></p></div>
+
+    <section id="verdict">
+      <h2><span class="num">06</span><span>Chapter Verdict</span></h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">Verdict 1</span>
+          <h4>The configuration choice is rational, not backward</h4>
+          <p>The multirotor sacrifices cruise efficiency in exchange for enumerable failure modes and a shorter certification cycle. For a category that must build its certification standards from scratch, obtaining the certificate first matters more than flying farther first.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 2</span>
+          <h4>The figures are self-consistent, with no sign of exaggeration</h4>
+          <p>The mass budget and power integral converge at the 40 kWh scale, consistent with the claimed 25 minutes of endurance. The published data withstands order-of-magnitude checks.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 3</span>
+          <h4>The range ceiling is structural, not solvable by iteration</h4>
+          <p>With the configuration unchanged, 30 km is a function of specific energy. Breaking through requires either waiting for batteries or changing configuration (such as the already-announced VT35 long-range model).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sum">
+      <h2><span class="num">07</span><span>Chapter Summary</span></h2>
+      <div class="sum">
+        <p>At component level the cost of the configuration choice becomes concrete: eight arms and sixteen rotors buy fault-tolerance headroom and a shorter approval cycle, at the price of cruise efficiency and range. The mass budget gives a payload fraction of 24.2%, and the power integral gives 40.8 kWh per sortie; the two independent paths converge at the 40 kWh scale, showing that the published figures are not exaggerated.</p>
+        <p>The most important judgment: <strong>30 km is not an engineering shortfall but the structural ceiling of a multirotor at 620 kg with current battery technology.</strong></p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
-      <a href="01-frame.html"><span class="p-d">Previous</span><span class="p-t">← Framing</span></a>
-      <a href="03-tech.html" class="next"><span class="p-d">Next</span><span class="p-t">Tech →</span></a>
+      <a href="01-frame.html"><span class="p-d">Previous</span><span class="p-t">← 01 Problem Definition &amp; Search Protocol</span></a>
+      <a href="03-tech.html" class="next"><span class="p-d">Next</span><span class="p-t">03 Technical Feasibility →</span></a>
     </nav>
   </main>
 
   <aside class="toc" aria-label="On this page">
     <p class="toc-title">On This Page</p>
     <ol>
-      <li><a href="#s01">Four-Level Decomposition</a></li>
-      <li><a href="#s02">Configuration</a></li>
-      <li><a href="#s03">Mass Budget</a></li>
-      <li><a href="#s04">Power & Energy</a></li>
-      <li><a href="#s05">Boundaries & Interfaces</a></li>
-      <li><a href="#s06">Chapter Summary</a></li>
+      <li><a href="#level">Four-Level Decomposition</a></li>
+      <li><a href="#config">Configuration Analysis</a></li>
+      <li><a href="#mass">Mass Budget</a></li>
+      <li><a href="#power">Power &amp; Energy</a></li>
+      <li><a href="#iface">Boundaries &amp; Interfaces</a></li>
+      <li><a href="#verdict">Chapter Verdict</a></li>
+      <li><a href="#sum">Chapter Summary</a></li>
     </ol>
   </aside>
 </div>
 
 <footer class="foot">
   <span><a class="home" href="index.html">Home</a>　·　Fundamentals of Flying Vehicle Technology 2026</span>
-  <span>Subject: EHang EH216-S　|　<a href="#top" class="back-to-top">↑ Back to top</a></span>
+  <span><a href="#top" class="back-to-top">↑ Back to top</a>　|　Subject: EHang Intelligent EH216-S　|　<a href="07-evidence.html">Evidence &amp; References</a></span>
 </footer>
 <script src="../assets/lang.js"></script>
 <script src="../assets/main.js"></script>

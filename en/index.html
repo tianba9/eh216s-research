@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EH216-S Full-Spectrum Research & Analysis</title>
-<meta name="description" content="A reproducible evidence-chain study of the EHang EH216-S: technical feasibility, operating scenarios and market viability.">
+<title>EH216-S Full-Spectrum Research &amp; Analysis · Fundamentals of Flying Vehicle Technology</title>
+<meta name="description" content="Using an evidence-chain approach from systems engineering, this report conducts an in-depth study of the EHang EH216-S passenger-carrying autonomous aircraft across technical feasibility, application scenarios and market viability.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -13,7 +13,7 @@
 
 <header class="topbar">
   <div class="topbar-in">
-    <a class="brand" href="index.html"><b>EH216-S Research & Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
+    <a class="brand" href="index.html"><b>EH216-S Research &amp; Analysis</b><span>Fundamentals of Flying Vehicle Technology</span></a>
     <nav class="topnav" aria-label="Chapter navigation">
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="01-frame.html">Framing</a>
@@ -31,94 +31,179 @@
 </header>
 
 <div class="shell">
+
   <aside class="toc-nav" aria-label="Site chapters">
     <p class="toc-title">Site Chapters</p>
     <ol>
-        <li class="nav-home"><a href="index.html">Home</a></li>
-        <li><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li><a href="02-system.html">02 System Decomposition & Configuration</a></li>
-        <li><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
-        <li><a href="08-summary.html">08 Overall Conclusion</a></li>
+      <li class="nav-home"><a href="index.html">Home</a></li>
+      <li><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+      <li><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
+      <li><a href="03-tech.html">03 Technical Feasibility</a></li>
+      <li><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+      <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+      <li><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+      <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
+      <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
 
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">Home</span></div>
-        <div class="head-nav">
-        <a href="01-frame.html" title="Framing">Framing ›</a>
-        </div>
+        <div class="crumb"><span class="cur">Home</span><span class="sep">·</span><span>Full-Spectrum Research &amp; Analysis</span></div>
+        <div class="head-nav"><a href="01-frame.html" title="Start reading: 01 Problem Definition &amp; Search Protocol">Start reading →</a></div>
       </div>
       <h1>EH216-S: The First Certificate That Turned “Can It Fly” into “Can It Ship”</h1>
       <p class="lede">
-This is not a product brochure. It asks a question that can be falsified: how did a two-seat, pilotless aircraft with a 30 km range and 25 minutes of endurance become the first passenger-carrying eVTOL to obtain a Chinese type certificate in 2023, only to begin selling sightseeing tickets in 2026? The report traces its technical, operational and commercial boundaries with a single chain of evidence, stating explicitly which conclusions have support and which are inference.
+        This is not a product brochure. It asks a question that can be falsified: how did a two-seat, pilotless aircraft with a 30 km range and 25 minutes of endurance obtain the world's first type certificate for a passenger-carrying eVTOL in 2023, and why did it only begin selling its first sightseeing tickets in 2026? Using a single chain of evidence, this report examines its technical, scenario and commercial boundaries, stating explicitly which conclusions are supported by evidence and which are inference.
       </p>
     </div>
 
+    <div class="kpis">
+      <div class="kpi"><div class="v">4<small>Certificates</small></div><div class="k">TC / AC / PC / OC</div></div>
+      <div class="kpi"><div class="v">620<small>kg</small></div><div class="k">Maximum take-off weight (MTOW)</div></div>
+      <div class="kpi"><div class="v">30<small>km</small></div><div class="k">Design range</div></div>
+      <div class="kpi"><div class="v">25<small>min</small></div><div class="k">Maximum endurance</div></div>
+      <div class="kpi"><div class="v">239<small>× RMB 10,000</small></div><div class="k">China recommended price</div></div>
+      <div class="kpi"><div class="v">90,000<small>+ sorties</small></div><div class="k">Accumulated safe flights</div></div>
+    </div>
+
     <section id="conclusions">
-      <h2><span class="num">01</span>Five Key Conclusions</h2>
-      <p>These five claims carry the argument. Each states its supporting evidence and the limits of what it can prove.</p>
+      <h2><span class="num">01</span><span>Five Key Conclusions</span></h2>
+      <p>The five claims below carry the main argument of this research. Each is labelled with the grade of evidence supporting it and with what it cannot be used to support.</p>
+
       <div class="verdicts">
-        <div class="verdict"><span class="n">01 · Competitive moat</span><h4>The barrier is the certification record, not the configuration</h4><p>The EH216-S is the only passenger eVTOL holding all four certificates. Joby and Archer were still inside their certification processes in 2026. The multi-rotor layout can be copied; the failure-probability argument behind three flight-control channels and 90,000 sorties cannot.</p></div>
-        <div class="verdict"><span class="n">02 · Scenario boundary</span><h4>The parameters lock it into experiences, not commuting</h4><p>A 30 km range, 25 minutes of endurance and roughly 120 minutes of recharge give about three sorties per aircraft per day and fewer than 2,000 seat-offerings per year. That is an order of magnitude below what urban commuting requires.</p></div>
-        <div class="verdict"><span class="n">03 · Demand quality</span><h4>Order volume is real; end-user demand is not yet proven</h4><p>More than 1,000 indicative orders are reported, but buyers are largely local state-owned platforms and leasing companies, and most indicative orders carry no deposit. These orders reflect industrial-policy intent rather than travel demand.</p></div>
-        <div class="verdict"><span class="n">04 · Financial state</span><h4>It crossed “can we sell” but not “can we earn”</h4><p>In 2025 revenue reached RMB 509.5m (+11.7%) with a 62.0% gross margin, yet a net loss of RMB 231m. Q4 produced the first GAAP quarterly profit. Scale effects are appearing, but they are not yet a steady state.</p></div>
-        <div class="verdict"><span class="n">05 · Decisive variable</span><h4>Battery specific energy is the only variable that changes the answer</h4><p>A November 2024 test with 480 Wh/kg cells extended endurance to 48 minutes. If that reaches production, the scenario boundary moves from sightseeing to intercity shuttle; if not, the 30 km line stays put.</p></div>
+        <div class="verdict">
+          <span class="n">Conclusion 01 · Competitive moat</span>
+          <h4>The real moat is not the configuration but the certification evidence chain</h4>
+          <p>The EH216-S is the only passenger-carrying eVTOL in the world holding TC, AC, PC and OC simultaneously <span class="ev ev-off">Official</span>.
+          As of September 2026, Joby is in the final stage of the FAA's five-stage certification, with 20% of applicant work completed and 10% accepted by the authority; Archer closed stage three in April 2026, and neither has obtained a type certificate <span class="ev ev-med">Media analysis</span>. The multirotor configuration can be copied; the failure-probability argument for three flight-control channels and the 90,000-sortie operating record cannot.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Conclusion 02 · Scenario boundary</span>
+          <h4>The parameters lock its market into “experience”, not “commuting”</h4>
+          <p>A 30 km range, 25 minutes of endurance and roughly 120 minutes of recharge. On a calculation of 25 minutes of flight plus 120 minutes of recharge plus 10 minutes of turnaround, the theoretical daily sorties per aircraft are about three, with fewer than 2,000 seat-offerings per year <span class="ev ev-est">Author's estimate</span>.
+          This turnaround cannot support the capacity density a commuting product requires; it can only support point-to-point sightseeing at scenic sites.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Conclusion 03 · Demand quality</span>
+          <h4>Order volume holds up; the reality of demand is not yet verified</h4>
+          <p>More than 1,000 indicative orders are on hand, and over 1,100 batch orders domestically <span class="ev ev-med">Company via media</span>.
+          But the customers are mainly local state-owned platforms and financial leasing companies, and most indicative orders carry no deposit <span class="ev ev-med">Media investigation</span>.
+          Such orders reflect local industrial-policy intent, not end-user travel demand.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Conclusion 04 · Financial state</span>
+          <h4>It has crossed “can we sell” but not “can we earn”</h4>
+          <p>In 2025 revenue reached RMB 509.5m, up 11.7% year on year, with a 62.0% gross margin and 221 aircraft delivered; the full-year net loss was RMB 231m.
+          Q4 net profit was RMB 10.5m, the first GAAP quarterly profit since listing <span class="ev ev-off">Financial report</span>.
+          Scale effects show signs of an inflection point but do not yet constitute steady-state profitability.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Conclusion 05 · Decisive variable</span>
+          <h4>The only variable that can rewrite the conclusions above is battery specific energy</h4>
+          <p>In November 2024, an EH216-S fitted with a 480 Wh/kg solid-state battery completed a flight of 48 min 10 s, an improvement of 60%–90% over conventional cells <span class="ev ev-lit">Company single-point test</span>.
+          If that figure reaches production as planned in 2026, doubled endurance would push the scenario from scenic sightseeing to intercity shuttle; if not, the 30 km boundary will not move in the next three years.</p>
+        </div>
       </div>
     </section>
+
     <section id="overview">
-      <h2><span class="num">02</span>Research Overview</h2>
-      <p>This report has two volumes. Volume I asks “can it be built, and who buys it”; Volume II, <a href="https://tianba9.github.io/eh216s-safety/en/">Full-Spectrum Safety Analysis</a>, asks “why is it safe, and why did the regulator accept it”. Both share the same factual baseline and can be read independently.</p>
+      <h2><span class="num">02</span><span>Research Overview</span></h2>
+      <p>This report is in two volumes. Volume I asks “can it be built, and who buys it”; its sister volume, <em>Full-Spectrum Safety Analysis of the EH216-S</em> (Volume II), asks “why is it safe, and why did the regulator accept it”. Both volumes share the same factual baseline and can be read independently or side by side.</p>
+
       <h3>Why study it</h3>
-      <p>The EH216-S is not the best-performing eVTOL. It is the only one that has completed the full certification process and entered ticketed service. Studying it removes the noise of concept vehicles and tests what an already-approved engineering path actually supports.</p>
+      <p>The EH216-S is not the best-performing passenger-carrying eVTOL; it is <strong>the only one that has completed the full certification process and entered ticketed operation</strong>. Studying it bypasses the hype around “concept-vehicle figures” and tests directly what an engineering path already confirmed by the regulator does and does not support. For judging the deployment pace of the whole category, this is more valuable than comparing whose range is longer.</p>
+
       <h3>Method</h3>
-      <div class="tw"><table><caption><b>Table 0-1</b>　Three research steps</caption><thead><tr><th>Step</th><th>What was done</th><th>Output</th></tr></thead><tbody>
-      <tr><td class="em">Evidence</td><td>Searches in Chinese and English, prioritising regulators, standards, academia and media</td><td>A 20-source evidence matrix with claim-level grading</td></tr>
-      <tr><td class="em">Calculation</td><td>Time closure, order-of-magnitude checks and benchmarking</td><td>Mass and power budgets, energy accounting, unit economics</td></tr>
-      <tr><td class="em">Judgment</td><td>Four falsifiable propositions tested against data</td><td>Conclusions and residual uncertainties</td></tr>
-      </tbody></table></div>
+      <div class="tw">
+        <table>
+          <caption><b>Table 0-1</b>　Three research steps</caption>
+          <thead><tr><th style="width:18%">Step</th><th style="width:34%">What was done</th><th>Output</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Evidence</td><td>Searches prioritising official sources, then standards, then academia and finally media, with bilingual query strings archived</td><td>A 20-source evidence matrix, marking the claims each source can support</td></tr>
+            <tr><td class="em">Calculation</td><td>Published parameters verified by three methods: time closure, order-of-magnitude checks and benchmarking</td><td>Mass and power budgets, energy accounting and unit economics</td></tr>
+            <tr><td class="em">Judgment</td><td>Split into four falsifiable propositions, each with a verdict on whether it holds and its boundaries</td><td>Conclusions and a list of residual uncertainties</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h3>Three rules for handling data</h3>
-      <ol><li><strong>Conflicts within one dimension: use the official value.</strong> 620 kg from the manufacturer is used over 650 kg from secondary tables, with both retained in the record.</li>
-      <li><strong>Different calibers are never merged.</strong> Three market-size readings are shown separately, never added.</li>
-      <li><strong>Forecasts stay labelled as forecasts.</strong> A 2030 projection remains a projection, with its issuer named.</li></ol>
+      <ol>
+        <li><strong>Conflicts within one dimension: use the official value.</strong> The manufacturer's site gives a maximum take-off weight of 620 kg while secondary sources mostly give 650 kg; this report uses 620 kg and retains a note on the conflict.</li>
+        <li><strong>Different calibers are never merged.</strong> Three readings of low-altitude-economy scale exist — RMB 715.1bn, RMB 859.2bn and RMB 1.5tn — with different statistical boundaries; they are presented separately and never added.</li>
+        <li><strong>Forecasts stay labelled as forecasts.</strong> The “RMB 2tn by 2030” figure is an institutional projection; when cited, its forecast status and issuing body are retained.</li>
+      </ol>
+
+      <h3>Three self-imposed constraints</h3>
+      <ul>
+        <li><strong>No chase after single-point forecasts.</strong> Market size is given as a range with its caliber, not as one attractive number.</li>
+        <li><strong>No smoothing over conflicts.</strong> Official and secondary figures are presented side by side, with the reasons for the choice explained.</li>
+        <li><strong>Distinguish “verified” from “claimed”.</strong> Holding all four certificates is a verifiable regulatory fact; 90,000 sorties with zero accidents is a company claim.</li>
+      </ul>
     </section>
+
     <section id="facts">
-      <h2><span class="num">03</span>Subject Fact Sheet</h2>
-      <p>Every number in this volume is anchored here. Conflicts are preserved rather than smoothed away.</p>
-      <div class="tw"><table><caption><b>Table 0-2</b>　Baseline facts, as of November 2026</caption><thead><tr><th>Item</th><th>Value</th><th>Note</th></tr></thead><tbody>
-      <tr><td class="em">Model</td><td>EHang EH216-S</td><td>Passenger version; distinct from EH216-F and EH216-L</td></tr>
-      <tr><td class="em">Configuration</td><td>8 arms, 16 coaxial rotor pairs, pure electric</td><td>Two passengers, no pilot or flight controls on board</td></tr>
-      <tr><td class="em">Max takeoff weight</td><td>620 kg</td><td>Official figure; 650 kg appears in secondary sources</td></tr>
-      <tr><td class="em">Performance</td><td>30 km range · 25 min endurance · 130 km/h max</td><td>Normal level flight about 90 km/h</td></tr>
-      <tr><td class="em">Recharge</td><td>about 120 min</td><td>Sets the ceiling on daily sorties</td></tr>
-      <tr><td class="em">Price</td><td>RMB 2.39m (China), USD 410k (overseas)</td><td>Recommended retail price effective April 2024</td></tr>
-      <tr><td class="em">Certificates</td><td>TC 2023-10-13 · AC 2023-12-21 · PC 2024-04-07 · OC 2025-03-28</td><td>Globally the first four-certificate passenger eVTOL</td></tr>
-      <tr><td class="em">Basis of certification</td><td>SC-21-002, effective 2022-02-09</td><td>Seven requirement categories</td></tr>
-      <tr><td class="em">2025 results</td><td>Revenue RMB 509.5m · 62.0% gross margin · RMB 231m net loss</td><td>221 aircraft delivered</td></tr>
-      <tr><td class="em">Operating record</td><td>90,000+ sorties, zero accidents</td><td>Company claim, not independently audited</td></tr>
-      </tbody></table></div>
+      <h2><span class="num">03</span><span>Subject Fact Sheet</span></h2>
+      <p>The table below is the site-wide data baseline. All numerical values in later chapters follow this table; where sources conflict, the conflict is retained in the notes rather than smoothed over.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 0-2</b>　EH216-S baseline facts and data (as of November 2026)</caption>
+          <thead>
+            <tr><th style="width:22%">Item</th><th style="width:38%">Value</th><th>Source and note</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">Model</td><td>EH216-S (passenger standard version of the EH216 series)</td><td>Distinct from the EH216-F firefighting version and the EH216-L logistics version</td></tr>
+            <tr><td class="em">Manufacturer</td><td>EHang Intelligent (Nasdaq: EH), headquartered in Guangzhou</td><td>Listed on Nasdaq in 2019</td></tr>
+            <tr><td class="em">Configuration</td><td>8 arms, 16 coaxial rotor pairs, pure-electric multirotor</td><td>The special condition describes it as “driving eight pairs of rotating lift/thrust components”</td></tr>
+            <tr><td class="em">Seating and control</td><td>2 occupants, no pilot and no flight controls on board</td><td>Flies automatically throughout according to a pre-set flight plan</td></tr>
+            <tr><td class="em">Max take-off weight (MTOW)</td><td>620 kg</td><td>Manufacturer's figure; secondary sources mostly give 650 kg — <strong>the official value is used here and the conflict retained</strong></td></tr>
+            <tr><td class="em">Dimensions</td><td>Width 5.73 m × height 1.93 m, length 6.05 m</td><td>Width and height from the manufacturer; length cited by media</td></tr>
+            <tr><td class="em">Performance</td><td>Range 30 km; endurance 25 min; maximum speed 130 km/h; normal level flight 90 km/h</td><td>Consistent between the manufacturer and the special condition</td></tr>
+            <tr><td class="em">Recharge</td><td>About 120 min</td><td>Manufacturer's figure; battery-swapping not disclosed</td></tr>
+            <tr><td class="em">Operating envelope</td><td>Low-altitude segregated airspace, maximum altitude about 120 m AGL</td><td>The special condition limits it to commercial passenger carrying in a UAM environment</td></tr>
+            <tr><td class="em">Price</td><td>RMB 2.39m recommended in China; USD 410,000 overseas</td><td>Announced 2024-02-01, effective 2024-04-01</td></tr>
+            <tr><td class="em">Airworthiness certificates</td><td>TC 2023-10-13; AC 2023-12-21; PC 2024-04-07; OC 2025-03-28</td><td>The four-certificate sequence for a transport-category aircraft; OC is held by the operator</td></tr>
+            <tr><td class="em">Basis of certification</td><td>SC-21-002 special condition, effective 2022-02-09</td><td>Seven requirement categories; see the <a href="07-evidence.html">evidence chapter</a></td></tr>
+            <tr><td class="em">Deliveries and finances</td><td>216 aircraft in 2024; 221 in 2025 (including 6 VT35); 2025 revenue RMB 509.5m</td><td>2025 results: 62.0% gross margin, net loss RMB 231m</td></tr>
+            <tr><td class="em">Safety record</td><td>90,000+ cumulative sorties, zero accidents</td><td>As of 2026-06; <strong>company claim, not independently audited</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">Note on the data baseline: where official and secondary sources conflict (for example maximum take-off weight or maximum flight altitude), this report uses the official value and flags the conflict in the text; no silent choices are made.</p>
     </section>
+
     <section id="route">
-      <h2><span class="num">04</span>Reading Path</h2>
-      <div class="tw"><table><caption><b>Table 0-3</b>　What each chapter answers</caption><thead><tr><th>Chapter</th><th>Question</th><th>Deliverable</th></tr></thead><tbody>
-      <tr><td><a href="01-frame.html">01 Framing & Search</a></td><td>Why ask this, and how was the answer found</td><td>Four propositions, reproducible queries, evidence grading</td></tr>
-      <tr><td><a href="02-system.html">02 System & Configuration</a></td><td>What are its boundaries and interfaces</td><td>Four-level decomposition, mass and power budgets</td></tr>
-      <tr><td><a href="03-tech.html">03 Technical Feasibility</a></td><td>Are the published figures physically credible</td><td>Time closure, benchmarking, TRL, bottleneck layers</td></tr>
-      <tr><td><a href="04-scenario.html">04 Scenarios & ODD</a></td><td>Where and for whom can it fly</td><td>Scenario matrix, seven ODD elements</td></tr>
-      <tr><td><a href="05-market.html">05 Market Feasibility</a></td><td>Does the unit economic model close</td><td>Daily sorties, cost per seat, three scenarios</td></tr>
-      <tr><td><a href="06-compete.html">06 Competitors & Verdict</a></td><td>Where does it stand, and what are the risks</td><td>Comparison matrix, moat test, rating B</td></tr>
-      <tr><td><a href="07-evidence.html">07 Evidence & References</a></td><td>Can every claim be traced</td><td>20 sources, limitations, reproduction notes</td></tr>
-      <tr><td><a href="08-summary.html">08 Overall Conclusion</a></td><td>What is the report really saying</td><td>Main thread, three findings, final position</td></tr>
-      </tbody></table></div>
+      <h2><span class="num">04</span><span>Reading Path</span></h2>
+      <p>Volume I asks “can it be built, and who buys it”. Its sister volume, <em>Full-Spectrum Safety Analysis of the EH216-S</em>, asks “why is it safe, and why did the regulator accept it”; both volumes share the same factual baseline.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 0-3</b>　Chapter guide: the question each chapter answers and the verdict it produces</caption>
+          <thead><tr><th style="width:26%">Chapter</th><th style="width:40%">Question answered</th><th>Deliverable</th></tr></thead>
+          <tbody>
+            <tr><td><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></td><td>Why the question is worth asking and where the answer comes from</td><td>Four falsifiable propositions, bilingual query strings and evidence-grading rules</td></tr>
+            <tr><td><a href="02-system.html">02 System Decomposition &amp; Configuration</a></td><td>What levels it comprises, and where its boundaries and interfaces lie</td><td>Four-level mission / system-of-systems / system / component decomposition, mass and power budgets</td></tr>
+            <tr><td><a href="03-tech.html">03 Technical Feasibility</a></td><td>Whether the figures are physically self-consistent</td><td>Hover power and energy accounting, consistency checks and TRL assessment</td></tr>
+            <tr><td><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></td><td>Under what conditions and for whom it can fly</td><td>Scenario matrix and definition of the seven ODD elements</td></tr>
+            <tr><td><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></td><td>Whether the unit economics model closes</td><td>Daily sorties per aircraft, cost per seat, three scenarios and sensitivity</td></tr>
+            <tr><td><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></td><td>Where it stands relative to peers and what the risks are</td><td>Four-aircraft comparison matrix, five-dimension scoring and risk register</td></tr>
+            <tr><td><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></td><td>Whether every figure can be traced</td><td>20 sources, supportable claims and a limitations statement</td></tr>
+            <tr><td><a href="08-summary.html">08 Overall Conclusion</a></td><td>What the report is really saying</td><td>The three-question thread, three key findings, conclusion boundaries and final rating</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note key">
+        <span class="lbl">Sister volume</span>
+        <p>The sister volume, <em>Full-Spectrum Safety Analysis of the EH216-S</em>, continues this report by placing the same subject into an eight-step systems safety engineering framework, covering hazard identification, redundancy-architecture argumentation and operational safety argumentation. Both volumes can be read independently or side by side.
+        <a href="https://tianba9.github.io/eh216s-safety/en/">Go to Volume II →</a></p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
-      <a href="01-frame.html" class="next"><span class="p-d">Next</span><span class="p-t">Framing →</span></a>
+      <a href="01-frame.html" class="next"><span class="p-d">Next</span><span class="p-t">01 Problem Definition &amp; Search Protocol →</span></a>
     </nav>
   </main>
 
@@ -135,7 +220,7 @@ This is not a product brochure. It asks a question that can be falsified: how di
 
 <footer class="foot">
   <span><a class="home" href="index.html">Home</a>　·　Fundamentals of Flying Vehicle Technology 2026</span>
-  <span>Subject: EHang EH216-S　|　<a href="#top" class="back-to-top">↑ Back to top</a></span>
+  <span><a href="#top" class="back-to-top">↑ Back to top</a>　|　Subject: EHang Intelligent EH216-S　|　<a href="07-evidence.html">Evidence &amp; References</a></span>
 </footer>
 <script src="../assets/lang.js"></script>
 <script src="../assets/main.js"></script>

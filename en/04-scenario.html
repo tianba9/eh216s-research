@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Scenarios & Operating Conditions · EH216-S Research</title>
-<meta name="description" content="Scenarios are combinations of hazard and threshold, not marketing categories. The same aircraft is a product above a scenic park and a risk above a city.">
+<meta name="description" content="Scenarios are filtered by demand rigidity, ability to pay, regulatory permission and capacity matching, not chosen by marketing.">
 <link rel="icon" href="../assets/favicon.svg">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
@@ -35,13 +35,13 @@
     <p class="toc-title">Site Chapters</p>
     <ol>
         <li class="nav-home"><a href="index.html">Home</a></li>
-        <li><a href="01-frame.html">01 Problem Definition & Search Protocol</a></li>
-        <li><a href="02-system.html">02 System Decomposition & Configuration</a></li>
+        <li><a href="01-frame.html">01 Problem Definition &amp; Search Protocol</a></li>
+        <li><a href="02-system.html">02 System Decomposition &amp; Configuration</a></li>
         <li><a href="03-tech.html">03 Technical Feasibility</a></li>
-        <li class="active"><a href="04-scenario.html">04 Scenarios & Operating Conditions</a></li>
-        <li><a href="05-market.html">05 Market & Commercial Feasibility</a></li>
-        <li><a href="06-compete.html">06 Competitors & Overall Judgment</a></li>
-        <li><a href="07-evidence.html">07 Evidence Matrix & References</a></li>
+        <li class="active"><a href="04-scenario.html">04 Scenarios &amp; Operating Conditions</a></li>
+        <li><a href="05-market.html">05 Market &amp; Commercial Feasibility</a></li>
+        <li><a href="06-compete.html">06 Competitors &amp; Overall Judgment</a></li>
+        <li><a href="07-evidence.html">07 Evidence Matrix &amp; References</a></li>
         <li><a href="08-summary.html">08 Overall Conclusion</a></li>
     </ol>
   </aside>
@@ -49,7 +49,7 @@
   <main id="main">
     <div class="page-head">
       <div class="ph-top">
-        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">04 Scenarios & Operating Conditions</span></div>
+        <div class="crumb"><a href="index.html">Home</a><span class="sep">›</span><span class="cur">04 Scenarios &amp; Operating Conditions</span></div>
         <div class="head-nav">
         <a href="03-tech.html" title="Tech">‹ Tech</a>
         <a href="05-market.html" title="Market">Market ›</a>
@@ -57,33 +57,172 @@
       </div>
       <h1>Flying Is Not Operating</h1>
       <p class="lede">
-Scenarios are combinations of hazard and threshold, not marketing categories. The same aircraft is a product above a scenic park and a risk above a city.
+The same aircraft is a product above a scenic site, a risk above a city and a public resource on an emergency corridor. Scenarios are not chosen by marketing; they are the result of four conditions acting together: demand rigidity, ability to pay, regulatory permission and capacity matching.
       </p>
     </div>
 
-    <section id="s01">
+    <section id="matrix">
       <h2><span class="num">01</span>Scenario Matrix</h2>
-      <p>Five scenario classes were placed by regulatory access and demand rigidity. Sightseeing and short shuttle sit in the upper-right quadrant; commuting is demand-strong but regulatory-weak.</p>
+      <p>Two dimensions are used for screening: the horizontal axis is the availability of regulation and airspace, and the vertical axis is demand rigidity and willingness to pay. Only scenarios in the upper-right quadrant meet the conditions for deployment at the current stage.</p>
+
+      <figure>
+        <div class="frame">
+          <svg viewBox="0 0 680 420" role="img" aria-label="Two-dimensional positioning matrix of application scenarios">
+            <g font-family="system-ui, sans-serif">
+              <!-- quadrant backgrounds -->
+              <rect x="80" y="30" width="270" height="160" fill="#f7f5f0"/>
+              <rect x="350" y="30" width="270" height="160" fill="#eef5f0"/>
+              <rect x="80" y="190" width="270" height="160" fill="#faf9f5"/>
+              <rect x="350" y="190" width="270" height="160" fill="#f7f5f0"/>
+              <!-- axes -->
+              <line x1="350" y1="30" x2="350" y2="350" stroke="#cfcabf" stroke-dasharray="4 4"/>
+              <line x1="80" y1="190" x2="620" y2="190" stroke="#cfcabf" stroke-dasharray="4 4"/>
+              <line x1="80" y1="350" x2="620" y2="350" stroke="#15181c"/>
+              <line x1="80" y1="30" x2="80" y2="350" stroke="#15181c"/>
+              <!-- axis labels -->
+              <text x="350" y="378" text-anchor="middle" font-size="11.5" fill="#3d454e">Regulatory and airspace availability →</text>
+              <text x="62" y="190" text-anchor="middle" font-size="11.5" fill="#3d454e" transform="rotate(-90 62 190)">Demand rigidity and willingness to pay →</text>
+              <!-- quadrant labels -->
+              <text x="94" y="50" font-size="10" fill="#9aa4ae" letter-spacing="1">Weak demand · difficult regulation</text>
+              <text x="606" y="50" font-size="10" fill="#1f6b45" text-anchor="end" letter-spacing="1">Priority deployment zone</text>
+              <text x="94" y="336" font-size="10" fill="#9aa4ae" letter-spacing="1">Deferred zone</text>
+              <text x="606" y="336" font-size="10" fill="#9aa4ae" text-anchor="end" letter-spacing="1">Questionable-demand zone</text>
+              <!-- scenario points -->
+              <g>
+                <circle cx="540" cy="88" r="9" fill="#1f6b45"/>
+                <text x="556" y="92" font-size="12" fill="#15181c">Low-altitude sightseeing</text>
+                <circle cx="470" cy="140" r="7.5" fill="#1f6b45" opacity=".65"/>
+                <text x="486" y="144" font-size="11.5" fill="#3d454e">Island / mountain short shuttle</text>
+                <circle cx="300" cy="112" r="7.5" fill="#a8500c"/>
+                <text x="286" y="116" font-size="11.5" fill="#3d454e" text-anchor="end">Emergency medical transfer</text>
+                <circle cx="205" cy="248" r="7.5" fill="#6d7783" opacity=".7"/>
+                <text x="191" y="252" font-size="11.5" fill="#6d7783" text-anchor="end">Urban air commuting</text>
+                <circle cx="420" cy="290" r="7.5" fill="#6d7783" opacity=".55"/>
+                <text x="436" y="294" font-size="11.5" fill="#6d7783">Aerial advertising / shows</text>
+              </g>
+              <!-- annotation -->
+              <text x="540" y="112" font-size="9.5" fill="#6d7783" text-anchor="middle">Already in ticketed operation</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption><b>Fig. 4-1</b>　Two-dimensional positioning of five scenario classes. The upper-right quadrant is the only area with closed-loop conditions at present; emergency medical demand is strong but involves airspace priority and vertiport coordination, making it "demand-strong, threshold-high".
+        <span class="fig-src">Positioning is the author's judgment based on public information, not a quantitative estimate.</span></figcaption>
+      </figure>
     </section>
-    <section id="s02">
+
+    <section id="score">
       <h2><span class="num">02</span>Five-Dimension Scoring</h2>
-      <p>Sightseeing scores 17 out of 20, shuttle 16, emergency 14, advertising 13 and commuting 11. The spread is structural, not marginal.</p>
+      <p>To avoid the vague judgment that "everything looks good", each scenario is broken into five scoreable requirements, each rated from 1 to 5.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 4-1</b>　Five-dimension scoring of five scenario classes (5-point scale; higher is more favourable)</caption>
+          <thead>
+            <tr><th style="width:22%">Scenario</th><th class="num">Demand rigidity</th><th class="num">Ability to pay</th><th class="num">Regulatory feasibility</th><th class="num">Capacity matching</th><th class="num">Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="em">Low-altitude sightseeing</td><td class="num">3</td><td class="num">4</td><td class="num">5</td><td class="num">5</td><td class="num em t-ok">17</td></tr>
+            <tr><td class="em">Island / mountain shuttle</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num">4</td><td class="num em t-ok">16</td></tr>
+            <tr><td class="em">Emergency medical transfer</td><td class="num">5</td><td class="num">3</td><td class="num">2</td><td class="num">4</td><td class="num em t-warn">14</td></tr>
+            <tr><td class="em">Aerial advertising / shows</td><td class="num">2</td><td class="num">3</td><td class="num">3</td><td class="num">5</td><td class="num em t-warn">13</td></tr>
+            <tr><td class="em">Urban air commuting</td><td class="num">4</td><td class="num">5</td><td class="num">1</td><td class="num">1</td><td class="num em t-no">11</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="t-foot">Scoring basis: demand rigidity considers whether irreplaceable time value exists; ability to pay considers end-customer ticket price; regulatory feasibility considers whether airspace and vertiports are open; capacity matching considers whether daily sorties per aircraft can meet the passenger density of the scenario.</p>
+
+      <p>The commuting scenario fails not on demand but on <strong>capacity matching</strong>. A city's commuting demand is measured in tens of thousands of trips, while one aircraft carries fewer than 10 passengers per day; over a thousand aircraft would need to be airborne simultaneously to form effective supply — untenable across airspace, vertiport and cost dimensions.</p>
     </section>
-    <section id="s03">
+
+    <section id="odd">
       <h2><span class="num">03</span>Seven ODD Elements</h2>
-      <p>Airspace, weather, vertiport, daylight, population density, communications and ground access define the operating design domain. Each is a boundary on the safety case.</p>
+      <p>The operational design domain (ODD) defines "under what conditions flight is allowed". The special condition has limited the operating environment to commercial passenger carrying within segregated low-altitude airspace, which means not all weather, sites or time slots fall within the design scope.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 4-2</b>　ODD elements of the EH216-S and current constraints</caption>
+          <thead><tr><th style="width:16%">Element</th><th style="width:38%">Current status</th><th>Impact on operations</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Airspace</td><td>Segregated low-altitude airspace; flight plans must be filed in advance</td><td>Cannot mix with manned aircraft; each route requires individual approval</td></tr>
+            <tr><td class="em">Weather</td><td>Limited to visual meteorological conditions; no quantified wind limit published</td><td>High winds, thunderstorms and low visibility stop flights; flyable days are limited</td></tr>
+            <tr><td class="em">Vertiport</td><td>Requires hard, level ground with clearance and crowd separation</td><td>Site cost and siting difficulty form a hidden threshold</td></tr>
+            <tr><td class="em">Time slot</td><td>Daylight operations; no night approval seen</td><td>Operating window is compressed, capping daily sorties</td></tr>
+            <tr><td class="em">Population density</td><td>Population density beneath routes is restricted</td><td>Difficult to cross city cores; routes must follow edges or scenic sites</td></tr>
+            <tr><td class="em">Communications</td><td>Relies on a dedicated data link with triple redundancy</td><td>Operations are impossible where link coverage is insufficient</td></tr>
+            <tr><td class="em">Ground access</td><td>Vertiports need passenger collection and dispersal facilities</td><td>Determines total door-to-door time and erodes the speed advantage over ground transport</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note warn">
+        <span class="lbl">An underestimated item</span>
+        <p>Ground access is often overlooked yet directly determines product value. The EH216-S flies 30 km in about 25 minutes, but passengers typically spend more than 30 minutes travelling to and from the vertiport, clearing security and boarding. If the vertiport is not near the origin and destination, total door-to-door time may be worse than driving. The sightseeing scenario works precisely because the vertiport sits inside the scenic site, making access cost zero.</p>
+      </div>
     </section>
-    <section id="s04">
+
+    <section id="isolated">
       <h2><span class="num">04</span>The Cost of Segregated Airspace</h2>
-      <p>No networking, no mixed operations and no city-centre access. Scheduled service is impossible; onlypre-booked, pre-booked experience flights fit.</p>
+      <p>"Segregated airspace" means three things commercially, worth stating separately because it is the most direct link between the current regulatory position and the business model.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 4-3</b>　The three commercial meanings of segregated airspace</caption>
+          <thead><tr><th style="width:22%">Implication</th><th style="width:34%">Manifestation</th><th>Commercial consequence</th></tr></thead>
+          <tbody>
+            <tr><td class="em">No networking</td><td>Each sortie needs a separate filing, making a fixed schedule network difficult</td><td>Cannot offer "go any time" commuting; only pre-booked experience flights are possible</td></tr>
+            <tr><td class="em">No mixed operations</td><td>Airspace shared on a time- and zone-sharing basis with helicopters, drones and manned aircraft</td><td>Low airspace turnover; mutual obstruction as scale grows</td></tr>
+            <tr><td class="em">No city access</td><td>Routes avoid densely populated areas</td><td>High-value city-centre scenarios are excluded, lowering the market ceiling</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>These three are not specific to the EH216-S but common constraints on the whole industry before air traffic management upgrades. They also explain why industry treats the "intelligent low-altitude network" and "fine-grained airspace management" as issues as important as the aircraft itself.</p>
     </section>
-    <section id="s05">
+
+    <section id="path">
       <h2><span class="num">05</span>Deployment Path</h2>
-      <p>Demonstration first, then cross-area shuttle, then urban commuting. Each step requires a different external condition, and the third needs an energy or configuration breakthrough.</p>
+      <p>The course material judges that "specialised and mass-market scenarios proceed in parallel". Judging by the EH216-S's actual trajectory, the path is closer to three stages, with progressively rising thresholds.</p>
+
+      <div class="tw">
+        <table>
+          <caption><b>Table 4-4</b>　Three-stage deployment path and thresholds</caption>
+          <thead><tr><th style="width:14%">Stage</th><th style="width:26%">Scenario</th><th style="width:26%">Core threshold</th><th>EH216-S current position</th></tr></thead>
+          <tbody>
+            <tr><td class="em">Stage 1<br>Demonstration</td><td>Sightseeing, city landmark tours</td><td>Certification + single-site operating permit</td><td><strong>Entered</strong>: ticketed operations in Guangzhou and Hefei from March 2026</td></tr>
+            <tr><td class="em">Stage 2<br>Shuttle</td><td>Islands, mountains, airports and city short trips</td><td>Cross-region airspace coordination + vertiport network</td><td>Pilots underway: purchases by tourism and transport groups in several regions</td></tr>
+            <tr><td class="em">Stage 3<br>Commuting</td><td>Regular scheduled urban air commuting</td><td>ATM integration + doubled endurance + lower cost</td><td><strong>Not entered</strong>: requires a configuration or energy breakthrough</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The spans between stages differ. Stage 1 to 2 is an expansion of operational capability; Stage 2 to 3 is a switch of technical paradigm — the latter cannot be crossed through operational optimisation.</p>
     </section>
-    <section id="s06">
-      <h2><span class="num">06</span>Chapter Summary</h2>
-      <p>Sightseeing and short shuttle are the only closed-loop combination today. Segregated airspace caps the model, and door-to-door time erases the speed advantage over driving.</p>
+
+    <section id="verdict">
+      <h2><span class="num">06</span>Chapter Verdict</h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <span class="n">Verdict 1</span>
+          <h4>Scenario screening converges rather than diverges</h4>
+          <p>The five-dimension scores of the five scenario classes decline monotonically from 17 to 11; sightseeing and short shuttle form the only viable combination today. This matches exactly the commercial operations it has actually entered.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 2</span>
+          <h4>Segregated airspace is the starting point of model design, not a temporary restriction</h4>
+          <p>No networking, no mixed operations and no city access: together these three constraints mean it can only offer pre-booked experiences, not scheduled commuting. Any business plan ignoring this fails.</p>
+        </div>
+        <div class="verdict">
+          <span class="n">Verdict 3</span>
+          <h4>Door-to-door time is the hidden killer</h4>
+          <p>A 25-minute flight plus 30 minutes of access and security almost erases the speed advantage over ground transport. The scenario only works if the vertiport is at the destination, which explains why scenic sites come first.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sum">
+      <h2><span class="num">07</span>Chapter Summary</h2>
+      <div class="sum">
+        <p>Scenarios are not marketing categories but combinations of demand, regulation and capacity. Five-dimension scoring ranks the five classes from 17 to 11; sightseeing and short shuttle form the only closed-loop combination, matching the commercial operations it has actually entered.</p>
+        <p>The triple cost of segregated airspace — no networking, no mixed operations, no city access — confines it to pre-booked experiences. Together with door-to-door time almost erasing the speed advantage, commuting is not viable at the current stage.</p>
+      </div>
     </section>
 
     <nav class="pager" aria-label="Chapter paging">
@@ -95,12 +234,13 @@ Scenarios are combinations of hazard and threshold, not marketing categories. Th
   <aside class="toc" aria-label="On this page">
     <p class="toc-title">On This Page</p>
     <ol>
-      <li><a href="#s01">Scenario Matrix</a></li>
-      <li><a href="#s02">Five-Dimension Scoring</a></li>
-      <li><a href="#s03">Seven ODD Elements</a></li>
-      <li><a href="#s04">The Cost of Segregated Airspace</a></li>
-      <li><a href="#s05">Deployment Path</a></li>
-      <li><a href="#s06">Chapter Summary</a></li>
+      <li><a href="#matrix">Scenario Matrix</a></li>
+      <li><a href="#score">Five-Dimension Scoring</a></li>
+      <li><a href="#odd">Seven ODD Elements</a></li>
+      <li><a href="#isolated">The Cost of Segregated Airspace</a></li>
+      <li><a href="#path">Deployment Path</a></li>
+      <li><a href="#verdict">Chapter Verdict</a></li>
+      <li><a href="#sum">Chapter Summary</a></li>
     </ol>
   </aside>
 </div>
