@@ -47,26 +47,35 @@
     </ol>
   </aside>
 
-  <main id="main">
+  <main id="main" class="reading-redesign">
     <div class="page-head">
       <div class="ph-top">
         <div class="crumb"><span class="cur">Home</span><span class="sep">·</span><span>Full-Spectrum Research &amp; Analysis</span></div>
         <div class="head-nav"><a href="01-frame.html" title="Start reading: 01 Problem Definition &amp; Search Protocol">Start reading →</a></div>
       </div>
-      <h1>EH216-S: The First Certificate That Turned “Can It Fly” into “Can It Ship”</h1>
-      <p class="lede">
-        This is not a product brochure. It asks a question that can be falsified: how did a two-seat, pilotless aircraft with a 30 km range and 25 minutes of endurance obtain the world's first type certificate for a passenger-carrying eVTOL in 2023, and why did it only begin selling its first sightseeing tickets in 2026? Using a single, complete evidence chain, this report examines its technical, scenario and commercial boundaries, stating explicitly which conclusions are supported by evidence and which are inference.
-      </p>
+      <h1>EH216-S: Where can it operate, and when does it break even?</h1>
+      <div class="report-hero">
+        <div>
+          <p class="lede">Under the report’s operating assumptions, short sightseeing flights fit the endurance and recharge limits better than high-frequency commuting. In the baseline model, reported fares fall short of aircraft-level costs even at full occupancy.</p>
+          <dl class="report-metrics"><div><dt>Published endurance</dt><dd>25 min</dd></div><div><dt>Baseline utilisation</dt><dd>3 flights/day</dd></div><div><dt>Full-load break-even fare</dt><dd>RMB 556</dd></div></dl>
+          <div class="report-actions"><a href="04-scenario.html#odd">See operating conditions</a><a href="05-market.html#calc-charge">Calculate break-even</a></div>
+        </div>
+        <figure class="home-visual">
+      <img src="../assets/eh216s-paris.jpg" width="960" height="721" decoding="async" alt="EH216-S on display, showing its cabin, arms and rotors">
+      <figcaption>EH216-S on display at the 2025 Paris Air Show. <a href="https://commons.wikimedia.org/wiki/File:EHang_216-S_au_Salon_du_Bourget_2025.jpg">Artvill / Wikimedia Commons</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · Resized and cropped for display. <a href="02-system.html">Explore the aircraft layout</a></figcaption>
+    </figure>
+      </div>
+
     </div>
 
-    <div class="kpis">
-      <div class="kpi"><div class="v">4<small>Certificates</small></div><div class="k">TC / AC / PC / OC</div></div>
-      <div class="kpi"><div class="v">620<small>kg</small></div><div class="k">Maximum take-off weight (MTOW)</div></div>
-      <div class="kpi"><div class="v">30<small>km</small></div><div class="k">Design range</div></div>
-      <div class="kpi"><div class="v">25<small>min</small></div><div class="k">Maximum endurance</div></div>
-      <div class="kpi"><div class="v">239<small>× RMB 10,000</small></div><div class="k">China recommended price</div></div>
-      <div class="kpi"><div class="v">90,000<small>+ sorties</small></div><div class="k">Accumulated safe flights</div></div>
-    </div>
+    <details class="reading-toc"><summary>On this page</summary>
+      <ol>
+      <li><a href="#conclusions">Five Key Conclusions</a></li>
+      <li><a href="#overview">Research Overview</a></li>
+      <li><a href="#facts">Subject Fact Sheet</a></li>
+      <li><a href="#route">Reading Path</a></li>
+    </ol>
+    </details>
 
     <section id="conclusions">
       <h2><span class="num">01</span><span>Five Key Conclusions</span></h2>
@@ -78,12 +87,14 @@
           <h3>The real moat is not the configuration but the certification evidence chain</h3>
           <p>The EH216-S is the only passenger-carrying eVTOL in the world holding TC, AC, PC and OC simultaneously <span class="ev ev-off">Official</span>.
           As of September 2026, Joby is in the final stage of the FAA's five-stage certification, with 20% of applicant work completed and 10% accepted by the authority; Archer closed stage three in April 2026, and neither has obtained a type certificate <span class="ev ev-med">Media analysis</span>. The multirotor configuration can be copied; the failure-probability argument for three flight-control sets and the 90,000-sortie operational data cannot.</p>
+          <p class="t-foot"><a href="06-compete.html#moat">Certification evidence</a></p>
         </div>
         <div class="verdict">
           <span class="n">Conclusion 02 · Scenario boundary</span>
           <h3>The parameters lock its market into “experience”, not “commuting”</h3>
-          <p>A 30 km range, 25 minutes of endurance and roughly 120 minutes of recharge. On a calculation of 25 minutes of flight plus 120 minutes of recharge plus 10 minutes of turnaround, the theoretical daily sorties per aircraft are about three, with fewer than 2,000 seat-offerings per year <span class="ev ev-est">Author's estimate</span>.
+          <p>A 30 km range, 25 minutes of endurance and roughly 120 minutes of recharge <span class="ev ev-off">Manufacturer disclosure</span>. On a calculation of 25 minutes of flight plus 120 minutes of recharge plus 10 minutes of turnaround, the theoretical daily sorties per aircraft are about three, with fewer than 2,000 seat-offerings per year <span class="ev ev-est">Author's estimate</span>.
           This turnover rate cannot support the capacity density a commuting product requires; it can only support point-to-point sightseeing at scenic sites.</p>
+          <p class="t-foot"><a href="04-scenario.html#odd">Operating conditions</a></p>
         </div>
         <div class="verdict">
           <span class="n">Conclusion 03 · Demand quality</span>
@@ -91,6 +102,7 @@
           <p>More than 1,000 indicative orders are on hand, and over 1,100 batch orders domestically <span class="ev ev-med">Company via media</span>.
           But the customers are mainly local state-owned platforms and financial leasing companies, and most indicative orders carry no deposit <span class="ev ev-med">Media investigation</span>.
           Such orders reflect local industrial-policy intent, not end-user travel demand.</p>
+          <p class="t-foot"><a href="05-market.html#demand">Order evidence</a></p>
         </div>
         <div class="verdict">
           <span class="n">Conclusion 04 · Financial state</span>
@@ -98,12 +110,13 @@
           <p>In 2025 revenue reached RMB 509.5m, up 11.7% year on year, with a 62.0% gross margin and 221 aircraft delivered; the full-year net loss was RMB 231m.
           Q4 net profit was RMB 10.5m, the first GAAP quarterly profit since listing <span class="ev ev-off">Financial report</span>.
           Scale effects show signs of an inflection point but do not yet constitute steady-state profitability.</p>
+          <p class="t-foot"><a href="05-market.html#calc-charge">Aircraft-level economics calculator</a></p>
         </div>
         <div class="verdict">
           <span class="n">Conclusion 05 · Decisive variable</span>
-          <h3>The only variable that can rewrite the conclusions above is battery specific energy</h3>
-          <p>In November 2024, an EH216-S fitted with a 480 Wh/kg solid-state battery completed a flight of 48 min 10 s, an improvement of 60%–90% over conventional cells <span class="ev ev-lit">Company single-point test</span>.
-          If that figure reaches production as planned in 2026, doubled endurance would push the scenario from scenic sightseeing to intercity shuttle; if not, the 30 km boundary will not move in the next three years.</p>
+          <h3>Battery specific energy affects endurance; economics also depend on turnaround and demand</h3>
+          <p>The company reported a 48 min 10 s EH216-S test flight with a solid-state battery in November 2024. The 480 Wh/kg figure applies to cells. This flight provides evidence of longer endurance in the tested configuration. Usable energy and life of production packs and commercial operating performance still need separate evidence. Operating economics also depend on recharge time, fare and occupancy.</p>
+          <p class="t-foot"><a href="03-tech.html#bottle">Battery limits and sensitivity</a></p>
         </div>
       </div>
     </section>

@@ -9,25 +9,22 @@
   /* 1 补能时间 → 单座成本 */
   var CHG = { fly: 25, turn: 10, window: 480, days: 300, fixed: 972000, kwhCost: 32 };
 
-  function chargeModel(t) {
+  function chargeModel(t, fare, occupancy) {
     var cycle = CHG.fly + t + CHG.turn;
     var sorties = Math.max(1, Math.floor(CHG.window / cycle));
     var annual = sorties * CHG.days;
     var total = CHG.fixed + CHG.kwhCost * annual;
-    return { cycle: cycle, sorties: sorties, annual: annual, perSeat: total / (annual * 2) };
+    var passengers = annual * 2 * occupancy / 100;
+    return { cycle: cycle, sorties: sorties, annual: annual,
+      breakEven: passengers ? total / passengers : null,
+      profit: Math.round(passengers * fare - total) };
   }
 
   function chargeNote(m) {
-    if (isEn()) {
-      if (m.perSeat <= 300) return 'Cost per seat is <em>below RMB 300</em>; even low-fare operations can be profitable.';
-      if (m.perSeat <= 450) return 'Cost per seat is <em>close to the RMB 400 fare</em>, near break-even; profit depends on load factor.';
-      if (m.perSeat <= 560) return 'Cost per seat is <em>slightly above the RMB 400 fare</em>; operations cannot self-fund and rely on aircraft sales margin.';
-      return 'Cost per seat is <em>well above the fare range</em>; this recharge strategy is not operationally sustainable.';
-    }
-    if (m.perSeat <= 300) return '单座成本 <em>低于 300 元</em>，即使按低价票价运营仍具备盈利空间。';
-    if (m.perSeat <= 450) return '单座成本与 400 元级票价<em>基本持平</em>，接近盈亏平衡，利润依赖上座率。';
-    if (m.perSeat <= 560) return '单座成本<em>略高于 400 元票价</em>，运营端难以自负盈亏，需靠整机销售毛利支撑。';
-    return '单座成本<em>显著高于票价区间</em>，该补能方案下运营本身不可持续。';
+    if (m.breakEven === null) return isEn() ? 'With no passengers, ticket sales cannot cover costs.' : '上座率为零，票务收入无法覆盖成本。';
+    if (m.profit < 0) return isEn() ? 'Estimated annual loss.' : '按所选条件，预计全年亏损。';
+    if (m.profit > 0) return isEn() ? 'Estimated annual surplus.' : '按所选条件，预计全年有盈余。';
+    return isEn() ? 'Estimated annual break-even.' : '按所选条件，预计全年收支平衡。';
   }
 
   /* 2 失效旋翼数 → 推力余量 */
@@ -90,16 +87,52 @@
     var sEl = document.getElementById('chg-sorties');
     var yEl = document.getElementById('chg-year');
     var pEl = document.getElementById('chg-seat');
+    var fareInput = document.getElementById('chg-fare');
+    var loadInput = document.getElementById('chg-load');
+    var fareOut = document.getElementById('chg-fare-v');
+    var loadOut = document.getElementById('chg-load-v');
+    var profitOut = document.getElementById('chg-profit');
+    var chart = document.getElementById('recharge-sensitivity');
+    var curve = document.getElementById('chg-curve');
+    var guide = document.getElementById('chg-guide');
+    var marker = document.getElementById('chg-marker');
+    var point = document.getElementById('chg-point');
+
+    function chartX(minutes) { return 34 + (minutes - 5) * 2; }
+    function chartY(flights) { return 102 - flights * 7.5; }
+
+    var maxFlights = chargeModel(5, 0, 0).sorties;
+    var minFlights = chargeModel(180, 0, 0).sorties;
+    var stairs = 'M34 ' + chartY(maxFlights);
+    for (var flights = maxFlights; flights > minFlights; flights--) {
+      var boundary = CHG.window / flights - CHG.fly - CHG.turn;
+      stairs += ' H' + chartX(boundary) + ' V' + chartY(flights - 1);
+    }
+    curve.setAttribute('d', stairs + ' H384');
+    chart.hidden = false;
     function update() {
       var t = parseFloat(input.value);
-      var m = chargeModel(t);
+      var fare = Number(fareInput.value);
+      var occupancy = Number(loadInput.value);
+      var m = chargeModel(t, fare, occupancy);
+      fareOut.textContent = fare + (isEn() ? ' RMB' : ' 元');
+      loadOut.textContent = occupancy + '%';
+      profitOut.textContent = m.profit.toLocaleString(isEn() ? 'en' : 'zh-CN');
       out.textContent = t + ' min';
+      var x = chartX(t);
+      var y = chartY(m.sorties);
+      marker.setAttribute('cx', x);
+      marker.setAttribute('cy', y);
+      guide.setAttribute('d', 'M' + x + ' ' + y + ' V102');
+      point.textContent = isEn() ? t + ' min · ' + m.sorties + ' flights/day' : t + ' 分钟 · 每日 ' + m.sorties + ' 架次';
       sEl.textContent = f0(m.sorties);
       yEl.textContent = f0(m.annual);
-      pEl.textContent = f0(m.perSeat);
+      pEl.textContent = m.breakEven === null ? '—' : f0(m.breakEven);
       noteEl.innerHTML = chargeNote(m) + suffixCharge(m);
     }
-    input.addEventListener('input', update);
+    [input, fareInput, loadInput].forEach(function (control) {
+      control.addEventListener('input', update);
+    });
     update();
   })();
 
